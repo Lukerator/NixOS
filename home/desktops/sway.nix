@@ -6,6 +6,7 @@
 		package = pkgs.swayfx;
 		extraOptions = [ "--unsupported-gpu" ];
 		extraConfigEarly = ''
+			exec swaybg -c fbf1c7
 			exec "swaybg -i ~/.config/nixos/stylix/gruvbox-light.png"
 		'';
 		extraConfig = ''
