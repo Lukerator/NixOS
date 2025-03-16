@@ -8,7 +8,7 @@
 		initExtra = ''
 neovideClose() {
 	neovide "$@" && foot &
-	disown neovide && exit
+	disown neovide && disown foot && exit
 }
 clear
 		'';
