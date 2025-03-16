@@ -10,6 +10,7 @@ neovideClose() {
 	neovide "$@" && foot &
 	exit
 }
+clear
 		'';
 		oh-my-zsh = {
 			enable = true;
