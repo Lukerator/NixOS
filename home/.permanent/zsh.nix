@@ -12,7 +12,6 @@
 		};
 		shellAliases = {
 			ls = "lsd";
-			nvim = "neovideClose";
 			update = "update-no-git && git-update";
 			upgrade = "upgrade-no-git && git-update";
 			home-update = "home-update-no-git && git-update";
