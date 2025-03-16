@@ -1,17 +1,11 @@
 {
 	programs.zsh = {
 		enable = true;
+		initExtra = "clear";
 		dotDir = ".config/zsh";
 		enableCompletion = true;
 		autosuggestion.enable = false;
 		syntaxHighlighting.enable = true;
-		initExtra = ''
-neovideClose() {
-	neovide "$@" && foot &
-	disown neovide && disown foot && exit
-}
-clear
-		'';
 		oh-my-zsh = {
 			enable = true;
 			theme = "robbyrussell";
