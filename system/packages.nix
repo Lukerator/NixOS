@@ -1,7 +1,6 @@
 { pkgs, ... }:
 {
 	environment.systemPackages = with pkgs; [
-		fuzzel
 		gcc
 		git
 		gh

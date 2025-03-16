@@ -51,6 +51,7 @@
 				"Mod4+w" = "exec firefox";
 				"Mod4+Return" = "exec foot";
 				"Mod4+Shift+x" = "exec sway exit";
+				"Mod4+d" = "exec fuzzel";
 
 				"Mod4+Up" = "focus up";
 				"Mod4+Down" = "focus down";
