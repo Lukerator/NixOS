@@ -1,0 +1,31 @@
+{
+	inputs = {
+		stylix.url = "github:danth/stylix";
+		nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+		nixvim = {
+			inputs.nixpkgs.follows = "nixpkgs";
+			url = "github:nix-community/nixvim";
+		};
+		home-manager = {
+			inputs.nixpkgs.follows = "nixpkgs";
+			url = "github:nix-community/home-manager";
+		};
+	};
+	outputs = { home-manager, nixpkgs, nixvim, stylix, ... }: let system = "x86_64-linux"; in {
+		nixosConfigurations.Luke-PC =  nixpkgs.lib.nixosSystem {
+			inherit system;
+			modules = [
+				./system
+				stylix.nixosModules.stylix
+			];
+		};
+		homeConfigurations.luke = home-manager.lib.homeManagerConfiguration {
+			pkgs = nixpkgs.legacyPackages.${system};
+			modules = [
+				./home
+				nixvim.homeManagerModules.nixvim
+				stylix.homeManagerModules.stylix
+			];
+		};
+	};
+}

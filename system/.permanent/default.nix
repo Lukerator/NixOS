@@ -1,0 +1,18 @@
+{
+	imports = [
+		./audio.nix
+		./boot.nix
+		./firefox.nix
+		./flakes.nix
+		./fonts.nix
+		./hardware.nix
+		./helper.nix
+		./keyboard.nix
+		./locales.nix
+		./networking.nix
+		./unfree.nix
+		./user.nix
+		./version.nix
+		./zsh.nix
+	];
+}
