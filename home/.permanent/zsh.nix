@@ -7,8 +7,8 @@
 		syntaxHighlighting.enable = true;
 		initExtra = ''
 neovideClose() {
-	neovide "$@" & disown neovide && foot &
-	exit
+	neovide "$@" && foot &
+	disown neovide && exit
 }
 clear
 		'';
