@@ -7,7 +7,7 @@
 			scrollback.lines = 0;
 			main = {
 				font = "JetBrainsMono Nerd Font:size=14";
-				# pad = "3x3 center";
+				pad = "3x3 center";
 			};
 		};
 	};
