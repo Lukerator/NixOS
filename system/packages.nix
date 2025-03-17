@@ -10,6 +10,7 @@
 		lsd
 		lua
 		neovide
+		polkit_gnome
 		python3
 		ripgrep
 		typst

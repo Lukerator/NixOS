@@ -21,6 +21,7 @@
 			startup = [
 				{ command = "swayosd-server"; }
 				{ command = "eww -c ~/.config/nixos/eww/activatelinux open activate-linux"; }
+				{ command = "exec ${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1"; }
 			];
 			gaps = {
 				inner = 5;
