@@ -50,7 +50,8 @@
 					adaptive_sync = "on";
 					scale_filter = "smart";
 					mode = "1920x1080@144Hz";
-					bg = "~/.config/nixos/stylix/gruvbox-light.png fill #fbf1c7";
+					# bg = "~/.config/nixos/stylix/gruvbox-light.png fill #fbf1c7";
+					bg = "~/.config/nixos/stylix/gruvbox-dark.png fill #282828";
 				};
 			};
 			keybindings = {

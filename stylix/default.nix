@@ -1,5 +1,5 @@
 {
 	imports = [
-		./stylix-light.nix
+		./stylix-dark.nix
 	];
 }
