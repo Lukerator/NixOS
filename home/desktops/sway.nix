@@ -18,7 +18,10 @@
 			bars = [];
 			focus.followMouse = "yes";
 			defaultWorkspace = "workspace number 1";
-			startup = [{ command = "swayosd-server"; }];
+			startup = [
+				{ command = "swayosd-server"; }
+				{ command = "eww -c ~/.config/nixos/eww/activatelinux open activate-linux"; }
+			];
 			gaps = {
 				inner = 5;
 				outer = 5;
