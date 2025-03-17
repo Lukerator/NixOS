@@ -2,8 +2,8 @@
 {
 	programs.eww = {
 		enable = true;
-		package = pkgs.eww-wayland;
 		configDir = ../../eww;
+		package = pkgs.eww-wayland;
 		enableZshIntegration = true;
 	};
 }
