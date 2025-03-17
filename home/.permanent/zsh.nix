@@ -12,6 +12,7 @@
 		};
 		shellAliases = {
 			ls = "lsd";
+			eww = "eww -c ~/.config/nixos/eww";
 			update = "update-no-git && git-update";
 			upgrade = "upgrade-no-git && git-update";
 			home-update = "home-update-no-git && git-update";
