@@ -106,10 +106,10 @@
 				"XF86AudioRaiseVolume" = "exec swayosd-client --output-volume 5 --max-volume 150";
 				"XF86AudioLowerVolume" = "exec swayosd-client --output-volume -5 --max-volume 150";
 
-				"Control+Shift+Down" = "swaymsg output eDP-1 transform 180";
-				"Control+Shift+Left" = "swaymsg output eDP-1 transform 270";
-				"Control+Shift+Right" = "swaymsg output eDP-1 transform 90";
-				"Control+Shift+Up" = "swaymsg output eDP-1 transform normal";
+				"Control+Shift+Down" = "exec swaymsg output eDP-1 transform 180";
+				"Control+Shift+Left" = "exec swaymsg output eDP-1 transform 270";
+				"Control+Shift+Right" = "exec swaymsg output eDP-1 transform 90";
+				"Control+Shift+Up" = "exec swaymsg output eDP-1 transform normal";
 			};
 		};
 	};
