@@ -1,3 +1,6 @@
+(deflisten notifs :initial ""
+  `python ~/.config/nixos/eww/main.py`)
+
 (defwindow powermenu
 	:monitor 0
 	:stacking "overlay"
@@ -6,5 +9,5 @@
 		:height "20%"
 		:anchor "top right"
 	)
-	(label :text "Hello, World!")
+	(literal :content notifs)
 )
