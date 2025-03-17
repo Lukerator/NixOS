@@ -2,6 +2,10 @@
 	inputs = {
 		stylix.url = "github:danth/stylix";
 		nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+		astal = {
+			url = "github:aylur/astal";
+			inputs.nixpkgs.follows = "nixpkgs";
+		};
 		nixvim = {
 			inputs.nixpkgs.follows = "nixpkgs";
 			url = "github:nix-community/nixvim";
@@ -11,7 +15,10 @@
 			url = "github:nix-community/home-manager";
 		};
 	};
-	outputs = { home-manager, nixpkgs, nixvim, stylix, ... }: let system = "x86_64-linux"; in {
+	outputs = { home-manager, nixpkgs, nixvim, stylix, astal, ... }: let
+		system = "x86_64-linux";
+		pkgs = nixpkgs.legacyPackages.${system};
+	in {
 		nixosConfigurations.Luke-PC =  nixpkgs.lib.nixosSystem {
 			inherit system;
 			modules = [
@@ -20,11 +27,20 @@
 			];
 		};
 		homeConfigurations.luke = home-manager.lib.homeManagerConfiguration {
-			pkgs = nixpkgs.legacyPackages.${system};
+			inherit pkgs;
 			modules = [
 				./home
 				nixvim.homeManagerModules.nixvim
 				stylix.homeManagerModules.stylix
+			];
+		};
+		packages.${system}.default = astal.lib.mkLuaPackage {
+			inherit pkgs;
+			name = "Lukestal";
+			src = ./astal;
+			extraPackages = [
+				pkgs.dart-sass
+				astal.packages.${system}.battery
 			];
 		};
 	};

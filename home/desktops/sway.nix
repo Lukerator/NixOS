@@ -5,10 +5,6 @@
 		checkConfig = false;
 		package = pkgs.swayfx;
 		extraOptions = [ "--unsupported-gpu" ];
-		extraConfigEarly = ''
-			exec swaybg -c fbf1c7
-			exec swaybg -i ~/.config/nixos/stylix/gruvbox-light.png
-		'';
 		extraConfig = ''
 			corner_radius 10
 			focus_follows_mouse no
@@ -20,19 +16,21 @@
 		'';
 		config = {
 			bars = [];
-			floating.border = 4;
+			focus.followMouse = "yes";
 			defaultWorkspace = "workspace number 1";
+			startup = [{ command = "swayosd-server"; }];
 			gaps = {
 				inner = 5;
 				outer = 5;
+			};
+			floating = {
+				border = 4;
+				modifier = "Mod4";
 			};
 			window = {
 				border = 4;
 				titlebar = false;
 			};
-			startup = [
-				{ command = "swayosd-server"; }
-			];
 			input = {
 				"type:touchpad" = {
 					tap = "enabled";
@@ -44,6 +42,17 @@
 					repeat_delay = "300";
 				};
 			};
+			output = {
+				eDP-1 = {
+					scale = "1";
+					pos = "0 0";
+					subpixel = "rgb";
+					adaptive_sync = "on";
+					scale_filter = "smart";
+					mode = "1920x1080@144Hz";
+					bg = "~/.config/nixos/stylix/gruvbox-light.png fill #fbf1c7";
+				};
+			};
 			keybindings = {
 				"Mod4+q" = "kill";
 				"Mod4+c" = "exec neovide";
@@ -51,7 +60,6 @@
 				"Mod4+w" = "exec firefox";
 				"Mod4+Return" = "exec foot";
 				"Mod4+Shift+x" = "exec sway exit";
-				"Mod4+d" = "exec fuzzel";
 
 				"Mod4+Up" = "focus up";
 				"Mod4+Down" = "focus down";
@@ -97,6 +105,11 @@
 				"XF86AudioMicMute" = "exec swayosd-client --input-volume mute-toggle";
 				"XF86AudioRaiseVolume" = "exec swayosd-client --output-volume 5 --max-volume 150";
 				"XF86AudioLowerVolume" = "exec swayosd-client --output-volume -5 --max-volume 150";
+
+				"Control+Shift+Down" = "swaymsg output eDP-1 transform 180";
+				"Control+Shift+Left" = "swaymsg output eDP-1 transform 270";
+				"Control+Shift+Right" = "swaymsg output eDP-1 transform 90";
+				"Control+Shift+Up" = "swaymsg output eDP-1 transform normal";
 			};
 		};
 	};
