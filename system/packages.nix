@@ -1,7 +1,7 @@
 { pkgs, ... }:
 {
 	environment.systemPackages = with pkgs; [
-		eww-wayland
+		eww
 		gcc
 		git
 		gh
