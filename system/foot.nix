@@ -1,6 +1,6 @@
 {
 	programs.foot = {
-		enable = false;
+		enable = true;
 		# theme = "gruvbox-light";
 		theme = "gruvbox-dark";
 		settings = {
