@@ -15,12 +15,13 @@
 			url = "github:nix-community/home-manager";
 		};
 	};
-	outputs = { home-manager, nixpkgs, nixvim, stylix, astal, ... }: let
+	outputs = { home-manager, nixpkgs, nixvim, stylix, astal, ... }@inputs: let
 		system = "x86_64-linux";
 		pkgs = nixpkgs.legacyPackages.${system};
 	in {
 		nixosConfigurations.Luke-PC =  nixpkgs.lib.nixosSystem {
 			inherit system;
+			specialArgs = { inherit inputs; };
 			modules = [
 				./system
 				stylix.nixosModules.stylix
