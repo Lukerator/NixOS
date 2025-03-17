@@ -1,6 +1,7 @@
 { pkgs, inputs, ... }:
 {
 	environment.systemPackages = with pkgs; [
+		astal.astal4
 		gcc
 		git
 		gh
