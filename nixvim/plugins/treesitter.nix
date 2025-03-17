@@ -14,6 +14,7 @@
 				"typst"
 				"python"
 				"markdown"
+				"typescript"
 			];
 		};
 	};

@@ -1,7 +1,6 @@
-{ pkgs, inputs, ... }:
+{ pkgs, ... }:
 {
 	environment.systemPackages = with pkgs; [
-		astal.astal4
 		gcc
 		git
 		gh
@@ -13,6 +12,5 @@
 		python3
 		ripgrep
 		typst
-		inputs.astal.packages.${system}.default
 	];
 }

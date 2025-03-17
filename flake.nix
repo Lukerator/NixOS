@@ -2,6 +2,10 @@
 	inputs = {
 		stylix.url = "github:danth/stylix";
 		nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+		ags = {
+			url = "github:aylur/ags";
+			inputs.nixpkgs.follows = "nixpkgs";
+		};
 		astal = {
 			url = "github:aylur/astal";
 			inputs.nixpkgs.follows = "nixpkgs";
@@ -15,7 +19,7 @@
 			url = "github:nix-community/home-manager";
 		};
 	};
-	outputs = { home-manager, nixpkgs, nixvim, stylix, astal, ... }@inputs: let
+	outputs = { home-manager, nixpkgs, nixvim, stylix, astal, ags, ... }@inputs: let
 		system = "x86_64-linux";
 		pkgs = nixpkgs.legacyPackages.${system};
 	in {
@@ -35,14 +39,22 @@
 				stylix.homeManagerModules.stylix
 			];
 		};
-		packages.${system}.default = astal.lib.mkLuaPackage {
-			inherit pkgs;
-			name = "Lukestal";
+		packages.${system}.default = pkgs.stdenvNoCC.mkDerivation rec {
+			name = "Luke-shell";
 			src = ./astal;
-			extraPackages = [
-				pkgs.dart-sass
-				astal.packages.${system}.battery
+			nativeBuildInputs = [
+				ags.packages.${system}.default
+				pkgs.wrapGAppsHook
+				pkgs.gobject-introspection
 			];
+			buildInputs = with astal.packages.${system}; [
+				astal3
+				io
+			];
+			installPhase = ''
+				mkdir -p $out/bin
+				ags bundle app.ts $out/bin/${name}
+			'';
 		};
 	};
 }
