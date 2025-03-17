@@ -6,6 +6,7 @@
 		git
 		gh
 		home-manager
+		libnotify
 		lf
 		lsd
 		lua
