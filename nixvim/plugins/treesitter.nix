@@ -11,10 +11,10 @@
 				"cpp"
 				"lua"
 				"nix"
+				"yuck"
 				"typst"
 				"python"
 				"markdown"
-				"typescript"
 			];
 		};
 	};
