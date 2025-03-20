@@ -1,7 +1,7 @@
 {
 	imports = [
 		./gdm.nix
-		./sway.nix
+		./river.nix
 		./wayland.nix
 	];
 }
