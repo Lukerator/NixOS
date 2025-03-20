@@ -1,12 +1,17 @@
+{ pkgs, ... }:
 {
 	wayland.windowManager.river = {
 		enable = true;
 		settings = {
 			border-width = 2;
 			set-repeat = "50 300";
-			default-layout = "rivertile";
 			background-color = "0x2b2d52";
 			focus-follows-cursor = "always";
+			spawn = [
+				"rivertile &"
+				"swayosd-server"
+				"exec ${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1"
+			];
 			input = {
 				"pointer-1267-12521-ELAN1205:00_04F3:30E9_Touchpad" = {
 					tap = true;
@@ -17,6 +22,7 @@
 				normal = {
 					"Super Q" = "close";
 					"Super+Shift X" = "exit";
+					"Super C" = "spawn nvim";
 					"Super W" = "spawn firefox";
 					"Super Return" = "spawn foot";
 					"Super ~" = "set-focused-tags 0";
