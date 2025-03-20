@@ -5,6 +5,5 @@
 		./foot.nix
 		./packages.nix
 		./.permanent
-		../stylix
 	];
 }
