@@ -1,5 +1,12 @@
 { pkgs, ... }:
 {
+	services.hyprpaper = {
+		enable = true;
+		settings = {
+			preload = [ "../../stylix/gruvbox-dark.png" ];
+			wallpaper = [ "../../stylix/gruvbox-dark.png" ];
+		};
+	};
 	wayland.windowManager.hyprland = {
 		enable = true;
 		xwayland.enable = true;
