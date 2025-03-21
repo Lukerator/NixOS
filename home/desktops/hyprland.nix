@@ -139,6 +139,7 @@
 				"$mod, 0, workspace, 10"
 				"$mod, code:20, workspace, -1"
 				"$mod, code:21, workspace, +1"
+				"$mod, code:49, togglespecialworkspace"
 
 				"$mod SHIFT, 1, movetoworkspace, 1"
 				"$mod SHIFT, 2, movetoworkspace, 2"
@@ -152,6 +153,7 @@
 				"$mod SHIFT, 0, movetoworkspace, 10"
 				"$mod SHIFT, code:20, movetoworkspace, -1"
 				"$mod SHIFT, code:21, movetoworkspace, +1"
+				"$mod SHIFT, code:49, movetoworkspace, special"
 			];
 		};
 	};
