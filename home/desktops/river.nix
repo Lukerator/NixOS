@@ -5,10 +5,10 @@
 		settings = {
 			border-width = 2;
 			set-repeat = "50 300";
+			default-layout = "rivertile";
 			background-color = "0x2b2d52";
 			focus-follows-cursor = "always";
 			spawn = [
-				"rivertile &"
 				"swayosd-server"
 				"exec ${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1"
 			];
@@ -22,7 +22,7 @@
 				normal = {
 					"Super Q" = "close";
 					"Super+Shift X" = "exit";
-					"Super C" = "spawn nvim";
+					"Super C" = "spawn neovide";
 					"Super W" = "spawn firefox";
 					"Super Return" = "spawn foot";
 					"Super ~" = "set-focused-tags 0";
