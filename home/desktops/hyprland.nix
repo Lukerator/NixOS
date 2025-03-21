@@ -33,8 +33,8 @@
 				"nofocus,class:^$,title:^$,xwayland:1,floating:1,fullscreen:0,pinned:0"
 			];
 			general = {
-				gaps_in = 20;
-				gaps_out = 40;
+				gaps_in = 30;
+				gaps_out = 60;
 				border_size = 2;
 				layout = "dwindle";
 			};
