@@ -5,5 +5,7 @@
 		./foot.nix
 		./packages.nix
 		./.permanent
+		../stylix
+		../stylix/system-targets.nix
 	];
 }
