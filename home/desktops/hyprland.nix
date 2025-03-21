@@ -122,10 +122,10 @@
 				"$mod, q, killactive"
 				"$mod, d, exec, fuzzel"
 				"$mod, l, exec, lutris"
-				"$mod, w, exec, zen-twilight"
+				"$mod, w, exec, firefox"
 				"$mod, c, exec, neovide"
 				"$mod, e, exec, nautilus"
-				"$mod, return, exec, kitty"
+				"$mod, return, exec, foot"
 
 				"$mod, 1, workspace, 1"
 				"$mod, 2, workspace, 2"
