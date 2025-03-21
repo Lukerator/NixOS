@@ -1,5 +1,6 @@
 {
 	boot = {
+		plymouth.enable = true;
 		loader = {
 			systemd-boot.enable = false;
 			efi.canTouchEfiVariables = true;
