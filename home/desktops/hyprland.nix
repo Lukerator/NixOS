@@ -53,11 +53,12 @@
 				",XF86AudioMicMute, exec, swayosd-client --input-volume mute-toggle"
 			];
 			input = {
+				kb_layout = "ro";
+				sensitivity = 0;
 				repeat_rate = 50;
-				sensitivity = 0.4;
 				repeat_delay = 300;
 				follow_mouse = true;
-				kb_layout = "ro";
+				force_no_accel = true;
 				touchpad.natural_scroll = true;
 			};
 			decoration = {
@@ -134,6 +135,7 @@
 				"$mod, c, exec, neovide"
 				"$mod, e, exec, nautilus"
 				"$mod, return, exec, foot"
+				"$mod SHIFT, x, exec, shutdown -h now"
 
 				"$mod, 1, workspace, 1"
 				"$mod, 2, workspace, 2"
