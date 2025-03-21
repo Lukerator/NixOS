@@ -59,7 +59,6 @@
 				follow_mouse = true;
 				kb_layout = "ro";
 				touchpad.natural_scroll = true;
-				# kb_options = "grp:win_space_toggle";
 			};
 			decoration = {
 				rounding = 5;

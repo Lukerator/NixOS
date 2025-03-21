@@ -2,7 +2,7 @@
 	programs.foot = {
 		enable = true;
 		# theme = "gruvbox-light";
-		theme = "gruvbox-dark";
+		# theme = "gruvbox-dark";
 		settings = {
 			scrollback.lines = 0;
 			main = {
