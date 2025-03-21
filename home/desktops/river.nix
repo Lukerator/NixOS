@@ -6,7 +6,7 @@
 			border-width = 2;
 			set-repeat = "50 300";
 			default-layout = "rivertile";
-			background-color = "0x2b2d52";
+			background-color = "0x1a1423";
 			focus-follows-cursor = "always";
 			spawn = [
 				"swayosd-server"
