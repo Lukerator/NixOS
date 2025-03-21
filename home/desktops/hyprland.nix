@@ -1,10 +1,13 @@
 { pkgs, ... }:
 {
-	services.hyprpaper = {
-		enable = true;
-		settings = {
-			preload = [ "../../stylix/gruvbox-dark.png" ];
-			wallpaper = [ "../../stylix/gruvbox-dark.png" ];
+	services = {
+		swaync.enable = true;
+		hyprpaper = {
+			enable = true;
+			settings = {
+				preload = [ "../../stylix/gruvbox-dark.png" ];
+				wallpaper = [ "../../stylix/gruvbox-dark.png" ];
+			};
 		};
 	};
 	wayland.windowManager.hyprland = {
@@ -31,15 +34,14 @@
 			];
 			general = {
 				gaps_in = 4;
-				gaps_out = 10;
+				gaps_out = 15;
 				border_size = 2;
 				layout = "dwindle";
 			};
 			exec-once = [
-				"swaync"
+				# "swaync"
 				"swayosd-server"
-				"swaybg -i ~/Pictures/background.png"
-				"killall -q waybar;sleep 1 && waybar"
+				# "killall -q waybar;sleep 1 && waybar"
 				"${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1"
 			];
 			bindel = [
@@ -57,7 +59,7 @@
 				follow_mouse = true;
 				kb_layout = "ro";
 				touchpad.natural_scroll = true;
-				kb_options = "grp:win_space_toggle";
+				# kb_options = "grp:win_space_toggle";
 			};
 			decoration = {
 				rounding = 5;
