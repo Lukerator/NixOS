@@ -3,6 +3,8 @@
 		enable = true;
 		# theme = "gruvbox-light";
 		# theme = "gruvbox-dark";
+		# theme = "catppuccin-latte";
+		# theme = "catppuccin-macchiato";
 		settings = {
 			scrollback.lines = 0;
 			main = {

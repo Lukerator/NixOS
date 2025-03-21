@@ -2,6 +2,10 @@
 	programs.nixvim = {
 		enable = true;
 		defaultEditor = true;
+		colorschemes.catppuccin = {
+			enable = true;
+			settings.style = "macchiato";
+		};
 		globals = {
 			mapleader = " ";
 			maplocalleader = " ";
