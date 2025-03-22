@@ -11,7 +11,7 @@
 			anchor_to_edges = true;
 			icon_theme = "Adwaita";
 			margin = {
-				top = 20;
+				top = 10;
 				left = 20;
 				right = 20;
 			};
