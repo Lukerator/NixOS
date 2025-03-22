@@ -10,9 +10,9 @@
 			anchor_to_edges = true;
 			icon_theme = "Adwaita";
 			margin = {
-				top = 10;
-				left = 10;
-				right = 10;
+				top = 20;
+				left = 20;
+				right = 20;
 			};
 			start = [
 				{
