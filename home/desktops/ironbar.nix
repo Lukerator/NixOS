@@ -2,10 +2,14 @@
 	programs.ironbar = {
 		enable = true;
 		config = {
-			margin.top = 10;
 			position = "top";
 			anchor_to_edges = true;
 			icon_theme = "Adwaita";
+			margin = {
+				top = 10;
+				left = 10;
+				right = 10;
+			};
 			start = [
 				{
 					type = "workspaces";
@@ -23,10 +27,40 @@
 						"10" = "10";
 					};
 				}
+			];
+			center = [
 				{
 					type = "focused";
 					show_icon = false;
 					show_title = true;
+				}
+			];
+			end = [
+				{
+					type = "volume";
+					format = "{icon} {volume}%";
+					max_volume = 150;
+					icons = {
+						volume_high = "";
+						volume_low = "";
+						muted = "";
+					};
+				}
+				{
+					type = "battery";
+					format = "{percentage}% {icon}";
+					icons = {
+						battery_full = "";
+						battery_high = "";
+						battery_medium = "";
+						battery_low = "";
+						battery_empty = "";
+						battery_charging = "";
+						battery_charged = "";
+					};
+				}
+				{
+					type = "clock";
 				}
 			];
 		};
