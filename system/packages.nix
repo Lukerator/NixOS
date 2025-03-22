@@ -14,6 +14,8 @@
 		polkit_gnome
 		python3
 		ripgrep
+		swayimg
+		swayosd
 		xfce.thunar
 		xfce.thunar-archive-plugin
 		xfce.thunar-volman
