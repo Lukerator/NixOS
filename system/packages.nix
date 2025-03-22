@@ -8,6 +8,7 @@
 		lf
 		lsd
 		lua
+		lutris
 		neovide
 		polkit_gnome
 		python3

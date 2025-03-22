@@ -129,11 +129,11 @@
 				"$mod CTRL, right, resizeactive, 20 0"
 
 				"$mod, q, killactive"
+				"$mod, e, exec, thunar"
 				"$mod, d, exec, fuzzel"
 				"$mod, l, exec, lutris"
 				"$mod, w, exec, firefox"
 				"$mod, c, exec, neovide"
-				"$mod, e, exec, nautilus"
 				"$mod, return, exec, foot"
 				"$mod SHIFT, x, exec, shutdown -h now"
 
