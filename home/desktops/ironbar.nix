@@ -47,19 +47,6 @@
 					};
 				}
 				{
-					type = "battery";
-					format = "{percentage}% {icon}";
-					icons = {
-						battery_full = "";
-						battery_high = "";
-						battery_medium = "";
-						battery_low = "";
-						battery_empty = "";
-						battery_charging = "";
-						battery_charged = "";
-					};
-				}
-				{
 					type = "clock";
 				}
 			];
