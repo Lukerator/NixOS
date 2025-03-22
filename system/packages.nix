@@ -5,6 +5,7 @@
 		git
 		gh
 		home-manager
+		ironbar
 		lf
 		lsd
 		lua
