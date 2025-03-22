@@ -2,8 +2,9 @@
 	programs.ironbar = {
 		enable = true;
 		config = {
-			anchor_to_edges = false;
+			margin.top = 10;
 			position = "top";
+			anchor_to_edges = true;
 			icon_theme = "Adwaita";
 			start = [
 				{
