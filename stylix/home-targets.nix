@@ -3,9 +3,9 @@
 	config.stylix = {
 		image = ./catppuccin-macchiato.png;
 		cursor = {
-			package = "${pkgs.catppuccin-cursors.macchiatoLight}";
-			name = "Catppuccin Macchiato Light";
 			size = 26;
+			name = "Catppuccin Macchiato Light";
+			package = "${pkgs.catppuccin-cursors.macchiatoLight}";
 		};
 		targets = {
 			foot.enable = true;
