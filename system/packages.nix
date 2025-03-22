@@ -1,6 +1,7 @@
 { pkgs, ... }:
 {
 	environment.systemPackages = with pkgs; [
+		aseprite
 		catppuccin-gtk
 		gcc
 		git

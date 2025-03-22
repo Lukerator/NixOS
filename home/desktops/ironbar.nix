@@ -41,9 +41,6 @@
 			];
 			end = [
 				{
-					type = "upower";
-				}
-				{
 					type = "volume";
 					format = "{icon} {percentage}%";
 					max_volume = 150;
