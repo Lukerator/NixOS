@@ -13,5 +13,6 @@
 		python3
 		ripgrep
 		typst
+		zathura
 	];
 }
