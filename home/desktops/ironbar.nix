@@ -1,6 +1,6 @@
 {
 	programs.ironbar = {
-		enable = true;
+		enable = false;
 		style = ''
 			.background = #00000000;
 			#bar.background = #00000000;
