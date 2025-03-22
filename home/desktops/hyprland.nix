@@ -136,6 +136,7 @@
 				"$mod, c, exec, neovide"
 				"$mod, return, exec, foot"
 				"$mod SHIFT, x, exec, shutdown -h now"
+				"$mod, x, exec, hyprctl dispatch exit"
 
 				"$mod, 1, workspace, 1"
 				"$mod, 2, workspace, 2"

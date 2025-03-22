@@ -22,6 +22,11 @@
 						"10" = "10";
 					};
 				}
+				{
+					type = "focused";
+					show_icon = false;
+					show_title = true;
+				}
 			];
 		};
 	};
