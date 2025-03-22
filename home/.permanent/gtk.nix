@@ -1,6 +1,8 @@
+{ pkgs, ... }:
 {
 	gtk.cursorTheme = {
-		name = "Catppuccin Macchiato Light";
 		size = 26;
+		name = "Catppuccin Macchiato Light";
+		package = "${pkgs.catppuccin-cursors.macchiatoLight}";
 	};
 }
