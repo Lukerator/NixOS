@@ -39,8 +39,9 @@
 				layout = "dwindle";
 			};
 			exec-once = [
-				"swayosd-server"
-				"${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1"
+				"ironbar &"
+				"swayosd-server &"
+				"exec ${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1"
 			];
 			bindel = [
 				",XF86MonBrightnessUp, exec, swayosd-client --brightness raise"
