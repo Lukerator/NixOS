@@ -4,5 +4,9 @@
 		TERMINAL = "foot";
 		EDITOR = "neovide";
 	};
-	xdg.mimeApps.defaultApplications."inode/directory" = "thunar.desktop";
+	xdg.mimeApps.defaultApplications = {
+		"inode/directory" = "thunar.desktop";
+		"text/*" = "neovide.desktop";
+		"image/*" = "swayimg.desktop";
+	};
 }
