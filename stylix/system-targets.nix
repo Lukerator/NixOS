@@ -1,7 +1,9 @@
 {
 	stylix.targets = {
-		gnome.enable = true;
+		qt.enable = true;
+		gtk.enable = true;
 		grub.enable = true;
+		gnome.enable = true;
 		plymouth.enable = true;
 	};
 }

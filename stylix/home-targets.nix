@@ -8,6 +8,8 @@
 			package = "${pkgs.catppuccin-cursors.macchiatoLight}";
 		};
 		targets = {
+			qt.enable = true;
+			gtk.enable = true;
 			foot.enable = true;
 			zathura.enable = true;
 			hyprland = {
