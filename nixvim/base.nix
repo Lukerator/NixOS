@@ -4,7 +4,7 @@
 		defaultEditor = true;
 		colorschemes.catppuccin = {
 			enable = true;
-			settings.flavour = "";
+			settings.flavour = "Macchiato";
 		};
 		globals = {
 			mapleader = " ";
