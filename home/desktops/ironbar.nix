@@ -2,7 +2,8 @@
 	programs.ironbar = {
 		enable = true;
 		style = ''
-			.background = "rgba(0, 0, 0, 0)";
+			.background = #00000000;
+			#bar.background = #00000000;
 		'';
 		config = {
 			height = 20;
