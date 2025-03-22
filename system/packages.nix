@@ -1,6 +1,7 @@
 { pkgs, ... }:
 {
 	environment.systemPackages = with pkgs; [
+		catppuccin-gtk
 		gcc
 		git
 		gh
