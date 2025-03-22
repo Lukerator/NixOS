@@ -42,7 +42,6 @@
 			end = [
 				{
 					type = "upower";
-					format = "{percentage}% {time_remaining}";
 				}
 				{
 					type = "volume";

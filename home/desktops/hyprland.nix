@@ -39,8 +39,7 @@
 				layout = "dwindle";
 			};
 			exec-once = [
-				"ironbar &"
-				"swayosd-server &"
+				"swayosd-server"
 				"exec ${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1"
 			];
 			bindel = [
