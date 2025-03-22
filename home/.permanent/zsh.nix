@@ -13,10 +13,10 @@
 		shellAliases = {
 			ls = "lsd";
 			eww = "eww -c ~/.config/nixos/eww";
-			update = "update-no-git && git-update";
-			upgrade = "upgrade-no-git && git-update";
-			home-update = "home-update-no-git && git-update";
-			system-update = "system-update-no-git && git-update";
+			update = "git-update && update-no-git";
+			upgrade = "git-update && upgrade-no-git && git-update";
+			home-update = "git-update && home-update-no-git";
+			system-update = "git-update && system-update-no-git";
 			system-update-no-git = "nh os switch && nh clean all";
 			home-update-no-git = "nh home switch -- --impure && nh clean all";
 			update-no-git = "nh os switch && nh home switch -- --impure && nh clean all";
