@@ -17,6 +17,7 @@
 		ripgrep
 		swayimg
 		swayosd
+		tlp
 		xfce.thunar
 		xfce.thunar-archive-plugin
 		xfce.thunar-volman
