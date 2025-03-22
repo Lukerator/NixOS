@@ -13,6 +13,8 @@
 		polkit_gnome
 		python3
 		ripgrep
+		xdg-user-dirs
+		xdg-user-dirs-gtk
 		xfce.thunar
 		xfce.thunar-archive-plugin
 		xfce.thunar-volman
