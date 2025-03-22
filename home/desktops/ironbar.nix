@@ -38,7 +38,7 @@
 			end = [
 				{
 					type = "volume";
-					format = "{icon} {volume}%";
+					format = "{icon} {percentage}%";
 					max_volume = 150;
 					icons = {
 						volume_high = " ";
