@@ -1,7 +1,11 @@
 {
 	programs.ironbar = {
 		enable = true;
+		style = ''
+			.background = "rgba(0, 0, 0, 0)";
+		'';
 		config = {
+			height = 20;
 			position = "top";
 			anchor_to_edges = true;
 			icon_theme = "Adwaita";
@@ -37,11 +41,16 @@
 			];
 			end = [
 				{
+					type = "upower";
+					format = "{percentage}% {time_remaining}";
+				}
+				{
 					type = "volume";
 					format = "{icon} {percentage}%";
 					max_volume = 150;
 					icons = {
 						volume_high = " ";
+						volume_medium = " ";
 						volume_low = " ";
 						muted = " ";
 					};
