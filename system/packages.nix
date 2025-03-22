@@ -12,6 +12,9 @@
 		polkit_gnome
 		python3
 		ripgrep
+		xfce.thunar
+		xfce.thunar-archive-plugin
+		xfce.thunar-volman
 		typst
 		zathura
 	];
