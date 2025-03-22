@@ -2,7 +2,7 @@
 	programs.ironbar = {
 		enable = true;
 		config = {
-			anchor_to_edges = true;
+			anchor_to_edges = false;
 			position = "top";
 			icon_theme = "Adwaita";
 			start = [
