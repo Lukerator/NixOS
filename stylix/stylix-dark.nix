@@ -10,10 +10,5 @@
 			gtk.enable = true;
 			qt.enable = true;
 		};
-		cursor = {
-			package = "${pkgs.catppuccin-cursors.macchiatoLight}";
-			name = "Catppuccin Macchiato Light";
-			size = 24;
-		};
 	};
 }
