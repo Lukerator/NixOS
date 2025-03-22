@@ -2,6 +2,7 @@
 {
 	environment.systemPackages = with pkgs; [
 		aseprite
+		brightnessctl
 		catppuccin-gtk
 		gcc
 		git
