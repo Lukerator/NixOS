@@ -41,9 +41,9 @@
 					format = "{icon} {volume}%";
 					max_volume = 150;
 					icons = {
-						volume_high = "";
-						volume_low = "";
-						muted = "";
+						volume_high = " ";
+						volume_low = " ";
+						muted = " ";
 					};
 				}
 				{
