@@ -4,11 +4,11 @@
 		aseprite
 		brightnessctl
 		catppuccin-gtk
+		fuzzel
 		gcc
 		git
 		gh
 		home-manager
-		ironbar
 		lf
 		lsd
 		lua
