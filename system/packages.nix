@@ -19,11 +19,12 @@
 		ripgrep
 		swayimg
 		swayosd
+		typst
 		unar
+		wineWow64Packages.waylandFull
 		xfce.thunar
 		xfce.thunar-archive-plugin
 		xfce.thunar-volman
-		typst
 		zathura
 	];
 }
