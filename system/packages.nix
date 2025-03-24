@@ -4,7 +4,6 @@
 		aseprite
 		brightnessctl
 		catppuccin-gtk
-		fuzzel
 		gcc
 		git
 		gh

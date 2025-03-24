@@ -11,7 +11,6 @@
 		./locales.nix
 		./networking.nix
 		./printing.nix
-		./removal.nix
 		./unfree.nix
 		./user.nix
 		./version.nix
