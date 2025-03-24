@@ -13,7 +13,7 @@
 		{
 			key = "<leader>e";
 			mode = [ "n" ];
-			action = " lua vim.lsp.buf.code_action()";
+			action = ":lua vim.lsp.buf.code_action()";
 		}
 		{
 			mode = "n";
