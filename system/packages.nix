@@ -7,7 +7,6 @@
 		gcc
 		git
 		gh
-		ghc
 		home-manager
 		lf
 		lsd
