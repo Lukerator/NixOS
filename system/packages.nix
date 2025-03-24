@@ -14,13 +14,13 @@
 		lua
 		lutris
 		neovide
+		p7zip
 		polkit_gnome
 		python3
 		qbittorrent-enhanced
 		ripgrep
 		swayimg
 		swayosd
-		tlp
 		xfce.thunar
 		xfce.thunar-archive-plugin
 		xfce.thunar-volman
