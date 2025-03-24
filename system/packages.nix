@@ -4,6 +4,7 @@
 		aseprite
 		brightnessctl
 		catppuccin-gtk
+		dtrx
 		gcc
 		git
 		gh
