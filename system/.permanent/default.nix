@@ -11,6 +11,7 @@
 		./keyboard.nix
 		./locales.nix
 		./networking.nix
+		./nvidia.nix
 		./printing.nix
 		./unfree.nix
 		./user.nix
