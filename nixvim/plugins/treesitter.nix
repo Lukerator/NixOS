@@ -14,6 +14,7 @@
 				"yuck"
 				"typst"
 				"python"
+				"haskell"
 				"markdown"
 			];
 		};
