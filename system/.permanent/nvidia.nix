@@ -17,19 +17,15 @@
 				intelBusId = "PCI:0:2:0";
 				nvidiaBusId = "PCI:1:0:0";
 				offload = {
-					enable = true;
-					enableOffloadCmd = true;
+					enable = false;
+					enableOffloadCmd = false;
 				};
 			};
 		};
 	};
-	specialisation.gaming.configuration = {
-		hardware.nvidia.prime = {
-			reverseSync.enable = lib.mkForce true;
-			offload = {
-				enable = lib.mkForce false;
-				enableOffloadCmd = lib.mkForce false;
-			};
-		};
+	specialisation.gaming.configuration.hardware.nvidia.prime.reverseSync.enable = lib.mkForce true;
+	specialisation.battery-saving.configuration.hardware.nvidia.prime.offload = {
+		enable = lib.mkForce true;
+		enableOffloadCmd = lib.mkForce true;
 	};
 }
