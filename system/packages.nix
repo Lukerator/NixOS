@@ -2,7 +2,6 @@
 {
 	environment.systemPackages = with pkgs; [
 		aseprite
-		asusctl
 		brightnessctl
 		catppuccin-gtk
 		gcc

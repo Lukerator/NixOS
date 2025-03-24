@@ -1,5 +1,6 @@
 {
 	imports = [
+		./asus.nix
 		./audio.nix
 		./boot.nix
 		./firefox.nix
