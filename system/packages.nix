@@ -15,6 +15,7 @@
 		neovide
 		polkit_gnome
 		python3
+		qbittorrent-enhanced
 		ripgrep
 		swayimg
 		swayosd
