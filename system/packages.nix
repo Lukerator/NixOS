@@ -5,6 +5,7 @@
 		brightnessctl
 		catppuccin-gtk
 		dtrx
+		file
 		gcc
 		git
 		gh
