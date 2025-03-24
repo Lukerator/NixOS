@@ -12,8 +12,8 @@
 		}
 		{
 			key = "<leader>e";
-			mode = [ "n" "v" ];
-			action.__raw = "vim.lsp.buf.code_action()";
+			mode = [ "n" ];
+			action = " lua vim.lsp.buf.code_action()";
 		}
 		{
 			mode = "n";
