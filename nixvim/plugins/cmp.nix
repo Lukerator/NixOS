@@ -17,7 +17,7 @@
 				{ name = "nvim_lsp"; }
 			];
 			mapping = {
-				"<CR>".__raw = ''
+				"<C-CR>".__raw = ''
 					cmp.mapping(function(fallback)
 						local luasnip = require("luasnip")
 						if cmp.visible() then
