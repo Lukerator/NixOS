@@ -135,7 +135,7 @@
 				"$mod, w, exec, firefox"
 				"$mod, c, exec, neovide"
 				"$mod, return, exec, foot"
-				"$mod SHIFT, q, exec, hyprctl quit"
+				"$mod SHIFT, q, exec, hyprctl kill"
 				"$mod SHIFT, x, exec, shutdown -h now"
 				"$mod, x, exec, hyprctl dispatch exit"
 
