@@ -34,13 +34,13 @@
 			mode = "n";
 			key = "<leader>gh";
 			options.desc = "[G]enerate and run [H]askell file";
-			action = '':FloatermNew --autoclose=0 clear && ghc % && ./%:r && rm ./%:r<CR>'';
+			action = '':FloatermNew --autoclose=0 ghc % && clear && ./%:r && rm ./%:r<CR>'';
 		}
 		{
 			mode = "n";
 			key = "<leader>gc";
 			options.desc = "[G]enerate and run [C]++ file";
-			action = '':FloatermNew --autoclose=0 clear && g++ -o %:r % -g && ./%:r && rm ./%:r<CR>'';
+			action = '':FloatermNew --autoclose=0 g++ -o %:r % -g && clear && ./%:r && rm ./%:r<CR>'';
 		}
 	];
 }
