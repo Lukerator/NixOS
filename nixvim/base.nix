@@ -23,15 +23,15 @@
       mouse = "a";
       list = true;
       tabstop = 2;
-      expandtab = true;
-      shiftwidth = 2;
       paste = false;
       number = true;
       cmdheight = 1;
+      shiftwidth = 2;
       scrolloff = 10;
       hlsearch = true;
       showmode = true;
       undofile = true;
+      expandtab = true;
       smartcase = true;
       updatetime = 250;
       timeoutlen = 400;
@@ -44,8 +44,6 @@
       cursorcolumn = false;
       inccommand = "split";
       relativenumber = true;
-      listchars.__raw = # lua
-        "{ tab = '» ', trail = '·' }";
       clipboard = {
         register = "unnamedplus";
         providers.wl-copy.enable = true;
