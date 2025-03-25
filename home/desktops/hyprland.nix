@@ -59,7 +59,7 @@
 				force_no_accel = true;
 				touchpad = {
 					natural_scroll = true;
-					clickfinger_behavior = 1;
+					clickfinger_behavior = true;
 				};
 			};
 			decoration = {
