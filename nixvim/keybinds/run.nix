@@ -34,7 +34,7 @@
       mode = "n";
       key = "<leader>gh";
       options.desc = "[G]enerate and run [H]askell file";
-      action = '':FloatermNew --autoclose=0 ghc % && clear && ./%:r <CR>'';
+      action = '':FloatermNew --autoclose=0 ghc % && clear && ./%:r && rm ./%:r && rm ./%:r.o && rm ./%:r.hi <CR>'';
     }
     {
       mode = "n";
