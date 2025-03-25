@@ -22,6 +22,9 @@
     opts = {
       mouse = "a";
       list = true;
+      tabstop = 2;
+      expandtab = true;
+      shiftwidth = 2;
       paste = false;
       number = true;
       cmdheight = 1;
