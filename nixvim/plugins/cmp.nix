@@ -44,7 +44,7 @@
           end)
         '';
         "<S-Tab>".__raw = ''
-          mp.mapping(function(fallback)
+         cmp.mapping(function(fallback)
           local luasnip = require("luasnip")
             if cmp.visible() then
               cmp.select_prev_item()
