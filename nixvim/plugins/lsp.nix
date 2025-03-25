@@ -19,7 +19,8 @@
           mode = "n";
           key = "<leader>gd";
           options.desc = "LSP: [G]oto [D]efinition";
-          action.__raw = "require('telescope.builtin').lsp_definitions";
+          action.__raw = # lua
+            "require('telescope.builtin').lsp_definitions";
         }
       ];
     };

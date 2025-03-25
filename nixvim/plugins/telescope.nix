@@ -49,7 +49,8 @@
         };
       };
       settings = {
-        extensions.__raw = "{ ['ui-select'] = { require('telescope.themes').get_dropdown() } }";
+        extensions.__raw = # lua
+          "{ ['ui-select'] = { require('telescope.themes').get_dropdown() } }";
       };
     };
     keymaps = [

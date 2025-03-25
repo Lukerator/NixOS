@@ -40,7 +40,8 @@
       cursorcolumn = false;
       inccommand = "split";
       relativenumber = true;
-      listchars.__raw = "{ tab = '» ', trail = '·' }";
+      listchars.__raw = # lua
+        "{ tab = '» ', trail = '·' }";
       clipboard = {
         register = "unnamedplus";
         providers.wl-copy.enable = true;

@@ -34,7 +34,8 @@
             desc = "Files";
             group = "Label";
             icon_hl = "@variable";
-            action.__raw = "function(path) vim.cmd('Telescope find_files') end";
+            action.__raw = # lua
+              "function(path) vim.cmd('Telescope find_files') end";
           }
         ];
       };

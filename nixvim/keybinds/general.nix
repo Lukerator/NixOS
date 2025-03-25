@@ -32,7 +32,8 @@
         "n"
         "v"
       ];
-      action.__raw = "function() Snacks.scratch.select() end";
+      action.__raw = # lua
+        "function() Snacks.scratch.select() end";
       options.desc = "Search Scratch Buffer";
     }
     {
@@ -42,7 +43,8 @@
         "v"
       ];
       options.desc = "Toggle Scratch Buffer";
-      action.__raw = "function() Snacks.scratch() end";
+      action.__raw = # lua
+        "function() Snacks.scratch() end";
     }
     {
       mode = [ "n" ];
