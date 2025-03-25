@@ -57,7 +57,10 @@
 				repeat_delay = 300;
 				follow_mouse = true;
 				force_no_accel = true;
-				touchpad.natural_scroll = true;
+				touchpad = {
+					natural_scroll = true;
+					clickfinger_behavior = 1;
+				};
 			};
 			decoration = {
 				rounding = 5;
