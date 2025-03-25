@@ -37,6 +37,7 @@
       splitright = true;
       ignorecase = true;
       breakindent = true;
+      smartindent = true;
       cursorcolumn = false;
       inccommand = "split";
       relativenumber = true;
