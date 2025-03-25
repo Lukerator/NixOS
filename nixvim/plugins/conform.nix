@@ -28,11 +28,14 @@
 				notify_on_error = false;
 				formatters_by_ft = {
 					lua = [ "stylua" ];
-					nix = [ "nixfmt-rfc-style" ];
+					haskell = [ "hfmt" ];
 					python = [ "black" ];
 					typst = [ "typstfmt" ];
 					cpp = [ "clang_format" ];
+					nix = [ "nixfmt-rfc-style" ];
 				};
+				# format_on_save = {
+				# };
 			};
 		};
 	};
