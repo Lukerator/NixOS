@@ -21,7 +21,6 @@
     ];
     opts = {
       mouse = "a";
-      list = true;
       tabstop = 2;
       paste = false;
       number = true;
@@ -29,7 +28,7 @@
       shiftwidth = 2;
       scrolloff = 10;
       hlsearch = true;
-      showmode = true;
+      showmode = false;
       undofile = true;
       expandtab = true;
       smartcase = true;
