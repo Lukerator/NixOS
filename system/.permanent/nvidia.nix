@@ -1,31 +1,31 @@
 { config, lib, ... }:
 {
-	services.xserver.videoDrivers = [ "nvidia" ];
-	hardware = {
-		graphics.enable = true;
-		nvidia = {
-			open = true;
-			nvidiaSettings = true;
-			modesetting.enable = true;
-			package = config.boot.kernelPackages.nvidiaPackages.beta;
-			powerManagement= {
-				enable = false;
-				finegrained = false;
-			};
-			prime = {
-				sync.enable = false;
-				intelBusId = "PCI:0:2:0";
-				nvidiaBusId = "PCI:1:0:0";
-				offload = {
-					enable = false;
-					enableOffloadCmd = false;
-				};
-			};
-		};
-	};
-	specialisation.gaming.configuration.hardware.nvidia.prime.reverseSync.enable = lib.mkForce true;
-	specialisation.battery-saving.configuration.hardware.nvidia.prime.offload = {
-		enable = lib.mkForce true;
-		enableOffloadCmd = lib.mkForce true;
-	};
+  services.xserver.videoDrivers = [ "nvidia" ];
+  hardware = {
+    graphics.enable = true;
+    nvidia = {
+      open = true;
+      nvidiaSettings = true;
+      modesetting.enable = true;
+      package = config.boot.kernelPackages.nvidiaPackages.beta;
+      powerManagement = {
+        enable = false;
+        finegrained = false;
+      };
+      prime = {
+        sync.enable = false;
+        intelBusId = "PCI:0:2:0";
+        nvidiaBusId = "PCI:1:0:0";
+        offload = {
+          enable = false;
+          enableOffloadCmd = false;
+        };
+      };
+    };
+  };
+  specialisation.gaming.configuration.hardware.nvidia.prime.reverseSync.enable = lib.mkForce true;
+  specialisation.battery-saving.configuration.hardware.nvidia.prime.offload = {
+    enable = lib.mkForce true;
+    enableOffloadCmd = lib.mkForce true;
+  };
 }

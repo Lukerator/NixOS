@@ -1,7 +1,7 @@
 {
-	programs.kitty = {
-		enable = true;
-		themeFile = "GruvboxMaterialLightMedium";
-		# themeFile = "GruvboxMaterialDarkMedium";
-	};
+  programs.kitty = {
+    enable = true;
+    themeFile = "GruvboxMaterialLightMedium";
+    # themeFile = "GruvboxMaterialDarkMedium";
+  };
 }

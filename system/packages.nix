@@ -1,31 +1,31 @@
 { pkgs, ... }:
 {
-	environment.systemPackages = with pkgs; [
-		aseprite
-		brightnessctl
-		catppuccin-gtk
-		gcc
-		git
-		gh
-		ghc
-		home-manager
-		lf
-		lsd
-		lua
-		lutris
-		neovide
-		polkit_gnome
-		python3
-		qbittorrent-enhanced
-		ripgrep
-		swayimg
-		swayosd
-		typst
-		unar
-		wineWow64Packages.waylandFull
-		xfce.thunar
-		xfce.thunar-archive-plugin
-		xfce.thunar-volman
-		zathura
-	];
+  environment.systemPackages = with pkgs; [
+    aseprite
+    brightnessctl
+    catppuccin-gtk
+    gcc
+    git
+    gh
+    ghc
+    home-manager
+    lf
+    lsd
+    lua
+    lutris
+    neovide
+    polkit_gnome
+    python3
+    qbittorrent-enhanced
+    ripgrep
+    swayimg
+    swayosd
+    typst
+    unar
+    wineWow64Packages.waylandFull
+    xfce.thunar
+    xfce.thunar-archive-plugin
+    xfce.thunar-volman
+    zathura
+  ];
 }

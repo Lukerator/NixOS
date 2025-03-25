@@ -1,7 +1,7 @@
 {
-	imports = [
-		./firefox.nix
-		./home.nix
-		./zsh.nix
-	];
+  imports = [
+    ./firefox.nix
+    ./home.nix
+    ./zsh.nix
+  ];
 }
