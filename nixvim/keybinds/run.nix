@@ -2,9 +2,21 @@
 	programs.nixvim.keymaps = [
 		{
 			mode = "n";
-			key = "<leader>gc";
-			options.desc = "[G]enerate and run [C]++ file";
-			action = '':FloatermNew --autoclose=0 clear && g++ -o %:r % -g && ./%:r && rm ./%:r<CR>'';
+			key = "<leader>gt";
+			options.desc = "[G]o [T]ypst file";
+			action = ":! typst c %<CR><CR>";
+		}
+		{
+			mode = "n";
+			key = "<leader>gh";
+			options.desc = "[G]o [H]tml file";
+			action = ":! zen-twilight % &<CR><CR>";
+		}
+		{
+			mode = "n";
+			key = "<leader>gz";
+			options.desc = "[G]o open [Z]athura";
+			action = ":! zathura %:r.pdf &<CR><CR>";
 		}
 		{
 			mode = "n";
@@ -21,20 +33,14 @@
 		{
 			mode = "n";
 			key = "<leader>gh";
-			options.desc = "[G]o [H]tml file";
-			action = ":! zen-twilight % &<CR><CR>";
+			options.desc = "[G]enerate and run [H]askell file";
+			action = '':FloatermNew --autoclose=0 clear && ghc % && ./%:r && rm ./%:r<CR>'';
 		}
 		{
 			mode = "n";
-			key = "<leader>gt";
-			options.desc = "[G]o [T]ypst file";
-			action = ":! typst c %<CR><CR>";
-		}
-		{
-			mode = "n";
-			key = "<leader>gz";
-			options.desc = "[G]o open [Z]athura";
-			action = ":! zathura %:r.pdf &<CR><CR>";
+			key = "<leader>gc";
+			options.desc = "[G]enerate and run [C]++ file";
+			action = '':FloatermNew --autoclose=0 clear && g++ -o %:r % -g && ./%:r && rm ./%:r<CR>'';
 		}
 	];
 }
