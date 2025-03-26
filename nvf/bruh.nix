@@ -1,4 +1,3 @@
-{ pkgs, ... }:
 {
   programs.nvf = {
     enable = true;
@@ -17,11 +16,12 @@
       # Status line
       statusline = {
         lualine.enable = true;
-        lualine.theme = "onedark"; # NOTE: dracula | gruvbox | onedark | catppuccin
+        # NOTE: lualine.theme dracula | gruvbox | onedark | catppuccin
       };
 
       ui = {
         borders.enable = false;
+        borders.plugins.which-key.enable = true;
         breadcrumbs.enable = true;
         illuminate.enable = true;
 
@@ -196,7 +196,6 @@
         relativenumber = true;
         laststatus = 3;
       };
-
     };
   };
 }
