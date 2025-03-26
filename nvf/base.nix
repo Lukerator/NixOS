@@ -47,7 +47,7 @@
                   else
                     fallback()
                   end
-                end
+                end)
               '')
             ];
             "<CR>" = [
@@ -63,7 +63,7 @@
                   else
                     fallback()
                   end
-                end
+                end)
               '')
             ];
           };
