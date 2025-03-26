@@ -8,12 +8,10 @@
         enable = true;
         name = "HighlightYank";
       };
-      aucmds.highlightyank = {
+      autocmds.highlightyank = {
         enable = true;
-        group = "HighlightYank";
         event = [ "TextYankPost" ];
-        desc = "Highlight yanked text";
-        callback = "function() vim.highlight.on_yank end";
+        callback = ''function() vim.highlight.on_yank() end'';
       };
     };
   };
