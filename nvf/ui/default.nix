@@ -1,7 +1,6 @@
 {
   imports = [
     ./borders.nix
-    ./bufferline.nix
     ./breadcrumbs.nix
     ./colorizer.nix
     ./devicons.nix
