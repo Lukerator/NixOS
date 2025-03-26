@@ -1,14 +1,14 @@
 {
   programs.nvf = {
     enable = true;
-    settings = {
-      vim.enableLuaLoader = true;
+    settings.vim = {
+      enableLuaLoader = true;
       augroups.highlightyank = {
         clear = true;
         enable = true;
         name = "HighlightYank";
       };
-      vim.autocmds.highlightyank = {
+      autocmds.highlightyank = {
         enable = true;
         group = "HighlightYank";
         event = [ "TextYankPost" ];
