@@ -2,7 +2,7 @@
 {
   programs.nvf = {
     enable = true;
-    config.vim = {
+    settings.config.vim = {
       #keybinds
       globals.mapleader = " ";
 
