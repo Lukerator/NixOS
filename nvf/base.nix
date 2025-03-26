@@ -1,3 +1,4 @@
+{ lib, ... }:
 {
   programs.nvf = {
     enable = true;
@@ -8,11 +9,19 @@
         enable = true;
         name = "HighlightYank";
       };
-      autocmds.highlightyank = {
-        enable = true;
-        event = [ "TextYankPost" ];
-        callback = ''function() vim.highlight.on_yank() end'';
-      };
+      autocmds = [
+        {
+          enable = true;
+          pattern = [ "*" ];
+          event = [ "TextYankPost" ];
+          desc = "Highlight yanked text";
+          callback = lib.generators.mkLuaInline /*lua*/ ''
+            function()
+              vim.highlight.on_yank({ timeout = 500 })
+            end
+          '';
+        }
+      ];
     };
   };
 }
