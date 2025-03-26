@@ -8,7 +8,7 @@
         enable = true;
         name = "HighlightYank";
       };
-      autocmds.highlightyank = {
+      autocmd.highlightyank = {
         enable = true;
         group = "HighlightYank";
         event = [ "TextYankPost" ];
