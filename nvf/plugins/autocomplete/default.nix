@@ -1,5 +1,5 @@
 {
   imports = [
-    ./autocomplete
+    ./blink.nix
   ];
 }
