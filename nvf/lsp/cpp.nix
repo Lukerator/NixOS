@@ -1,3 +1,3 @@
 {
-  programs.nvf.settings.config.vim.languages.cpp.enable = true;
+  programs.nvf.settings.config.vim.languages.clang.enable = true;
 }
