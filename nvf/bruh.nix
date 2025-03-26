@@ -9,19 +9,10 @@
       # theme
       theme.enable = true;
       theme.name = "catppuccin";
-      theme.style = "mocha";
+      theme.style = "macchiato";
 
       # Leet code
       utility.leetcode-nvim.enable = false;
-
-      # Discord 🤣
-      presence = {
-        neocord = {
-          enable = true;
-          setupOpts.enable_line_number = false;
-          setupOpts.show_time = false;
-        };
-      };
 
       # Status line
       statusline = {
@@ -58,7 +49,7 @@
         cellular-automaton.enable = false; # NOTE: figure out what this does.
       };
 
-      projects.project-nvim.enable = true;
+      projects.project-nvim.enable = false;
       telescope.enable = true;
       snippets.luasnip.enable = true;
 
@@ -77,7 +68,7 @@
 
       # Comments
       comments.comment-nvim = {
-        enable = true;
+        enable = false;
         setupOpts.mappings.extra = true;
       };
 
@@ -94,7 +85,7 @@
       terminal = {
         toggleterm = {
           enable = true;
-          lazygit.enable = true;
+          lazygit.enable = false;
         };
       };
 
@@ -102,7 +93,7 @@
       lsp = {
         formatOnSave = true;
         lspsaga.enable = false;
-        lsplines.enable = true; # virtual lines on top of the real line of code
+        lsplines.enable = false; # virtual lines on top of the real line of code
       };
 
       # Languages
@@ -156,8 +147,8 @@
 
       # Git
       git = {
-        enable = true;
-        gitsigns.enable = true;
+        enable = false;
+        gitsigns.enable = false;
         gitsigns.codeActions.enable = false; # throws an annoying debug message
       };
 
@@ -206,219 +197,6 @@
         laststatus = 3;
       };
 
-      keymaps = [
-        # My custom hotkeys 🧶
-        {
-          # Save
-          key = "<C-s>";
-          mode = "n";
-          silent = false;
-          action = ":w<CR>";
-        }
-        {
-          # Move one right
-          key = "<C-l>";
-          mode = "i";
-          silent = false;
-          action = "<Right>";
-        }
-        {
-          # add empty line without insert mode
-          key = "<M-o>";
-          mode = "n";
-          silent = false;
-          action = ":normal! o<CR>";
-        }
-        {
-          # Insert a new line above the current line and return to "normal" mode
-          key = "<M-O>";
-          mode = "n";
-          silent = false;
-          action = ":normal! O<CR>";
-        }
-        {
-          # Toggle between absolute and relative line numbers with <Leader>n
-          key = "<leader>n";
-          mode = "n";
-          silent = false;
-          action = ":set relativenumber!<CR>";
-        }
-        {
-          # LSP info
-          key = "<Leader>lsp";
-          mode = "n";
-          silent = false;
-          action = ":LspInfo<CR>";
-        }
-        {
-          # rename fuctions
-          key = "<leader>rn";
-          mode = "n";
-          silent = false;
-          action = "<cmd>lua vim.lsp.buf.rename()<CR>";
-        }
-        {
-          # show error in float
-          key = "<leader>d";
-          mode = "n";
-          silent = false;
-          action = "<cmd>lua vim.diagnostic.open_float()<cr>";
-        }
-        {
-          # Reset file back to last save
-          key = "<leader>E";
-          mode = "n";
-          silent = false;
-          action = ":e!<cr>";
-        }
-
-        # from primogen. 👾
-        {
-          # move highlighted
-          key = "<M-j>";
-          mode = "n";
-          silent = false;
-          action = ":m '>+1<CR>gv=gv";
-        }
-        {
-          # move highlighted 2
-          key = "<M-k>";
-          mode = "n";
-          silent = false;
-          action = ":m '<-2<CR>gv=gv";
-        }
-        {
-          # J stay in place. # tbh idk what this one does.
-          key = "J";
-          mode = "n";
-          silent = false;
-          action = "mzJ`z";
-        }
-        {
-          # move half page
-          key = "<C-d>";
-          mode = "n";
-          silent = false;
-          action = "<C-d>zz";
-        }
-        {
-          # move half page 2
-          key = "<C-u>";
-          mode = "n";
-          silent = false;
-          action = "<C-u>zz";
-        }
-        {
-          # search
-          key = "n";
-          mode = "n";
-          silent = false;
-          action = "nzzzv";
-        }
-        {
-          # search 2
-          key = "N";
-          mode = "n";
-          silent = false;
-          action = "Nzzzv";
-        }
-        {
-          # no more capital Q
-          key = "Q";
-          mode = "n";
-          silent = false;
-          action = "<nop>";
-        }
-        {
-          # replace highlighted word
-          key = "<leader>s";
-          mode = "n";
-          silent = false;
-          action = ":%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>";
-        }
-        # keymaps for plugins
-        {
-          # neotree
-          key = "<leader>e";
-          mode = "n";
-          silent = true;
-          action = ":Neotree left<CR>";
-        }
-        # harpoon
-        {
-          # harpoon menu
-          key = "<C-e>";
-          mode = "n";
-          silent = false;
-          action = "<cmd>lua require('harpoon.ui').toggle_quick_menu()<cr>";
-        }
-        {
-          # add to harpoon
-          key = "<leader>a";
-          mode = "n";
-          silent = false;
-          action = "<cmd>lua require('harpoon.mark').add_file()<cr>";
-        }
-        {
-          # harpoon switch
-          key = "<C-j>";
-          mode = "n";
-          silent = false;
-          action = "<cmd>lua require('harpoon.ui').nav_file(1)<cr>";
-        }
-        {
-          #
-          key = "<C-k>";
-          mode = "n";
-          silent = false;
-          action = "<cmd>lua require('harpoon.ui').nav_file(2)<cr>";
-        }
-        {
-          #
-          key = "<C-l>";
-          mode = "n";
-          silent = false;
-          action = "<cmd>lua require('harpoon.ui').nav_file(3)<cr>";
-        }
-        {
-          #
-          key = "<C-M-j>";
-          mode = "n";
-          silent = false;
-          action = "<cmd>lua require('harpoon.ui').nav_file(4)<cr>";
-        }
-        {
-          #
-          key = "<C-M-k>";
-          mode = "n";
-          silent = false;
-          action = "<cmd>lua require('harpoon.ui').nav_file(5)<cr>";
-        }
-        {
-          #
-          key = "<C-M-l>";
-          mode = "n";
-          silent = false;
-          action = "<cmd>lua require('harpoon.ui').nav_file(6)<cr>";
-        }
-        {
-          # undotree
-          key = "<F5>";
-          mode = "n";
-          silent = true;
-          action = ":UndotreeToggle<CR>";
-        }
-      ];
-      extraPlugins = with pkgs.vimPlugins; {
-        harpoon = {
-          package = harpoon;
-          setup = "require('harpoon').setup {}";
-        };
-        undotree = {
-          package = undotree;
-          after = [ "harpoon" ];
-        };
-      };
     };
   };
 }
