@@ -33,7 +33,7 @@
             "filetype",
             colored = true,
             icon_only = true
-          }
+          },
           {
             "filename",
             symbols = { modified = "", readonly = "" }
