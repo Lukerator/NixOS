@@ -1,7 +1,5 @@
 {
   imports = [
-    ./base.nix
-    ./plugins
-    ./options
+    ./bruh.nix
   ];
 }
