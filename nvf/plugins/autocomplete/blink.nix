@@ -10,10 +10,6 @@
         enable = true;
         package = "cmp-path";
       };
-      treesitter = {
-        enable = true;
-        package = "cmp-treesitter";
-      };
     };
   };
 }
