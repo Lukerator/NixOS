@@ -10,6 +10,7 @@
       path = {
         enable = true;
         package = "cmp-path";
+        module = "cmp-path";
       };
       treesitter = {
         enable = true;
