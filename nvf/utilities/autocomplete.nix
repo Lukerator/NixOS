@@ -5,7 +5,7 @@
     sourcePlugins.codeium = {
       enable = true;
       package = pkgs.vimPlugins.codeium-nvim;
-      module = "codeium-nvim";
+      module = "Codeium";
     };
   };
 }
