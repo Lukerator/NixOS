@@ -39,8 +39,8 @@
     homeConfigurations.luke = home-manager.lib.homeManagerConfiguration {
       inherit pkgs;
       modules = [
-        ./nvf
         ./home
+        # ./nvf
         ./stylix
         # ./nixvim
         ./stylix/home-targets.nix
