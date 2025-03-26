@@ -6,5 +6,6 @@
     ./neotree.nix
     ./neovide.nix
     ./telescope.nix
+    ./whichkey.nix
   ];
 }
