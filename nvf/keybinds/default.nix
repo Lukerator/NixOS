@@ -1,8 +1,10 @@
 {
   imports = [
+    ./bufferline.nix
+    ./codeactions.nix
     ./leader.nix
     ./neotree.nix
-    ./codeactions.nix
     ./neovide.nix
+    ./telescope.nix
   ];
 }
