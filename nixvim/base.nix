@@ -28,8 +28,8 @@
       shiftwidth = 2;
       scrolloff = 10;
       hlsearch = true;
-      showmode = false;
       undofile = true;
+      showmode = false;
       expandtab = true;
       smartcase = true;
       updatetime = 250;

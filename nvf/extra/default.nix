@@ -1,5 +1,5 @@
 {
   imports = [
-    ./autocomplete
+    ./codeium.nix
   ];
 }
