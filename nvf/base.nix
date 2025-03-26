@@ -4,11 +4,13 @@
     enable = true;
     settings.vim = {
       enableLuaLoader = true;
-      augroups.highlightyank = {
-        clear = true;
-        enable = true;
-        name = "HighlightYank";
-      };
+      augroups = [
+        {
+          clear = true;
+          enable = true;
+          name = "HighlightYank";
+        }
+      ];
       autocmds = [
         {
           enable = true;
