@@ -7,11 +7,6 @@
         package = "cmp-nvim-lsp";
         module = "nvim-lsp";
       };
-      path = {
-        enable = true;
-        package = "cmp-path";
-        module = "cmp-path";
-      };
       treesitter = {
         enable = true;
         package = "cmp-treesitter";
