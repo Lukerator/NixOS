@@ -1,5 +1,5 @@
 {
   imports = [
-    "./base.nix"
+    "/home/luke/.config/nixos/nvf/base.nix"
   ];
 }
