@@ -1,6 +1,5 @@
 {
   imports = [
-    ./debug
-    ./ui
+    ./filetree
   ];
 }
