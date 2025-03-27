@@ -1,5 +1,6 @@
 {
   imports = [
+    ./android.nix
     ./asus.nix
     ./audio.nix
     ./boot.nix
