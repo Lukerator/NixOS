@@ -1,13 +1,8 @@
 {
   imports = [
-    ./errors.nix
-    ./highlight.nix
     ./languages
-    ./movement.nix
-    ./multicursors.nix
+    ./misc
     ./neovide
     ./plugins
-    ./toggles.nix
-    ./update.nix
   ];
 }

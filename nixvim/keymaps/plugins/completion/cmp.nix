@@ -1,13 +1,7 @@
 {
-  programs.nixvim.keymaps = [
-    {
-      mode = [ "i" ];
-      key = "<CR>";
-      options = {
-        silent = true;
-        desc = "Confirm selection";
-      };
-      action.__raw = ''
+  programs.nixvim.cmp.mapping = {
+    "<CR>".__raw = # lua
+      ''
         cmp.mapping(function(fallback)
         local luasnip = require("luasnip")
           if cmp.visible() then
@@ -21,15 +15,8 @@
           end
         end)
       '';
-    }
-    {
-      mode = [ "i" ];
-      key = "<Tab>";
-      options = {
-        silent = true;
-        desc = "Next suggestion";
-      };
-      action.__raw = ''
+    "<Tab>".__raw = # lua
+      ''
         cmp.mapping(function(fallback)
         local luasnip = require("luasnip")
           if cmp.visible() then
@@ -41,17 +28,10 @@
           end
         end)
       '';
-    }
-    {
-      mode = [ "i" ];
-      key = "<S-Tab>";
-      options = {
-        silent = true;
-        desc = "Previous suggestion";
-      };
-      action.__raw = ''
+    "<S-Tab>".__raw = # lua
+      ''
         cmp.mapping(function(fallback)
-        local luasnip = require("luasnip")
+         local luasnip = require("luasnip")
            if cmp.visible() then
              cmp.select_prev_item()
            elseif luasnip.locally_jumpable(-1) then
@@ -61,6 +41,5 @@
            end
          end)
       '';
-    }
-  ];
+  };
 }

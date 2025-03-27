@@ -1,7 +1,0 @@
-{
-  imports = [
-    ./completion
-    ./filetree
-    ./search
-  ];
-}

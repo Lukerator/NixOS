@@ -1,6 +1,7 @@
 {
   imports = [
-    ./debug
-    ./utilities
+    ./completion
+    ./filetree
+    ./search
   ];
 }
