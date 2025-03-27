@@ -1,5 +1,5 @@
 {
   imports = [
-    ./oil.nix
+    ./neotree.nix
   ];
 }
