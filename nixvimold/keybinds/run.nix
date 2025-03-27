@@ -3,8 +3,8 @@
     {
       mode = "n";
       key = "<leader>gt";
-      options.desc = "[G]o [T]ypst file";
       action = ":! typst c %<CR><CR>";
+      options.desc = "[G]o [T]ypst file";
     }
     {
       mode = "n";
