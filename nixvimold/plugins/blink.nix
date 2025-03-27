@@ -21,11 +21,6 @@
               max_items = 10;
               min_word_length = 3;
             };
-            codeium = {
-              async = true;
-              kind = "Codeium";
-              score_offset = 10;
-            };
           };
         };
       };
