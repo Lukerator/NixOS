@@ -1,7 +1,7 @@
 {
   imports = [
     ./completion
-    ./filetrees
+    ./filetree
     ./telescope
   ];
 }
