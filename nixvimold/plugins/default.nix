@@ -1,7 +1,7 @@
 {
   imports = [
     ./basic.nix
-    ./blink.nix
+    ./cmp.nix
     ./codeium.nix
     ./codesnap.nix
     ./conform.nix
