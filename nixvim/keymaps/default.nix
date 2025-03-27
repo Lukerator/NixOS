@@ -6,6 +6,7 @@
     ./movement.nix
     ./multicursors.nix
     ./neovide
+    ./plugins
     ./toggles.nix
     ./update.nix
   ];
