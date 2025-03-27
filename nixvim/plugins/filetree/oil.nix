@@ -6,14 +6,15 @@
       use_default_keymaps = false;
       skip_confirm_for_simple_edits = true;
       win_options = {
-        concealcursor = "ncv";
-        conceallevel = 3;
-        cursorcolumn = false;
-        foldcolumn = "0";
         list = false;
-        signcolumn = "no";
-        spell = false;
         wrap = false;
+        spell = false;
+        conceallevel = 3;
+        foldcolumn = "0";
+        signcolumn = "no";
+        cursorcolumn = false;
+        concealcursor = "ncv";
+      };
     };
   };
 }
