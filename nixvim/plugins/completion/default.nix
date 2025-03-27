@@ -1,5 +1,6 @@
 {
   imports = [
     ./cmp.nix
+    ./modules
   ];
 }
