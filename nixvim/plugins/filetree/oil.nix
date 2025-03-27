@@ -3,6 +3,7 @@
     enable = true;
     settings = {
       columns = [ "icon" ];
+      use_default_keymaps = false;
       skip_confirm_for_simple_edits = true;
       win_options = {
         concealcursor = "ncv";
