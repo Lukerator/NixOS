@@ -42,7 +42,7 @@
         ./home
         # ./nvf
         ./stylix
-        ./nixvim
+        ./nixvimold
         ./stylix/home-targets.nix
         # nvf.homeManagerModules.default
         stylix.homeManagerModules.stylix
