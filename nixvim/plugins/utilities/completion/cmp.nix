@@ -11,7 +11,7 @@
       sources = [
         { name = "path"; }
         { name = "buffer"; }
-        { name = "luasnip" }
+        { name = "luasnip"; }
         { name = "nvim_lsp"; }
       ];
     };
