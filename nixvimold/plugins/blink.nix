@@ -6,9 +6,6 @@
       settings = {
         appearance.nerd_font_variant = "normal";
         sources = {
-          cmdline = [
-            "codeium"
-          ];
           compat = [
             "codeium"
           ];
