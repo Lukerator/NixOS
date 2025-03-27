@@ -2,14 +2,14 @@
   inputs = {
     stylix.url = "github:danth/stylix";
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-    nvf = {
-      inputs.nixpkgs.follows = "nixpkgs";
-      url = "github:notashelf/nvf";
-    };
-    # nixvim = {
+    # nvf = {
     #   inputs.nixpkgs.follows = "nixpkgs";
-    #   url = "github:nix-community/nixvim";
+    #   url = "github:notashelf/nvf";
     # };
+    nixvim = {
+      inputs.nixpkgs.follows = "nixpkgs";
+      url = "github:nix-community/nixvim";
+    };
     home-manager = {
       inputs.nixpkgs.follows = "nixpkgs";
       url = "github:nix-community/home-manager";
@@ -18,9 +18,9 @@
   outputs = {
     home-manager,
     nixpkgs,
-    # nixvim,
+    nixvim,
     stylix,
-    nvf,
+    # nvf,
     ...
   } @ inputs: let
     system = "x86_64-linux";
@@ -40,13 +40,13 @@
       inherit pkgs;
       modules = [
         ./home
-        ./nvf
+        # ./nvf
         ./stylix
         ./nixvim
         ./stylix/home-targets.nix
-        nvf.homeManagerModules.default
+        # nvf.homeManagerModules.default
         stylix.homeManagerModules.stylix
-        # nixvim.homeManagerModules.nixvim
+        nixvim.homeManagerModules.nixvim
       ];
     };
   };
