@@ -1,5 +1,5 @@
 {
-  programs.nixvim.plugins.cmp.mapping = {
+  programs.nixvim.plugins.cmp.settings.mappings = {
     "<CR>".__raw = # lua
       ''
         cmp.mapping(function(fallback)
