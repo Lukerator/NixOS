@@ -1,6 +1,7 @@
 { pkgs, ... }:
 {
   environment.systemPackages = with pkgs; [
+    acpi
     aseprite
     brightnessctl
     catppuccin-gtk
