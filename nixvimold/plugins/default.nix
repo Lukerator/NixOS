@@ -1,7 +1,7 @@
 {
   imports = [
     ./basic.nix
-    ./cmp.nix
+    ./basic.nix
     ./codeium.nix
     ./codesnap.nix
     ./conform.nix
