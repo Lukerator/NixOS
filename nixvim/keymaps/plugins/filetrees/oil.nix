@@ -4,7 +4,7 @@
       {
         mode = "n";
         key = "<C-n>";
-        actions = ":Oil --float<CR>";
+        action = ":Oil --float<CR>";
         options.silent = true;
       }
     ];
