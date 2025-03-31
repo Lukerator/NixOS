@@ -45,7 +45,7 @@
           ];
           lualine_c = [
             {
-              __unkeyed-1.__raw = ''
+              __raw = ''
                 function()
                   local buf_ft = vim.api.nvim_get_option_value('filetype', {})
                   for _, excluded_type in ipairs(excluded_buf_ft) do
@@ -82,8 +82,8 @@
               __raw = # lua
                 ''
                   function()
-                          return tostring(vim.fn.wordcount().words)
-                      end
+                    return tostring(vim.fn.wordcount().words)
+                  end
                 '';
             }
           ];
