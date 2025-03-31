@@ -10,11 +10,11 @@
         jump.__raw = "function(direction) vim.snippet.jump(direction) end";
       };
       sources = {
-          compat = [ "codeium" ];
           default = [
         "lsp"
         "path"
         "buffer"
+            "codeium"
         "snippets"
       ];
         };
