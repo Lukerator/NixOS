@@ -21,7 +21,6 @@
               module = "blink.compat.source";
             };
           };
-          compat = [ "codeium" ];
           default = [
         "lsp"
         "path"
