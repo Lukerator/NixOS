@@ -1,5 +1,9 @@
 {
   programs.nixvim.plugins = {
+    blink-compat = {
+      enable = true;
+      settings.impersonate_nvim_cmp = true;
+    };
     blink-cmp = {
       enable = true;
       settings = {
@@ -17,11 +21,11 @@
               module = "blink.compat.source";
             };
           };
+          compat = [ "codeium" ];
           default = [
         "lsp"
         "path"
         "buffer"
-            "codeium"
         "snippets"
       ];
         };
