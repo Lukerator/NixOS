@@ -1,18 +1,17 @@
 { pkgs, ... }:
 {
-    programs.nixvim = {
+  programs.nixvim = {
     extraPackages = with pkgs; [
+      black
       clang-tools
       nixfmt-rfc-style
+      stylua
     ];
-
-    # Autoformat
-    # https://nix-community.github.io/nixvim/plugins/conform-nvim.html
     plugins.conform-nvim = {
-        enable = true;
+      enable = true;
       settings = {
-          notify_on_error = false;
-        format_on_save = #lua
+        notify_on_error = false;
+        format_on_save = # lua
           ''
             function(bufnr)
               local disable_filetypes = { c = true, cpp = true }
@@ -22,29 +21,13 @@
             }
             end
           '';
-          formatters_by_ft = {
-            cpp = [ "clang-format" ];
+        formatters_by_ft = {
+          cpp = [ "clang-format" ];
           nix = [ "nixfmt-rfc-style" ];
-            lua = ["stylua"];
-            python = [ "black" ];
-          };
+          lua = [ "stylua" ];
+          python = [ "black" ];
         };
       };
-
-      keymaps = [
-        {
-          mode = "";
-        key = "<leader>f";
-          action.__raw = #lua
-            ''
-            function()
-              require('conform').format { async = true, lsp_fallback = true }
-            end
-          '';
-          options = {
-            desc = "[F]ormat buffer";
-          };
-        }
-    ];
     };
+  };
 }

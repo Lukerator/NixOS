@@ -7,12 +7,15 @@
     blink-cmp = {
       enable = true;
       settings = {
-      snippets = {
-        active.__raw = /*lua*/ "function(filter) return vim.snippet.active(filter) end";
-        expand.__raw = /*lua*/ "function(snippet) vim.snippet.expand(snippet) end";
-        jump.__raw = /*lua*/ "function(direction) vim.snippet.jump(direction) end";
-      };
-      sources = {
+        snippets = {
+          active.__raw = # lua
+            "function(filter) return vim.snippet.active(filter) end";
+          expand.__raw = # lua
+            "function(snippet) vim.snippet.expand(snippet) end";
+          jump.__raw = # lua
+            "function(direction) vim.snippet.jump(direction) end";
+        };
+        sources = {
           providers = {
             codeium = {
               async = false;
@@ -23,14 +26,14 @@
             };
           };
           default = [
-        "lsp"
-        "path"
-        "buffer"
+            "lsp"
+            "path"
+            "buffer"
             "codeium"
-        "snippets"
-      ];
+            "snippets"
+          ];
         };
-    };
+      };
     };
   };
 }
