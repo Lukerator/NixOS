@@ -9,12 +9,15 @@
         expand.__raw = "function(snippet) vim.snippet.expand(snippet) end";
         jump.__raw = "function(direction) vim.snippet.jump(direction) end";
       };
-      sources.default = [
+      sources = {
+          compat = [ "codeium" ];
+          default = [
         "lsp"
         "path"
         "buffer"
         "snippets"
       ];
+        };
     };
     };
   };

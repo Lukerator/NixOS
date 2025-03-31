@@ -5,7 +5,7 @@
       clang-tools
       nixfmt-rfc-style
     ];
-    plugins.conform = {
+    plugins.conform-nvim = {
     settings = {
     formatters_by_ft = {
       cpp = "clang_format";
