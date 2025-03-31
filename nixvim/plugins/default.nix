@@ -5,5 +5,6 @@
     ./filetree
     ./misc
     ./search
+    ./treesitter
   ];
 }

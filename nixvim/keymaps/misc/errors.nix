@@ -1,7 +1,7 @@
 {
   programs.nixvim.keymaps = [
     {
-      mode = [ "n" ];
+      mode = "n";
       key = "<leader>ea";
       action = ":lua vim.lsp.buf.code_action()<CR>";
       options = {
@@ -10,7 +10,7 @@
       };
     }
     {
-      mode = [ "n" ];
+      mode = "n";
       key = "<leader>et";
       action = ":Trouble<CR>";
       options = {
@@ -19,7 +19,7 @@
       };
     }
     {
-      mode = [ "n" ];
+      mode = "n";
       key = "<leader>eq";
       action = ":Trouble quickfix<CR>";
       options = {

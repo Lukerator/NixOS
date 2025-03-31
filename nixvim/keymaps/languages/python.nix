@@ -1,7 +1,7 @@
 {
   programs.nixvim.keymaps = [
     {
-      mode = [ "n" ];
+      mode = "n";
       key = "<leader>gp";
       action = '':FloatermNew --autoclose=0 clear && python3 %<CR>'';
       options = {

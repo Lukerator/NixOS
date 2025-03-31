@@ -1,7 +1,7 @@
 {
   programs.nixvim.keymaps = [
     {
-      mode = [ "n" ];
+      mode = "n";
       key = "<leader>sh";
       action = ":Telescope help_tags<CR>";
       options = {
@@ -10,7 +10,7 @@
       };
     }
     {
-      mode = [ "n" ];
+      mode = "n";
       key = "<leader>sk";
       action = ":Telescope keymaps<CR>";
       options = {
@@ -19,7 +19,7 @@
       };
     }
     {
-      mode = [ "n" ];
+      mode = "n";
       key = "<leader>sf";
       action = ":Telescope find_files<CR>";
       options = {
@@ -28,7 +28,7 @@
       };
     }
     {
-      mode = [ "n" ];
+      mode = "n";
       key = "<leader>ss";
       action = ":Telescope builtin<CR>";
       options = {
@@ -37,7 +37,7 @@
       };
     }
     {
-      mode = [ "n" ];
+      mode = "n";
       key = "<leader>sw";
       action = ":Telescope grep_string<CR>";
       options = {
@@ -46,7 +46,7 @@
       };
     }
     {
-      mode = [ "n" ];
+      mode = "n";
       key = "<leader>sg";
       action = ":Telescope live_grep<CR>";
       options = {
@@ -55,7 +55,7 @@
       };
     }
     {
-      mode = [ "n" ];
+      mode = "n";
       key = "<leader>sr";
       action = ":Telescope resume<CR>";
       options = {
@@ -64,7 +64,7 @@
       };
     }
     {
-      mode = [ "n" ];
+      mode = "n";
       key = "<leader><leader>";
       action = ":Telescope oldfiles<CR>";
       options = {

@@ -2,7 +2,7 @@
   programs.nixvim.keymaps = [
     {
       key = "<Esc>";
-      mode = [ "n" ];
+      mode = "n";
       action = ":nohlsearch<CR>";
       options = {
         silent = true;

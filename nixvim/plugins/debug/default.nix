@@ -1,5 +1,3 @@
 {
-  imports = [
-    ./trouble.nix
-  ];
+  programs.nixvim.plugins.trouble.enable = true;
 }

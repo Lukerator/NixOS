@@ -1,7 +1,7 @@
 {
   programs.nixvim.keymaps = [
     {
-      mode = [ "n" ];
+      mode = "n";
       key = "<leader>gh";
       action = '':FloatermNew --autoclose=0 ghc % && clear && ./%:r && rm ./%:r && rm ./%:r.o && rm ./%:r.hi<CR>'';
       options = {

@@ -1,7 +1,7 @@
 {
   programs.nixvim.keymaps = [
     {
-      mode = [ "n" ];
+      mode = "n";
       key = "<leader>gh";
       action = ":! zen-twilight % &<CR><CR>";
       options = {

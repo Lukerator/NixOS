@@ -1,7 +1,7 @@
 {
   programs.nixvim.keymaps = [
     {
-      mode = [ "n" ];
+      mode = "n";
       key = "<leader>gt";
       action = ":! typst c %<CR><CR>";
       options = {
@@ -10,7 +10,7 @@
       };
     }
     {
-      mode = [ "n" ];
+      mode = "n";
       key = "<leader>gz";
       action = ":! zathura %:r.pdf &<CR><CR>";
       options = {

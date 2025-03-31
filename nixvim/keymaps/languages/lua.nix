@@ -1,7 +1,7 @@
 {
   programs.nixvim.keymaps = [
     {
-      mode = [ "n" ];
+      mode = "n";
       key = "<leader>gl";
       action = '':FloatermNew --autoclose=0 clear && lua %<CR>'';
       options = {
