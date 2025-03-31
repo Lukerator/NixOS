@@ -6,47 +6,49 @@
       nixfmt-rfc-style
     ];
     plugins.conform-nvim = {
-    settings = {
-    formatters_by_ft = {
-      cpp = "clang_format";
-      nix = "nixfmt-rfc-style";
-    };
-    format_on_save = # Lua
-      ''
-        function(bufnr)
-          if vim.g.disable_autoformat or vim.b[bufnr].disable_autoformat then
-            return
-          end
+      settings = {
+        log_level = "warn";
+        notify_on_error = false;
+        notify_no_formatters = false;
+        formatters_by_ft = {
+          cpp = "clang_format";
+          nix = "nixfmt-rfc-style";
+        };
+        format_after_save = # Lua
+          ''
+            function(bufnr)
+              if vim.g.disable_autoformat or vim.b[bufnr].disable_autoformat then
+                return
+              end
 
-          if slow_format_filetypes[vim.bo[bufnr].filetype] then
-            return
-          end
+              if not slow_format_filetypes[vim.bo[bufnr].filetype] then
+                return
+              end
 
-          local function on_format(err)
-            if err and err:match("timeout$") then
-              slow_format_filetypes[vim.bo[bufnr].filetype] = true
+              return { lsp_fallback = true }
             end
-          end
+          '';
+        format_on_save = # Lua
+          ''
+            function(bufnr)
+              if vim.g.disable_autoformat or vim.b[bufnr].disable_autoformat then
+                return
+              end
 
-          return { timeout_ms = 200, lsp_fallback = true }, on_format
-         end
-      '';
-    format_after_save = # Lua
-      ''
-        function(bufnr)
-          if vim.g.disable_autoformat or vim.b[bufnr].disable_autoformat then
-            return
-          end
+              if slow_format_filetypes[vim.bo[bufnr].filetype] then
+                return
+              end
 
-          if not slow_format_filetypes[vim.bo[bufnr].filetype] then
-            return
-          end
+              local function on_format(err)
+                if err and err:match("timeout$") then
+                  slow_format_filetypes[vim.bo[bufnr].filetype] = true
+                end
+              end
 
-          return { lsp_fallback = true }
-        end
-      '';
-    log_level = "warn";
-    notify_on_error = false;
-    notify_no_formatters = false;
-  }; }; };
+              return { timeout_ms = 200, lsp_fallback = true }, on_format
+            end
+          '';
+      };
+    };
+  };
 }
