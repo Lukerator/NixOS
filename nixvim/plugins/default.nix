@@ -3,6 +3,7 @@
     ./bar
     ./completion
     ./debug
+    ./extra
     ./filetree
     ./format
     ./misc
