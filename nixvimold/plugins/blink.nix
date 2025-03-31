@@ -4,11 +4,13 @@
     blink-cmp = {
       enable = true;
       settings = {
+        signature.enabled = true;
         appearance.nerd_font_variant = "normal";
         completion = {
-          documentation.window.border = "round";
           menu.border = "round";
           ghost_text.enabled = true;
+          accept.auto_brackets.enabled = true;
+          documentation.window.border = "round";
         };
         sources = {
           compat = [
