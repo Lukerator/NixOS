@@ -3,7 +3,7 @@
     enable = true;
     servers = {
       clangd.enable = true;
-      luals.enable = true;
+      lua_ls.enable = true;
       nixd.enable = true;
       pyright.enable = true;
     };
