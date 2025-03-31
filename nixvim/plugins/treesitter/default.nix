@@ -11,6 +11,7 @@
         "cpp"
         "lua"
         "nix"
+        "python"
       ];
     };
   };
