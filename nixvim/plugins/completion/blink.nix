@@ -26,7 +26,6 @@
         "lsp"
         "path"
         "buffer"
-            "codeium"
         "snippets"
       ];
         };
