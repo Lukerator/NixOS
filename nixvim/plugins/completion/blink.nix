@@ -10,6 +10,13 @@
         jump.__raw = "function(direction) vim.snippet.jump(direction) end";
       };
       sources = {
+          providers = {
+            codeium = {
+              enabled = true;
+              max_items = 10;
+              module = "blink.compat.source";
+            };
+          };
           default = [
         "lsp"
         "path"
