@@ -3,6 +3,7 @@
     blink-compat.enable = true;
     blink-cmp = {
       enable = true;
+      settings = {
       snippets = {
         active.__raw = "function(filter) return vim.snippet.active(filter) end";
         expand.__raw = "function(snippet) vim.snippet.expand(snippet) end";
@@ -14,7 +15,7 @@
         "buffer"
         "snippets"
       ];
-      settings.keymap = {
+      keymap = {
         preset = "none";
         "<CR>" = [
           ''
@@ -59,6 +60,7 @@
         end)
       '' ];
       };
+    };
     };
   };
 }
