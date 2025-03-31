@@ -17,7 +17,7 @@
       ];
       keymap = {
         preset = "none";
-        "<CR>" = [
+        "<CR>".__raw =
           ''
             cmp.mapping(function(fallback)
             local luasnip = require("luasnip")
@@ -31,9 +31,8 @@
                 fallback()
               end
             end)
-          ''
-        ];
-    "<Tab>" = [
+          '';
+    "<Tab>".__raw =
       ''
         cmp.mapping(function(fallback)
         local luasnip = require("luasnip")
@@ -45,8 +44,8 @@
             fallback()
           end
         end)
-      '' ];
-    "<S-Tab>" = [
+      '';
+    "<S-Tab>".__raw =
       ''
         cmp.mapping(function(fallback)
         local luasnip = require("luasnip")
@@ -58,7 +57,7 @@
             fallback()
           end
         end)
-      '' ];
+      '';
       };
     };
     };
