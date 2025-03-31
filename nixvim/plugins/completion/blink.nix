@@ -1,9 +1,6 @@
 {
   programs.nixvim.plugins = {
-    cmp = {
-      enable = true;
-      settings.completion.autocomplete = false;
-    };
+    cmp.enable = true;
     blink-compat = {
       enable = true;
       settings.impersonate_nvim_cmp = true;
