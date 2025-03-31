@@ -5,6 +5,11 @@
       enable = true;
       settings = {
         appearance.nerd_font_variant = "normal";
+        completion = {
+          documentation.window.border = "round";
+          menu.border = "round";
+          ghost_text.enabled = true;
+        };
         sources = {
           compat = [
             "codeium"
