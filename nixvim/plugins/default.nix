@@ -1,6 +1,5 @@
 {
   imports = [
-    ./bar
     ./completion
     ./debug
     ./extra
@@ -9,5 +8,6 @@
     ./misc
     ./search
     ./treesitter
+    ./ui
   ];
 }
