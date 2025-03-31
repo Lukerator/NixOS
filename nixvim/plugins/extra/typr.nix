@@ -7,6 +7,7 @@
         repo = "typr";
         rev = "db0f98f";
         owner = "nvzone";
+        sha256 = "";
       };
     })
   ];
