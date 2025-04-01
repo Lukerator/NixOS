@@ -42,6 +42,7 @@
       };
       homeConfigurations.luke = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
+        extraSpecialArgs = { inherit inputs; };
         modules = [
           ./home
           # ./nvf
