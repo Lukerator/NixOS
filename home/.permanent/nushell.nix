@@ -14,7 +14,6 @@
       formats
       gstat
       highlight
-      skim
     ];
     shellAliases = {
       ls = "lsd";
