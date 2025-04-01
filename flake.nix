@@ -27,7 +27,10 @@
     }@inputs:
     let
       system = "x86_64-linux";
-      pkgs = nixpkgs.legacyPackages.${system};
+      pkgs = import nixpkgs {
+        inherit system;
+        overlays = [ inputs.awesome-neovim-plugins.overlays.default ];
+      };
     in
     {
       nixosConfigurations.Luke-PC = nixpkgs.lib.nixosSystem {
@@ -42,7 +45,6 @@
       };
       homeConfigurations.luke = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
-        extraSpecialArgs = { inherit inputs; };
         modules = [
           ./home
           # ./nvf
