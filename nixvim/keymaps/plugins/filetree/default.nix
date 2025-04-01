@@ -1,7 +1,7 @@
 {
   programs.nixvim.keymaps = [
     {
-      key = "<C-n>";
+      key = "<leader>n";
       mode = "n";
       action = ":Neotree float toggle reveal %:p:h<CR>";
       options.silent = true;
