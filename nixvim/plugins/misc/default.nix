@@ -2,7 +2,6 @@
   programs.nixvim.plugins = {
     mini.enable = true;
     noice.enable = true;
-    image.enable = true;
     notify.enable = true;
     comment.enable = true;
     twilight.enable = true;
