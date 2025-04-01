@@ -4,5 +4,6 @@
     nvzone-typr
     nvzone-volt
     nvzone-menu
+    nvim-ufo
   ];
 }

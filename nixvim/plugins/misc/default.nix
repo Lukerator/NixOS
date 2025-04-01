@@ -1,5 +1,7 @@
 {
   programs.nixvim.plugins = {
+    noice.enable = true;
+    notify.enable = true;
     comment.enable = true;
     typst-vim.enable = true;
     multicursors.enable = true;
