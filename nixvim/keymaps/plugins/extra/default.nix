@@ -9,14 +9,5 @@
         desc = "Typr";
       };
     }
-    {
-      mode = "n";
-      key = "<leader>pl";
-      action = ":Leet<CR>";
-      options = {
-        silent = true;
-        desc = "Leetcode";
-      };
-    }
   ];
 }

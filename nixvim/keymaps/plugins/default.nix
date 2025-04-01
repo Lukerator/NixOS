@@ -5,6 +5,7 @@
     ./extra
     ./filetree
     ./format
+    ./leetcode
     ./telescope
   ];
 }
