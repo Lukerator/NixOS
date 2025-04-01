@@ -20,6 +20,15 @@
     }
     {
       mode = "n";
+      key = "<leader>ed";
+      action = ":Trouble diagnostics<CR>";
+      options = {
+        silent = true;
+        desc = "Quickfix list";
+      };
+    }
+    {
+      mode = "n";
       key = "<leader>eq";
       action = ":Trouble quickfix<CR>";
       options = {

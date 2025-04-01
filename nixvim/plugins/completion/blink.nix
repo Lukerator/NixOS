@@ -7,6 +7,7 @@
     blink-cmp = {
       enable = true;
       settings = {
+        completion.ghost_text.enabled = true;
         snippets = {
           active.__raw = # lua
             "function(filter) return vim.snippet.active(filter) end";
