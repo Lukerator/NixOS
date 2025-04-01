@@ -5,7 +5,7 @@
     paste = false;
     number = true;
     cmdheight = 1;
-    foldlevel = 9;
+    foldlevel = 99;
     shiftwidth = 2;
     scrolloff = 10;
     hlsearch = true;
