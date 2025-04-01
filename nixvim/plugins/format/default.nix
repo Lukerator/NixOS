@@ -3,9 +3,10 @@
   programs.nixvim = {
     extraPackages = with pkgs; [
       black
+      stylua
+      typstfmt
       clang-tools
       nixfmt-rfc-style
-      stylua
     ];
     plugins.conform-nvim = {
       enable = true;
@@ -22,10 +23,11 @@
             end
           '';
         formatters_by_ft = {
-          cpp = [ "clang-format" ];
-          nix = [ "nixfmt-rfc-style" ];
           lua = [ "stylua" ];
           python = [ "black" ];
+          typst = [ "typstfmt" ];
+          cpp = [ "clang-format" ];
+          nix = [ "nixfmt-rfc-style" ];
         };
       };
     };
