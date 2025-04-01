@@ -1,6 +1,7 @@
 { pkgs, ... }:
 {
   imports = [
+    ./flake.nix
     ./leetcode.nix
     ./ufo.nix
   ];
