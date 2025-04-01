@@ -137,7 +137,7 @@
         "$mod, return, exec, foot"
         "$mod SHIFT, q, exec, hyprctl kill"
         "$mod SHIFT, x, exec, shutdown -h now"
-        "$mod, x, exec, hyprctl dispatch exit"
+        "$mod CTRL, x, exec, hyprctl dispatch exit"
 
         "$mod, 1, workspace, 1"
         "$mod, 2, workspace, 2"

@@ -1,12 +1,12 @@
 {
   programs.nixvim.opts = {
     mouse = "a";
-    tabstop = 2;
+    tabstop = 4;
     paste = false;
     number = true;
     cmdheight = 1;
     foldlevel = 99;
-    shiftwidth = 2;
+    shiftwidth = 4;
     scrolloff = 10;
     hlsearch = true;
     undofile = true;
