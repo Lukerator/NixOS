@@ -2,6 +2,6 @@
   imports = [
     ./firefox.nix
     ./home.nix
-    ./zsh.nix
+    ./nushell.nix
   ];
 }
