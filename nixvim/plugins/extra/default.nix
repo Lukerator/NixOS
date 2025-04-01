@@ -1,6 +1,9 @@
 { pkgs, ... }:
 {
-  imports = [ ./ufo.nix ];
+  imports = [
+    ./leetcode.nix
+    ./ufo.nix
+  ];
   programs.nixvim.extraPlugins = with pkgs.vimPlugins; [
     leetcode-nvim
     nvim-ufo
