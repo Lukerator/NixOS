@@ -1,9 +1,9 @@
 { pkgs, ... }:
 {
   users.users.luke = {
+    shell = pkgs.zsh;
     isNormalUser = true;
     description = "Luke";
-    shell = pkgs.nushell;
     extraGroups = [
       "audio"
       "networkmanager"
