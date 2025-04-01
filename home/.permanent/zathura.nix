@@ -4,4 +4,5 @@
     # ./zathura/mocha.nix
     ./zathura/macchiato.nix
   ];
+  programs.zathura.enable = true;
 }
