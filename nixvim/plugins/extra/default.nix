@@ -17,7 +17,7 @@
         rev = "e123320";
         owner = "2KAbhishek";
         repo = "exercism.nvim";
-        hash = "";
+        sha256 = "sha256-ysuDkCJ+SUap9q1AVmJHg984B3yHiyT2Jq0uTZ0wtuM=";
       };
     })
   ];
