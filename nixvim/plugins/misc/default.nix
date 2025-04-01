@@ -1,5 +1,6 @@
 {
   programs.nixvim.plugins = {
+    mini.enable = true;
     noice.enable = true;
     notify.enable = true;
     comment.enable = true;
