@@ -10,6 +10,7 @@
     scrolloff = 10;
     hlsearch = true;
     undofile = true;
+    foldcolumn = "0";
     showmode = false;
     expandtab = true;
     smartcase = true;
@@ -21,11 +22,10 @@
     ignorecase = true;
     breakindent = true;
     smartindent = true;
+    foldlevelstart = 99;
     cursorcolumn = false;
     inccommand = "split";
     relativenumber = true;
-    vim.o.foldcolumn = "0";
-    vim.o.foldlevelstart = 99;
     guifont = "JetBrainsMono NF:h14";
     clipboard = {
       register = "unnamedplus";
