@@ -17,7 +17,7 @@
         rev = "cf370b3";
         repo = "utils.nvim";
         owner = "2KAbhishek";
-        sha256 = "";
+        sha256 = "sha256-oryGryZssglSPocufz8GpwursrgUNA6uK/cnptKGjfA=";
       };
     })
     # (pkgs.vimUtils.buildVimPlugin {
