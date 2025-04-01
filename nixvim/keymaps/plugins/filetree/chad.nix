@@ -1,9 +1,9 @@
 {
   programs.nixvim.keymaps = [
     {
-      key = "<leader>n";
+      key = "<leader>chad";
       mode = "n";
-      action = ":Neotree float toggle reveal %:p:h<CR>";
+      action = ":CHADopen<CR>";
       options.silent = true;
     }
   ];

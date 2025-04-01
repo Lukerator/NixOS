@@ -3,7 +3,7 @@
     ./completion
     ./debug
     ./extra
-    ./filetree/neotree.nix
+    ./filetree
     ./format
     ./misc
     ./search

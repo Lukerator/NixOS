@@ -2,7 +2,7 @@
   imports = [
     ./bar
     ./completion
-    ./filetree/neotree.nix
+    ./filetree
     ./format
     ./telescope
   ];

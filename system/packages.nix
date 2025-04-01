@@ -15,6 +15,7 @@
     lua
     lutris
     neovide
+    nushell
     polkit_gnome
     python3
     qbittorrent-enhanced

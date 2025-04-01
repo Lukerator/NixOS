@@ -17,6 +17,6 @@
     ./unfree.nix
     ./user.nix
     ./version.nix
-    ./zsh.nix
+    # ./zsh.nix
   ];
 }

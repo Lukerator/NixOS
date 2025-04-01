@@ -1,10 +1,22 @@
 {
   programs.nixvim.keymaps = [
     {
-      key = "<leader>chad";
       mode = "n";
-      action = ":CHADopen<CR>";
-      options.silent = true;
+      key = "<leader>n";
+      action = ":lua mini.files.open()<CR>";
+      options = {
+        silent = true;
+        desc = "Open Filetree";
+      };
+    }
+    {
+      mode = "n";
+      key = "<leader>tree";
+      action = ":Neotree float toggle reveal %:p:h<CR>";
+      options = {
+        silent = true;
+        desc = "Open NeoTree";
+      };
     }
   ];
 }
