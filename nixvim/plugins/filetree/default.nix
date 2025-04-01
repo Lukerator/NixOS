@@ -1,11 +1,12 @@
 {
-  programs.nixvim.plugins.neo-tree = {
+  programs.nixvim.plugins.chadtree = {
     enable = true;
-    popupBorderStyle = "rounded";
-    filesystem.hijackNetrwBehavior = "open_current";
-    window.popup.size = {
-      width = "45%";
-      height = "45%";
-    };
+    view.windowOptions = # lua
+      ''
+        {
+          cursorline = true,
+          signcolumn = 'no'
+        }
+      '';
   };
 }

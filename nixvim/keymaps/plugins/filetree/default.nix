@@ -3,7 +3,7 @@
     {
       key = "<leader>n";
       mode = "n";
-      action = ":Neotree float toggle reveal %:p:h<CR>";
+      action = ":CHADopen<CR>";
       options.silent = true;
     }
   ];
