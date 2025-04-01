@@ -6,6 +6,7 @@
         permanent_delete = true;
         use_as_default_explorer = true;
       };
+    };
     neo-tree = {
       enable = true;
       popupBorderStyle = "rounded";
