@@ -2,6 +2,7 @@
 {
   imports = [ ./ufo.nix ];
   programs.nixvim.extraPlugins = with pkgs.vimPlugins; [
+    leetcode-nvim
     nvim-ufo
     nvzone-typr
     nvzone-volt
