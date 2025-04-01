@@ -6,7 +6,7 @@
     ];
     extraConfigLua = # lua
       "
-        require('exercism-nvim').setup({
+        require('exercism').setup({
           default_language = 'cpp',
         })
       ";
