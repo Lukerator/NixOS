@@ -11,5 +11,14 @@
     nvzone-volt
     nvzone-menu
     promise-async
+    (pkgs.vimUtils.buildVimPlugin {
+      name = "exercism.nvim";
+      src = pkgs.fetchFromGitHub {
+        rev = "e123320";
+        owner = "2KAbhishek";
+        repo = "exercism.nvim";
+        hash = "";
+      };
+    })
   ];
 }
