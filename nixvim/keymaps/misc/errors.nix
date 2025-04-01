@@ -24,7 +24,7 @@
       action = ":Trouble diagnostics<CR>";
       options = {
         silent = true;
-        desc = "Quickfix list";
+        desc = "Diagnostics list";
       };
     }
     {

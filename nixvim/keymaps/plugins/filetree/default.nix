@@ -1,7 +1,7 @@
 {
   programs.nixvim.keymaps = [
     {
-      key = "<leader>n";
+      key = "<leader>chad";
       mode = "n";
       action = ":CHADopen<CR>";
       options.silent = true;
