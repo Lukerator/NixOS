@@ -7,6 +7,7 @@
     twilight.enable = true;
     colorizer.enable = true;
     typst-vim.enable = true;
+    ts-autotag.enable = true;
     multicursors.enable = true;
     cmp-nvim-lsp.enable = true;
     nvim-autopairs.enable = true;
