@@ -2,10 +2,10 @@
   programs.nixvim.opts = {
     mouse = "a";
     tabstop = 2;
-    guifont = "JetBrainsMono NF:h14";
     paste = false;
     number = true;
     cmdheight = 1;
+    foldlevel = 9;
     shiftwidth = 2;
     scrolloff = 10;
     hlsearch = true;
@@ -24,6 +24,9 @@
     cursorcolumn = false;
     inccommand = "split";
     relativenumber = true;
+    vim.o.foldcolumn = "0";
+    vim.o.foldlevelstart = 99;
+    guifont = "JetBrainsMono NF:h14";
     clipboard = {
       register = "unnamedplus";
       providers.wl-copy.enable = true;
