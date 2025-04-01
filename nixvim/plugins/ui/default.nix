@@ -32,10 +32,6 @@
           lualine_a = [ "mode" ];
           lualine_b = [
             {
-              __unkeyed-1 = "filetype";
-              icon_only = true;
-            }
-            {
               __unkeyed-1 = "filename";
               symbols = {
                 modified = "";
@@ -45,38 +41,11 @@
           ];
           lualine_c = [
             {
-              __raw = ''
-                function()
-                  local buf_ft = vim.api.nvim_get_option_value('filetype', {})
-                  for _, excluded_type in ipairs(excluded_buf_ft) do
-                    if buf_ft == excluded_type then
-                      return ""
-                        end
-                      end
-                    local clients = vim.lsp.get_active_clients()
-                    local msg = 'No Active Lsp'
-                    if next(clients) == nil then
-                      return msg
-                    end
-                    for _, client in ipairs(clients) do
-                      local filetypes = client.config.filetypes
-                      if filetypes and vim.fn.index(filetypes, buf_ft) ~= -1 then
-                        return client.name
-                      end
-                    end
-                  return msg
-                end,
-              '';
-              icon = " : ";
+              __unkeyed-1 = "filetype";
+              icon_only = true;
             }
           ];
-          lualine_x = [
-            {
-              __unkeyed-1 = "searchcount";
-              maxcount = 999;
-              timeout = 120;
-            }
-          ];
+          lualine_x = [ ];
           lualine_y = [
             {
               __raw = # lua
@@ -88,6 +57,44 @@
             }
           ];
           lualine_z = [ "location" ];
+        };
+      };
+    };
+    dashboard = {
+      enable = true;
+      settings = {
+        theme = "hyper";
+        change_to_vcs_root = true;
+        hide = {
+          statusline = true;
+          tabline = true;
+        };
+        config = {
+          mru.limit = 5;
+          project.enable = false;
+          footer = [
+            ""
+            "Make cool shit"
+          ];
+          header = [
+            "███╗   ██╗███████╗ ██████╗ ██╗   ██╗██╗███╗   ███╗"
+            "████╗  ██║██╔════╝██╔═══██╗██║   ██║██║████╗ ████║"
+            "██╔██╗ ██║█████╗  ██║   ██║██║   ██║██║██╔████╔██║"
+            "██║╚██╗██║██╔══╝  ██║   ██║╚██╗ ██╔╝██║██║╚██╔╝██║"
+            "██║ ╚████║███████╗╚██████╔╝ ╚████╔╝ ██║██║ ╚═╝ ██║"
+            "╚═╝  ╚═══╝╚══════╝ ╚═════╝   ╚═══╝  ╚═╝╚═╝     ╚═╝"
+          ];
+          shortcut = [
+            {
+              key = "f";
+              icon = " ";
+              desc = "Files";
+              group = "Label";
+              icon_hl = "@variable";
+              action.__raw = # lua
+                "function(path) vim.cmd('Telescope find_files') end";
+            }
+          ];
         };
       };
     };
