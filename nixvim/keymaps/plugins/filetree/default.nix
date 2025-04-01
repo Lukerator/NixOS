@@ -2,7 +2,7 @@
   programs.nixvim.keymaps = [
     {
       mode = "n";
-      key = "<leader>tree";
+      key = "<leader>n";
       action = ":Neotree float toggle reveal %:p:h<CR>";
       options = {
         silent = true;
