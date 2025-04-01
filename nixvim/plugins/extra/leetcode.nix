@@ -1,6 +1,6 @@
 {
   programs.nixvim.extraConfigLua = # lua
-    "require('leetcode-nvim').setup({
+    "require('leetcode').setup({
       lang = 'cpp',
       picker = { provider = 'telescope' },
     })";

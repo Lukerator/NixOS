@@ -6,6 +6,7 @@
     ./filetree
     ./format
     ./misc
+    ./saving
     ./search
     ./treesitter
     ./ui
