@@ -1,7 +1,7 @@
 {
   programs.nixvim.plugins.chadtree = {
     enable = true;
-    view.windowOptions = # lua
+    view.windowOptions.__raw = # lua
       ''
         {
           cursorline = true,
