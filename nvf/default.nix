@@ -166,8 +166,8 @@
         #  See `:help 'list'`
         #  and `:help 'listchars'`
         list = true;
-        expandtab = false;
-        listchars = "tab:», trail:·, nbsp:␣";
+        tabstop = 4;
+        listchars = "tab:»   , trail:·, nbsp:␣";
 
         # Preview substitutions live, as you type!
         inccommand = "split";
