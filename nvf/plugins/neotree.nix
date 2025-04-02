@@ -4,6 +4,7 @@
     keymaps = [
       {
         key = "\\";
+        mode = "n";
         silent = true;
         desc = "NeoTree reveal";
         action = ":Neotree toggle reveal<CR>";
