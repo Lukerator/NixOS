@@ -16,10 +16,5 @@
     splitright = true;
     relativenumber = true;
     clipboard = "unnamedplus";
-    completeopt = [
-      "menu"
-      "menuone"
-      "noselect"
-    ];
   };
 }
