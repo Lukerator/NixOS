@@ -402,112 +402,112 @@ in
         # Jump to the definition of the word under your cursor.
         #  This is where a variable was first declared, or where a function is defined, etc.
         #  To jump back, press <C-t>.
-        {
-          lua = true;
-          mode = "n";
-          key = "gd";
-          desc = "[G]oto [D]efinition";
-          action = #lua
-          ''
-            vim.lsp.buf.definition()
-          '';
-        }
+        # {
+        #   lua = true;
+        #   mode = "n";
+        #   key = "gd";
+        #   desc = "[G]oto [D]efinition";
+        #   action = #lua
+        #   ''
+        #     require("telescope.builtin").lsp_definitions()
+        #   '';
+        # }
         # Find references for the word under your cursor.
-        {
-          lua = true;
-          mode = "n";
-          key = "gr";
-          desc = "[G]oto [R]eferences";
-          action = #lua
-          ''
-            vim.lsp.buf.references()
-          '';
-        }
+        # {
+        #   lua = true;
+        #   mode = "n";
+        #   key = "gr";
+        #   desc = "[G]oto [R]eferences";
+        #   action = #lua
+        #   ''
+        #     require("telescope.builtin").lsp_references()
+        #   '';
+        # }
         # Jump to the implementation of the word under your cursor.
         #  Useful when your language has ways of declaring types without an actual implementation.
-        {
-          lua = true;
-          mode = "n";
-          key = "gI";
-          desc = "[G]oto [I]mplementation";
-          action = #lua
-          ''
-            vim.lsp.buf.implementation()
-          '';
-        }
+        # {
+        #   lua = true;
+        #   mode = "n";
+        #   key = "gI";
+        #   desc = "[G]oto [I]mplementation";
+        #   action = #lua
+        #   ''
+        #     require("telescope.builtin").lsp_implementations()
+        #   '';
+        # }
         # Jump to the type of the word under your cursor.
         #  Useful when you're not sure what type a variable is and you want to see
         #  the definition of its *type*, not where it was *defined*.
-        {
-          lua = true;
-          mode = "n";
-          key = "<leader>D";
-          desc = "[T]ype [D]efinition";
-          action = #lua
-          ''
-            vim.lsp.buf.type_definition()
-          '';
-        }
+        # {
+        #   lua = true;
+        #   mode = "n";
+        #   key = "<leader>D";
+        #   desc = "[T]ype [D]efinition";
+        #   action = #lua
+        #   ''
+        #     require("telescope.builtin").lsp_type_definitions()
+        #   '';
+        # }
         # Fuzzy find all the symbols in your current document.
         #  Symbols are things like variables, functions, types, etc.
-        {
-          lua = true;
-          mode = "n";
-          key = "<leader>ds";
-          desc = "[D]ocument [S]ymbols";
-          action = #lua
-          ''
-            require("telescope.builtin").lsp_document_symbols()
-          '';
-        }
+        # {
+        #   lua = true;
+        #   mode = "n";
+        #   key = "<leader>ds";
+        #   desc = "[D]ocument [S]ymbols";
+        #   action = #lua
+        #   ''
+        #     require("telescope.builtin").lsp_document_symbols()
+        #   '';
+        # }
         # Fuzzy find all the symbols in your current workspace.
         #  Similar to document symbols, except searches over your entire project.
-        {
-          lua = true;
-          mode = "n";
-          key = "<leader>ws";
-          desc = "[W]orkspace [S]ymbols";
-          action = #lua
-          ''
-            require("telescope.builtin").lsp_workspace_symbols()
-          '';
-        }
+        # {
+        #   lua = true;
+        #   mode = "n";
+        #   key = "<leader>ws";
+        #   desc = "[W]orkspace [S]ymbols";
+        #   action = #lua
+        #   ''
+        #     require("telescope.builtin").lsp_workspace_symbols()
+        #   '';
+        # }
         # Rename the variable under your cursor.
         #  Most Language Servers support renaming across files, etc.
-        {
-          lua = true;
-          mode = "n";
-          key = "<leader>rn";
-          desc = "[R]ename";
-          action = #lua
-          ''
-            vim.lsp.buf.rename()
-          '';
-        }
+        # {
+        #   lua = true;
+        #   mode = "n";
+        #   key = "<leader>rn";
+        #   desc = "[R]ename";
+        #   action = #lua
+        #   ''
+        #     vim.lsp.buf.rename()
+        #   '';
+        # }
         # Execute a code action, usually your cursor needs to be on top of an error
         # or a suggestion from your LSP for this to activate.
-        {
-          lua = true;
-          mode = [ "n" "x" ];
-          key = "<leader>ca";
-          desc = "[C]ode [A]ction";
-          action = #lua
-          ''
-            vim.lsp.buf.code_action()
-          '';
-        }
+        # {
+        #   lua = true;
+        #   mode = [ "n" "x" ];
+        #   key = "<leader>ca";
+        #   desc = "[C]ode [A]ction";
+        #   action = #lua
+        #   ''
+        #     vim.lsp.buf.code_action()
+        #   '';
+        # }
         # WARN: This is not Goto Definition, this is Goto Declaration.
         #  For example, in C this would take you to the header.
-        {
-          lua = true;
-          mode = "n";
-          key = "gD";
-          desc = "[G]oto [D]eclaration";
-          action = #lua
-          ''
-            vim.lsp.buf.declaration()
-          '';
-        }
+        # {
+        #   lua = true;
+        #   mode = "n";
+        #   key = "gD";
+        #   desc = "[G]oto [D]eclaration";
+        #   action = #lua
+        #   ''
+        #     vim.lsp.buf.declaration()
+        #   '';
+        # }
       ];
 
       # [[ Basic Autocommands ]]
