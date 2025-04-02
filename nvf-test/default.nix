@@ -1,5 +1,5 @@
 {
-  programs.nvf = {
-    enable = true;
-  };
+  imports = [
+    ./settings
+  ];
 }
