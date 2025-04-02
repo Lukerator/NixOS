@@ -160,11 +160,7 @@
         #  See `:help 'list'`
         #  and `:help 'listchars'`
         list = true;
-        listchars = {
-          tab = "» ";
-          trail = "·";
-          nbsp = "␣";
-        };
+        listchars = lib.mkLuaInline "{ tab = '» ', trail = '·', nbsp = '␣' }";
 
         # Preview substitutions live, as you type!
         inccommand = "split";
