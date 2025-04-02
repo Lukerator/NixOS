@@ -326,11 +326,11 @@ in
         setupOpts = {
           delay = 0;
           icons = lib.mkMerge [
-            (mkIf nerd_fonts {
+            (lib.mkIf nerd_fonts {
               mappings = true;
               keys = {};
             })
-            (mkIf !nerd_fonts {
+            (lib.mkIf !nerd_fonts {
               mappings = false;
               keys = {
                 Up = "<Up>";
