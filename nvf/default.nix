@@ -286,11 +286,11 @@
 
       # To check the current status of your plugins, run
       #   :Lazy
-      extraPlugins = with pkgs.vimPlugins; [
-        {
+      extraPlugins = with pkgs.vimPlugins; {
+        vim-sleuth = {
           package = vim-sleuth;
-        }
-      ];
+        };
+      };
     };
   };
 }
