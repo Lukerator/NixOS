@@ -409,7 +409,7 @@ in
           desc = "[G]oto [D]efinition";
           action = #lua
           ''
-            require("telescope.builtin").lsp_definitions()
+            vim.lsp.buf.definition()
           '';
         }
         # Find references for the word under your cursor.
@@ -420,7 +420,7 @@ in
           desc = "[G]oto [R]eferences";
           action = #lua
           ''
-            require("telescope.builtin").lsp_references()
+            vim.lsp.buf.references()
           '';
         }
         # Jump to the implementation of the word under your cursor.
@@ -432,7 +432,7 @@ in
           desc = "[G]oto [I]mplementation";
           action = #lua
           ''
-            require("telescope.builtin").lsp_implementations()
+            vim.lsp.buf.implementation()
           '';
         }
         # Jump to the type of the word under your cursor.
@@ -445,7 +445,7 @@ in
           desc = "[T]ype [D]efinition";
           action = #lua
           ''
-            require("telescope.builtin").lsp_type_definitions()
+            vim.lsp.buf.type_definition()
           '';
         }
         # Fuzzy find all the symbols in your current document.
