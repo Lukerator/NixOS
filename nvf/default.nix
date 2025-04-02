@@ -1,4 +1,8 @@
 { lib, pkgs, ... }:
+let
+  # Set to true if you have a Nerd Font installed and selected in the terminal
+  nerd_fonts = false;
+in
 {
   /*
     =====================================================================
@@ -92,6 +96,7 @@
   imports = [
 
   ];
+
   programs.nvf = {
 
     # Enables the nvf program
@@ -116,9 +121,7 @@
         #  NOTE: Must happen before plugins are loaded (otherwise wrong leader will be used)
         mapleader = " ";
         maplocalleader = " ";
-
-        # Set to true if you have a Nerd Font installed and selected in the terminal
-        have_nerd_font = false;
+        have_nerd_font = nerd_fonts;
       };
 
       # [[ Setting options ]]
@@ -181,6 +184,7 @@
         # instead raise a dialog asking if you wish to save the current file(s)
         # See `:help 'confirm'`
         confirm = true;
+
       };
 
       # [[ Basic Keymaps ]]
@@ -257,6 +261,7 @@
         # { mode = "n"; key = "<C-S-l>"; action = "<C-w>L"; desc = "Move window to the right"; }
         # { mode = "n"; key = "<C-S-j>"; action = "<C-w>J"; desc = "Move window to the bottom"; }
         # { mode = "n"; key = "<C-S-k>"; action = "<C-w>K"; desc = "Move window to the top";}
+
       ];
 
       # [[ Basic Autocommands ]]
@@ -269,6 +274,7 @@
           clear = true;
         }
       ];
+
       autocmds = [
         # Highlight when yanking (copying) text
         #  Try it with `yap` in normal mode
@@ -284,11 +290,68 @@
 
       # [[ Configure and install plugins ]]
 
-      # To check the current status of your plugins, run
-      #   :Lazy
+      # This is different from the normal neovim because plugins
+      # can be installed both from NixPkgs and from NVF
+
+      # NOTE: Here is where you install your NixPkgs plugins.
+
+      # NOTE: Plugins can be also added from github, either through lib.fetchFromGitHub or
+      # with a flake like https://github.com/developing-today-forks/nixpkgs-vim-extra-plugins
       extraPlugins = with pkgs.vimPlugins; {
         vim-sleuth = {
           package = vim-sleuth;
+          # Use `setup = "require('').setup()" to configure a plugin, forcing the plugin to be loaded.`
+          # You can also use `after = [""]` to place the plugin configuration after another plugin
+        };
+      };
+
+      # Here is a more advanced example where we pass configuration options to `gitsigns.nvim`.
+
+      # See `:help gitsigns` to understand what the configuration keys do
+      git.gitsigns = {
+        # Adds git related signs to the gutter, as well as utilities for managing changes
+        enable = true;
+        setupOpts = {
+          signs = {
+            add.text = "+";
+            change.text = "~";
+            delete.text = "_";
+            topdelete.text = "‾";
+            changedelete.text = "~";
+          };
+        };
+      };
+      binds.whichKey = {
+        enable = true;
+        setupOpts = {
+          delay = 0;
+          icons = lib.mkMerge [
+            (mkIf nerd_fonts {
+              mappings = true;
+              keys = {};
+            })
+            (mkIf !nerd_fonts {
+              mappings = false;
+              keys = {
+                Up = "<Up>";
+                Down = "<Down>";
+                Left = "<Left>";
+                Right = "<Right>";
+                C = "<C-…>";
+                M = "<M-…>";
+                D = "<D-…>";
+                S = "<S-…>";
+                CR = "<CR>";
+                Esc = "<Esc>";
+                ScrollWheelDown = "<ScrollWheelDown>";
+                ScrollWheelUp = "<ScrollWheelUp>";
+                NL = "<NL>";
+                BS = "<BS>";
+                Space = "<Space>";
+                Tab = "<Tab>";
+              };
+            })
+          ];
         };
       };
     };
