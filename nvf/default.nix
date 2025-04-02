@@ -31,6 +31,7 @@ in
 
       Kickstart.nvf is a starting point for your own configuration.
 
+
         The goal is that you can read every line of code, top-to-bottom, understand
         what your configuration is doing, and modify it to suit your needs.
 
@@ -48,7 +49,7 @@ in
         - :help lua-guide
         - (or HTML version): https://neovim.io/doc/user/lua-guide.html
         - (Nix tutorial): https://nix.dev/tutorials/first-steps/
-
+        - (NVF documentation): https://notashelf.github.io/nvf/options.html
       Kickstart Guide:
 
         TODO: The very first thing you should do is to run the command `:Tutor` in Neovim.
@@ -92,9 +93,22 @@ in
 
       P.S. You can delete this when you're done too. It's your config now! :)
   */
-
   imports = [
+    # Here are some example plugins that I've included in the Kickstart repository.
+    # Uncomment any of the lines below to enable them.
 
+    # ./plugins/autopairs.nix
+    # ./plugins/debug.nix
+    # ./plugins/gitsigns.nix
+    # ./plugins/indentline.nix
+    # ./plugins/lint.nix
+    # ./plugins/neotree.nix
+
+    # NOTE: The import below can automatically add your own plugins, configuration, etc from `./plugins/custom/*.nix`
+    #    This is the easiest way to modularize your config.
+
+    # Uncomment the following line and add your plugins to `./plugins/custom/` to get going
+    # ./plugins/custom.nix
   ];
 
   programs.nvf = {
@@ -196,7 +210,7 @@ in
         {
           mode = "n";
           key = "<esc>";
-          action = "<cmd>nohlsearch<CR>";
+          action = ":nohlsearch<CR>";
         }
 
         # Diagnostic keymaps
@@ -222,10 +236,10 @@ in
         }
 
         # TIP: Disable arrow keys in normal mode
-        # { mode = "n"; key = "<Left>"; action = "<cmd>echo 'Use h to move!!'"; }
-        # { mode = "n"; key = "<Right>"; action = "<cmd>echo 'Use l to move!!'"; }
-        # { mode = "n"; key = "<Up>"; action = "<cmd>echo 'Use k to move!!'"; }
-        # { mode = "n"; key = "<Down>"; action = "<cmd>echo 'Use j to move!!'"; }
+        # { mode = "n"; key = "<Left>"; action = ":echo 'Use h to move!!'"; }
+        # { mode = "n"; key = "<Right>"; action = ":echo 'Use l to move!!'"; }
+        # { mode = "n"; key = "<Up>"; action = ":echo 'Use k to move!!'"; }
+        # { mode = "n"; key = "<Down>"; action = ":echo 'Use j to move!!'"; }
 
         # Keybinds to make split navigation easier.
         # Use CTRL+<hjkl> to switch between windows
@@ -262,6 +276,238 @@ in
         # { mode = "n"; key = "<C-S-j>"; action = "<C-w>J"; desc = "Move window to the bottom"; }
         # { mode = "n"; key = "<C-S-k>"; action = "<C-w>K"; desc = "Move window to the top";}
 
+        # For the Telescope plugin
+        # See `:help telescope.builtin`
+        {
+          mode = "n";
+          silent = true;
+          key = "<leader>sh";
+          desc = "[S]earch [H]elp";
+          action = ":Telescope help_tags<CR>";
+        }
+        {
+          mode = "n";
+          silent = true;
+          key = "<leader>sk";
+          desc = "[S]earch [K]eymaps";
+          action = ":Telescope keymaps<CR>";
+        }
+        {
+          mode = "n";
+          silent = true;
+          key = "<leader>sf";
+          desc = "[S]earch [F]iles";
+          action = ":Telescope find_files<CR>";
+        }
+        {
+          mode = "n";
+          silent = true;
+          key = "<leader>ss";
+          desc = "[S]earch [S]elect Telescope";
+          action = ":Telescope builtin<CR>";
+        }
+        {
+          mode = "n";
+          silent = true;
+          key = "<leader>sw";
+          desc = "[S]earch current [W]ord";
+          action = ":Telescope grep_string<CR>";
+        }
+        {
+          mode = "n";
+          silent = true;
+          key = "<leader>sg";
+          desc = "[S]earch by [G]rep";
+          action = ":Telescope live_grep<CR>";
+        }
+        {
+          mode = "n";
+          silent = true;
+          key = "<leader>sd";
+          desc = "[S]earch [D]iagnostics";
+          action = ":Telescope diagnostics<CR>";
+        }
+        {
+          mode = "n";
+          silent = true;
+          key = "<leader>sr";
+          desc = "[S]earch [R]esume";
+          action = ":Telescope resume<CR>";
+        }
+        {
+          mode = "n";
+          silent = true;
+          key = "<leader>s.";
+          desc = "[S]earch Recent Files ('.' for repeat)";
+          action = ":Telescope oldfiles<CR>";
+        }
+        {
+          mode = "n";
+          silent = true;
+          key = "<leader><leader>";
+          desc = "[S]earch [B]uffers";
+          action = ":Telescope buffers<CR>";
+        }
+        # Slightly advanced example of overriding default behavior and theme
+        {
+          lua = true;
+          mode = "n";
+          silent = true;
+          key = "<leader>/";
+          desc = "[/] Fuzzily search in current buffer";
+          action = #lua
+          ''
+            function()
+              require('telescope.builtin').current_buffer_fuzzy_find(
+                require('telescope.themes').get_dropdown {
+                  winblend = 10,
+                  previewer = false
+                }
+              )
+            end
+          '';
+        }
+        # See `:help telescope.builtin.live_grep()` for information about particular keys
+        {
+          lua = true;
+          mode = "n";
+          silent = true;
+          key = "<leader>s/";
+          desc = "[S]earch [/] in Open Files";
+          action = #lua
+          ''
+            function()
+              require('telescope.builtin').live_grep {
+                grep_open_files = true,
+                prompt_title = "Live grep in open files"
+              }
+            end
+          '';
+        }
+        {
+          lua = true;
+          mode = "n";
+          silent = true;
+          key = "<leader>sn";
+          desc = "[S]earch [N]eovim Files";
+          action = #lua
+          ''
+            function()
+              require('telescope.builtin').find_files { cwd = vim.fn.stdpath 'config'}
+            end
+          '';
+        }
+        
+        # LSP keymaps
+        # Jump to the definition of the word under your cursor.
+        #  This is where a variable was first declared, or where a function is defined, etc.
+        #  To jump back, press <C-t>.
+        {
+          lua = true;
+          mode = "n";
+          key = "gd";
+          desc = "[G]oto [D]efinition";
+          action = #lua
+          ''
+            require("telescope.builtin").lsp_definitions()
+          '';
+        }
+        # Find references for the word under your cursor.
+        {
+          lua = true;
+          mode = "n";
+          key = "gr";
+          desc = "[G]oto [R]eferences";
+          action = #lua
+          ''
+            require("telescope.builtin").lsp_references()
+          '';
+        }
+        # Jump to the implementation of the word under your cursor.
+        #  Useful when your language has ways of declaring types without an actual implementation.
+        {
+          lua = true;
+          mode = "n";
+          key = "gI";
+          desc = "[G]oto [I]mplementation";
+          action = #lua
+          ''
+            require("telescope.builtin").lsp_implementations()
+          '';
+        }
+        # Jump to the type of the word under your cursor.
+        #  Useful when you're not sure what type a variable is and you want to see
+        #  the definition of its *type*, not where it was *defined*.
+        {
+          lua = true;
+          mode = "n";
+          key = "<leader>D";
+          desc = "[T]ype [D]efinition";
+          action = #lua
+          ''
+            require("telescope.builtin").lsp_type_definitions()
+          '';
+        }
+        # Fuzzy find all the symbols in your current document.
+        #  Symbols are things like variables, functions, types, etc.
+        {
+          lua = true;
+          mode = "n";
+          key = "<leader>ds";
+          desc = "[D]ocument [S]ymbols";
+          action = #lua
+          ''
+            require("telescope.builtin").lsp_document_symbols()
+          '';
+        }
+        # Fuzzy find all the symbols in your current workspace.
+        #  Similar to document symbols, except searches over your entire project.
+        {
+          lua = true;
+          mode = "n";
+          key = "<leader>ws";
+          desc = "[W]orkspace [S]ymbols";
+          action = #lua
+          ''
+            require("telescope.builtin").lsp_workspace_symbols()
+          '';
+        }
+        # Rename the variable under your cursor.
+        #  Most Language Servers support renaming across files, etc.
+        {
+          lua = true;
+          mode = "n";
+          key = "<leader>rn";
+          desc = "[R]ename";
+          action = #lua
+          ''
+            vim.lsp.buf.rename()
+          '';
+        }
+        # Execute a code action, usually your cursor needs to be on top of an error
+        # or a suggestion from your LSP for this to activate.
+        {
+          lua = true;
+          mode = [ "n" "x" ];
+          key = "<leader>ca";
+          desc = "[C]ode [A]ction";
+          action = #lua
+          ''
+            vim.lsp.buf.code_action()
+          '';
+        }
+        # WARN: This is not Goto Definition, this is Goto Declaration.
+        #  For example, in C this would take you to the header.
+        {
+          lua = true;
+          mode = "n";
+          key = "gD";
+          desc = "[G]oto [D]eclaration";
+          action = #lua
+          ''
+            vim.lsp.buf.declaration()
+          '';
+        }
       ];
 
       # [[ Basic Autocommands ]]
@@ -272,6 +518,11 @@ in
           enable = true;
           name = "kickstart-highlight-yank";
           clear = true;
+        }
+        {
+          enable = true;
+          name = "kickstart-lsp-highlight";
+          clear = false;
         }
       ];
 
@@ -284,7 +535,29 @@ in
           event = [ "TextYankPost" ];
           group = "kickstart-highlight-yank";
           desc = "Highlight when yanking (copying) text";
-          callback = lib.generators.mkLuaInline "function() vim.highlight.on_yank() end";
+          callback = lib.generators.mkLuaInline #lua
+            "function() vim.highlight.on_yank() end";
+        }
+        {
+          enable = true;
+          group = "kickstart-lsp-highlight";
+          event = [ "CursorHold" "CursorHoldI" ];
+          callback = lib.generators.mkLuaInline #lua
+            "vim.lsp.buf.document_highlight";
+        }
+        {
+          enable = true;
+          group = "kickstart-lsp-highlight";
+          event = [ "CursorMoved" "CursorMovedI" ];
+          callback = lib.generators.mkLuaInline #lua
+            "vim.lsp.buf.clear_references";
+        }
+        {
+          enable = true;
+          event = [ "LspDetach" ];
+          group = "kickstart-lsp-highlight";
+          callback = lib.generators.mkLuaInline #lua
+            "function(event) vim.lsp.buf.clear_references() vim.api.nvim_clear_autocmds({ group = 'kickstart-lsp-highlight', buffer = event.buf }) end";
         }
       ];
 
@@ -330,7 +603,7 @@ in
               mappings = true;
               keys = {};
             })
-            (lib.mkIf (!nerd_fonts) {
+            (lib.mkIf !nerd_fonts {
               mappings = false;
               keys = {
                 Up = "<Up>";
@@ -364,6 +637,164 @@ in
               };
             })
           ];
+        };
+      };
+      visuals.nvim-web-devicons.enable = nerd_fonts;
+      # NOTE: NVF plugins meet their dependencies automatically, NixPkgs plugins do not.
+      telescope = {
+        # Telescope is a fuzzy finder that comes with a lot of different things that
+        # it can fuzzy find! It's more than just a "file finder", it can search
+        # many different aspects of Neovim, your workspace, LSP, and more!
+
+        # The easiest way to use Telescope, is to start by doing something like:
+        # :Telescope help_tags
+
+        # After running this command, a window will open up and you're able to
+        # type in the prompt window. You'll see a list of `help_tags` options and
+        # a corresponding preview of the help.
+
+        # Two important keymaps to use while in Telescope are:
+        #  - Insert mode: <c-/>
+        #  - Normal mode: ?
+
+        # This opens a window that shows you all of the keymaps for the current
+        # Telescope picker. This is really useful for discoveering what Telescope
+        # can do as well as how to actually do it!
+        enable = true;
+      };
+      # Main LSP Configuration
+      # This is very different from the default Neovim configuration as NVF automates
+      # a lot of things that the users usually need to configure manually
+      lsp = {
+        # Brief aside: **What is LSP?**
+
+        # LSP is an initialism you've probably heard, but might not understand what it is.
+        
+        # LSP stands for Language Server Protocol. It's a protocol that helps editors
+        # and language tooling communicate in a standardized fashion.
+
+        # In general, you have a "server" which is some tool built to understand a particular
+        # language (such as `gopls`, `lua_ls`, `rust_analyzer`, etc.). These Language Servers
+        # (sometimes called LSP servers, but that's kind of like ATM Machine) are standalone
+        # processes that communicate with some "client" - in this case, Neovim!
+
+        # LSP provides Neovim with features like:
+        #  - Go to definition
+        #  - Find references
+        #  - Autocompletion
+        #  - Symbol Search
+        #  - and more!
+
+        # Thus, Language Servers are external tools that must be installed separately from
+        # Neovim. This is where `mason` and related plugins come into play.
+
+        # If you're wondering about lsp vs treesitter, you can check out the wonderfully
+        # and elegantly composed help section, `:help lsp-vs-treesitter`
+        enable = true;
+      };
+      languages = {
+        enableLSP = true;
+        enableFormat = true;
+        enableTreesitter = true;
+
+        # Enable the following language servers
+        #  Feel free to add/remove any LSPs that you want here. They will automatically be installed.
+        lua.enable = true;
+      };
+      formatter.conform-nvim = {
+        enable = true;
+        setupOpts = {
+          notify_on_error = false;
+          format_on_save = {
+            timeout_ms = 500;
+            lsp_format = 'fallback';
+          };
+          formatters_by_ft = {
+            lua = [ "stylua" ];
+            # Conform can also run multiple formatters sequentially
+            # python = [ "isort", "black" ];
+          };
+        };
+      };
+      # Useful status updates for LSP.
+      visuals.fidget-nvim.enable = true;
+
+      # Autocompletion
+      snippets.luasnip.enable = true;
+      autocomplete.nvim-cmp = {
+        enable = true;
+        setupOpts.completion.completeopt = "menu,menuone,noinsert";
+        sources = {
+          nvim-cmp = null;
+          path = [ "path" ];
+          buffer = [ "buffer" ];
+          luasnip = [ "luasnip" ];
+          nvim_lsp = [ "nvim_lsp" ];
+        };
+        mappings = {
+          # For an understanding of why these mappings were
+          # chosen, you will need to read `:help ins-completion`
+
+          # No, but seriously. Please read `:help ins-completion`, it is really good!
+
+          next = "<C-n>";
+          previous = "<C-p>";
+
+          # Scroll the documentation window [b]ack / [f]orward
+          scrollDocsUp = "<C-f>";
+          scrollDocsDown = "<C-b>";
+
+          # Accept ([y]es) the completion.
+          #  This will auto-import if your LSP supports it.
+          #  This will expand snippets if the LSP sent a snippet.
+          confirm = "<C-y>";
+
+          # Manually trigger a completion from nvim-cmp.
+          #   Generally you don't need this, because nvim-cmp will display
+          #   completions whenever it has completion options available.
+          complete = "<C-Space>";
+
+          # If you prefer more traditional completion keymaps,
+          # you can uncomment the following lines
+          # confirm = "<CR>";
+          # next = "<Tab>";
+          # previous = "<S-Tab>";
+        };
+      };
+
+      # You can easily change to a different colorscheme.
+      # Just change the name of the colorscheme option below.
+
+      # If you want to see what colorschemes are already installed, you can use `:Telescope colorscheme`.
+      theme = {
+        enable = true;
+        name = "tokyonight";
+      };
+
+      # Highlight todo, notes, etc in comments
+      notes.todo-comments.enable = true;
+
+      mini = {
+        # Collection of various small independent plugins/modules
+        ai = {
+          enable = true;
+          setupOpts.n_lines = 500;
+        };
+        surround.enable = true;
+      };
+
+      treesitter = {
+        setupOpts = {
+          ensure_installed = [ "bash", "c", "diff", "html", "lua", "luadoc", "markdown", "markdown_inline", "query", "vim", "vimdoc" ];
+          auto_install = true;
+        };
+        highlight = {
+          enable = true;
+          additionalVimRegexHighlighting = [ "ruby" ];
+        };
+        indent = {
+          enable = true;
+          disable = [ "ruby" ];
         };
       };
     };
