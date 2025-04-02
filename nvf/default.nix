@@ -97,12 +97,12 @@ in
     # Here are some example plugins that I've included in the Kickstart repository.
     # Uncomment any of the lines below to enable them.
 
-    # ./plugins/autopairs.nix
-    # ./plugins/debug.nix
+    ./plugins/autopairs.nix
+    ./plugins/debug.nix
     # ./plugins/gitsigns.nix
-    # ./plugins/indentline.nix
+    ./plugins/indentline.nix
     # ./plugins/lint.nix
-    # ./plugins/neotree.nix
+    ./plugins/neotree.nix
 
     # NOTE: The import below can automatically add your own plugins, configuration, etc from `./plugins/custom/*.nix`
     #    This is the easiest way to modularize your config.
