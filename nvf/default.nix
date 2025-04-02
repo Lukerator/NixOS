@@ -161,9 +161,9 @@
         #  and `:help 'listchars'`
         list = true;
         listchars = [
-          "tab = '» '"
-          "trail = '·'"
-          "nbsp = '␣'"
+          tab = '» '
+          trail = '·'
+          nbsp = '␣'
         ];
 
         # Preview substitutions live, as you type!
