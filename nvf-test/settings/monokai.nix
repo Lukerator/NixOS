@@ -4,8 +4,8 @@
     name = "base16";
     base16-colors = {
       base00 = "#19181a";  # dark
-      base01 = "#221f22";  # black
-      base02 = "#403e41";  # dimmed5
+      base01 = "#403e41";  # dimmed5
+      base02 = "#221f22";  # black
       base03 = "#5b595c";  # dimmed4
       base04 = "#727072";  # dimmed3
       base05 = "#fcfcfa";  # white (text)
