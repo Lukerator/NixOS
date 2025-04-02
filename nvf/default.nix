@@ -99,6 +99,17 @@
 
     settings.vim = {
 
+      # Sync clipboard between OS and Neovim.
+      #  Schedule the setting after `UiEnter` because it can increase startup-time.
+      #  Remove this option if you want your OS clipboard to remain independent.
+      #  See `:help 'clipboard'`
+      luaConfigRC = # lua
+        ''
+          vim.schedule(function()
+            vim.opt.clipboard = 'unnamedplus'
+          end)
+        '';
+
       globals = {
         # Set <space> as the leader key
         # See `:help mapleader`
@@ -127,11 +138,6 @@
 
         # Don't show the mode, since it's already in the status line
         showmode = false;
-
-        # Sync clipboard between OS and Neovim.
-        #  Remove this option if you want your OS clipboard to remain independent.
-        #  See `:help 'clipboard'`
-        clipboard = "unnamedplus";
 
         # Enable break indent
         breakindent = true;
