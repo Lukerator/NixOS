@@ -726,10 +726,10 @@ in
         setupOpts.completion.completeopt = "menu,menuone,noinsert";
         sources = {
           nvim-cmp = null;
-          path = [ "path" ];
-          buffer = [ "buffer" ];
-          luasnip = [ "luasnip" ];
-          nvim_lsp = [ "nvim_lsp" ];
+          path = "[path]";
+          buffer = "[buffer]";
+          luasnip = "[luasnip]";
+          nvim_lsp = "[nvim_lsp]";
         };
         mappings = {
           # For an understanding of why these mappings were
