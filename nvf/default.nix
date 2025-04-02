@@ -275,9 +275,9 @@
         #  See `:help vim.highlight.on_yank()`
         {
           enable = true;
-          event = "TextYankPost";
-          desc = "Highlight when yanking (copying) text";
+          event = [ "TextYankPost" ];
           group = "kickstart-highlight-yank";
+          desc = "Highlight when yanking (copying) text";
           callback = lib.generators.mkLuaInline "function() vim.highlight.on_yank() end";
         }
       ];
