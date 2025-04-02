@@ -769,6 +769,7 @@ in
       theme = {
         enable = true;
         name = "tokyonight";
+        style = "night";
       };
 
       # Highlight todo, notes, etc in comments
