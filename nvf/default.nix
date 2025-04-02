@@ -1,7 +1,7 @@
 { lib, pkgs, ... }:
 let
   # Set to true if you have a Nerd Font installed and selected in the terminal
-  nerd_fonts = false;
+  nerd_fonts = true;
 in
 {
   /*
