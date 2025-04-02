@@ -1,3 +1,3 @@
 {
-  programs.nvf.config.vim.visuals.indent-blankline.enable = true;
+  programs.nvf.settings.vim.visuals.indent-blankline.enable = true;
 }
