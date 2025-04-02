@@ -728,7 +728,7 @@ in
           nvim-cmp = null;
           path = "[path]";
           buffer = "[buffer]";
-          luasnip = "[luasnip]";
+          luasnip = "[LuaSnip]";
           nvim_lsp = "[nvim_lsp]";
         };
         mappings = {
