@@ -22,7 +22,7 @@
       nixpkgs,
       nixvim,
       stylix,
-      # nvf,
+      nvf,
       ...
     }@inputs:
     let
@@ -47,12 +47,11 @@
         inherit pkgs;
         modules = [
           ./home
-          # ./nvf
-          # ./nvf-test
+          ./nvf
           ./stylix
-          ./nixvim
+          # ./nixvim
           ./stylix/home-targets.nix
-          # nvf.homeManagerModules.default
+          nvf.homeManagerModules.default
           stylix.homeManagerModules.stylix
           nixvim.homeManagerModules.nixvim
         ];
