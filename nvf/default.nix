@@ -603,7 +603,7 @@ in
               mappings = true;
               keys = {};
             })
-            (lib.mkIf !nerd_fonts {
+            (lib.mkIf (!nerd_fonts) {
               mappings = false;
               keys = {
                 Up = "<Up>";
