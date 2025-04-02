@@ -729,7 +729,7 @@ in
           path = "[path]";
           buffer = "[buffer]";
           luasnip = "[LuaSnip]";
-          nvim_lsp = "[nvim_lsp]";
+          nvim_lsp = "[LSP]";
         };
         mappings = {
           # For an understanding of why these mappings were
