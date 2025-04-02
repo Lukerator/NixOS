@@ -103,7 +103,7 @@
       #  Schedule the setting after `UiEnter` because it can increase startup-time.
       #  Remove this option if you want your OS clipboard to remain independent.
       #  See `:help 'clipboard'`
-      luaConfigRC = # lua
+      luaConfigPost = # lua
         ''
           vim.schedule(function()
             vim.opt.clipboard = 'unnamedplus'
