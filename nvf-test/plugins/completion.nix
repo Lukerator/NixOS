@@ -1,5 +1,5 @@
 {
-  programs.nvf.settings.vim.blink-cmp = {
+  programs.nvf.settings.vim.autocomplete.blink-cmp = {
     enable = true;
     friendly-snippets.enable = true;
     setupOpts = {
