@@ -277,12 +277,7 @@
           enable = true;
           desc = "Highlight when yanking (copying) text";
           group = "kickstart-highlight-yank";
-          callback = # lua
-            ''
-              function()
-                vim.highlight.on_yank()
-              end
-            '';
+          callback = lib.generators.mkLuaInline "function() vim.highlight.on_yank() end";
         }
       ];
 
