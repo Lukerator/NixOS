@@ -3,7 +3,7 @@
   home.packages = [
     (inputs.nvf.lib.neovimConfiguration {
       inherit pkgs;
-      modules = [ ../../nvf ];
+      modules = [ ../nvf ];
     }).neovim
   ];
 }
