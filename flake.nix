@@ -47,7 +47,7 @@
         inherit pkgs;
         modules = [
           ./home
-          ./nvf
+          ./kickstart.nvf
           ./stylix
           # ./nixvim
           ./stylix/home-targets.nix

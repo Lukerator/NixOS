@@ -3,7 +3,7 @@
     filetree.neo-tree.enable = true;
     keymaps = [
       {
-        key = "\\";
+        key = "<leader>n";
         mode = "n";
         silent = true;
         desc = "NeoTree reveal";
