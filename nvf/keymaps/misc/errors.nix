@@ -1,5 +1,5 @@
 {
-  config.vim.keymaps = [
+  /* config.vim.keymaps = [
     {
       mode = [
         "n" # Makes the keymap available in normal mode
@@ -10,5 +10,5 @@
       desc = "Show [C]ode [A]ctions"; # Sets the description for which-key
       action = "vim.lsp.buf.code_action()"; # Opens code actions for the current lines
     }
-  ];
+  ]; */
 }
