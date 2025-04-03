@@ -1,6 +1,6 @@
 {
   imports = [
-    ./errors.nix
+    # ./errors.nix
     ./movement.nix
     ./search.nix
     ./terminal.nix
