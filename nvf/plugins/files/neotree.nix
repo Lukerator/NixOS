@@ -1,3 +1,3 @@
 {
-  config.vim.filetree.neo-tree.enable = true;
+  config.vim.filetree.neo-tree.enable = true; # Enables NeoTree
 }

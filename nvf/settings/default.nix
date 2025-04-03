@@ -1,8 +1,8 @@
 {
   imports = [
     ./extra.nix
-    ./leader.nix
+    ./globals.nix
+    ./highlight.nix
     ./options.nix
-    ./theme.nix
   ];
 }
