@@ -49,7 +49,8 @@
           ./home
           # ./kickstart.nvf
           ./stylix
-          ./nixvim
+          ./.old/nixvimold
+          # ./nixvim
           ./stylix/home-targets.nix
           nvf.homeManagerModules.default
           stylix.homeManagerModules.stylix
