@@ -1,7 +1,7 @@
 {
   imports = [
     ./keymaps
-    ./misc
     ./plugins
+    ./settings
   ];
 }
