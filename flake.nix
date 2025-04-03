@@ -45,14 +45,14 @@
       };
       homeConfigurations.luke = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
+        extraSpecialArgs = { inherit inputs; };
         modules = [
           ./home
           # ./kickstart.nvf
           ./stylix
           # ./.old/nixvimold
-          ./nixvim
+          # ./nixvim
           ./stylix/home-targets.nix
-          nvf.homeManagerModules.default
           stylix.homeManagerModules.stylix
           nixvim.homeManagerModules.nixvim
         ];
