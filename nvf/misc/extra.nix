@@ -1,5 +1,5 @@
 {
-  programs.nvf.settings.vim.luaConfigPost = ''
+  config.vim.luaConfigPost = ''
     vim.schedule(function()
       vim.opt.clipboard = "unnamedplus"
     end)

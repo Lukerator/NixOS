@@ -1,5 +1,5 @@
 {
-  programs.nvf.settings.vim.keymaps = [
+  config.vim.keymaps = [
     {
       mode = "t"; # Makes the keymap available in terminal mode
       key = "<Esc><Esc>"; # Sets the keymap to Escape twice

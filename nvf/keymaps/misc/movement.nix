@@ -1,5 +1,5 @@
 {
-  programs.nvf.settings.vim.keymaps = [
+  config.vim.keymaps = [
     {
       mode = "n"; # Makes the keymap available in normal mode
       key = "<C-h>"; # Sets the keymap to Ctrl + h

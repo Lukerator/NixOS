@@ -1,5 +1,5 @@
 {
-  programs.nvf.settings.vim.telescope.mappings = {
+  config.vim.telescope.mappings = {
     open = "<leader>st";
     resume = "<leader>sr";
     buffers = "<leader>sb";

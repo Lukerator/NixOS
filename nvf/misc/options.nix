@@ -1,5 +1,5 @@
 {
-  programs.nvf.settings.vim.options = {
+  config.vim.options = {
     mouse = "a"; # Enable mouse support
     list = false; # Disables display of whitespace characters
     number = true; # Displays line numbers
