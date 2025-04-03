@@ -13,7 +13,7 @@
         enable = true; # Enables the autocmd
         group = "HighlightYank"; # Sets the group of the autocmd
         event = [ "TextYankPost" ]; # Sets the event of the autocmd
-        command = lib.generators.mkLuaInline "lua vim.highlight.on_yank()"; # Sets the command of the autocmd
+        callback = lib.generators.mkLuaInline "lua vim.highlight.on_yank()"; # Sets the command of the autocmd
       }
     ];
   };
