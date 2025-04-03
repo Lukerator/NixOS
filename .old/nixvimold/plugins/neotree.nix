@@ -11,7 +11,7 @@
     };
     keymaps = [
       {
-        key = "<C-n>";
+        key = "<leader>n";
         mode = [ "n" ];
         action = "<cmd>Neotree float %:p:h toggle reveal<CR>";
       }

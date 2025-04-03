@@ -10,6 +10,7 @@
     ./neotree.nix
     ./telescope.nix
     ./treesitter.nix
+    ./ufo.nix
     ./simple.nix
   ];
 }
