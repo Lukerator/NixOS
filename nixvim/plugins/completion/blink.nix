@@ -19,7 +19,7 @@
         sources = {
           providers = {
             codeium = {
-              async = false;
+              async = true;
               enabled = true;
               max_items = 10;
               name = "codeium";
