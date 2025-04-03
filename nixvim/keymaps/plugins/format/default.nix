@@ -14,7 +14,7 @@
     {
       mode = "n";
       key = "zp";
-      option.desc = "[P]review Fold";
+      options.desc = "[P]review Fold";
       action.__raw = # lua
         ''
           function()
