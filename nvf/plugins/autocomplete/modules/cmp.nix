@@ -2,7 +2,7 @@
   config.vim.autocomplete = {
     enableSharedCmpSources = true;
     nvim-cmp = {
-      enable = true;
+      enable = false;
       setupOpts.completion.completeopt = "";
     };
   };
