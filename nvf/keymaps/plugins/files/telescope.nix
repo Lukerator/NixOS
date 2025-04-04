@@ -19,7 +19,7 @@
         silent = true; # Does not echo the keymap to the cmdline
         desc = "Recent files"; # Sets the descriptiuon for which-key
         key = "<leader><leader>"; # Sets the keymap to Space + Space
-        action = ":Telescope oldfiles"; # Search recent files
+        action = ":Telescope oldfiles<CR>"; # Search recent files
       }
     ];
   };
