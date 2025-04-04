@@ -1,5 +1,5 @@
 {
-  config.vim.autocomplete.blink-cmp.sourceOpts.keymap = {
+  config.vim.autocomplete.blink-cmp.setupOpts.keymap = {
     preset = "none";
       "<CR>" = [ "accept" "fallback" ];
       "<Tab>" = [ "snippet_forward" "select_next" "fallback" ];
