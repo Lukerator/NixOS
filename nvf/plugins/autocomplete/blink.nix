@@ -7,7 +7,7 @@
       friendly-snippets.enable = true;
       sourcePlugins.codeium = {
         enable = true;
-        package = $pkgs.vimPlugins.codeium-nvim;
+        package = ${pkgs.vimPlugins.codeium-nvim};
         module = "blink.compat.source";
       };
       setupOpts = {
