@@ -1,11 +1,14 @@
 {
   config.vim.options = {
     mouse = "a"; # Enable mouse support
+    tabstop = 2; # Sets tabs to be 2 spaces
     list = false; # Disables display of whitespace characters
     number = true; # Displays line numbers
     confirm = true; # Prompt user to save before exiting
     scrolloff = 10; # Scrolls before cursor reaches top/bottom
+    shiftwidth = 2; # Sets the autoindent to 2
     undofile = true; # Enables persistent undo
+    expandtab = true; # Expands tabs into spaces
     showmode = false; # Hides mode in status bar as it will be displayed by lualine
     smartcase = true; # Enables case-sensitive search if there is an uppercase character
     timeoutlen = 300; # Sets timeout for key sequences
