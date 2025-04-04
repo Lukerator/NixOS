@@ -1,4 +1,4 @@
 { pkgs, ... }:
 {
-  config.vim.extraPlugins.floaterm.package = pkgs.vimPlugins.vim-floaterm
+  config.vim.extraPlugins.floaterm.package = pkgs.vimPlugins.vim-floaterm;
 }
