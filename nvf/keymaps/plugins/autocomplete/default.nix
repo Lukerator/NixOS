@@ -1,6 +1,5 @@
 {
   imports = [
     ./blink.nix
-    ./modules
   ];
 }
