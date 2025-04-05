@@ -14,6 +14,7 @@
     lsd
     lua
     lutris
+    mpv
     neovide
     polkit_gnome
     python3
