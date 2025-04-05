@@ -51,7 +51,7 @@
           # ./kickstart.nvf
           ./stylix
           # ./.old/nixvimold
-          # ./nixvim
+          ./nixvim
           ./stylix/home-targets.nix
           stylix.homeManagerModules.stylix
           nixvim.homeManagerModules.nixvim
