@@ -47,6 +47,15 @@
     }
     {
       mode = "n";
+      key = "<leader>lll";
+      action = ":Leet List<CR>";
+      options = {
+        silent = true;
+        desc = "[L]eetCode [L]ist";
+      };
+    }
+    {
+      mode = "n";
       key = "<leader>lre";
       action = ":Leet random difficulty=easy<CR>";
       options = {
@@ -70,6 +79,15 @@
       options = {
         silent = true;
         desc = "[L]eetCode [R]andom [H]ard";
+      };
+    }
+    {
+      mode = "n";
+      key = "<leader>lrr";
+      action = ":Leet random<CR>";
+      options = {
+        silent = true;
+        desc = "[L]eetCode [R]andom";
       };
     }
   ];
