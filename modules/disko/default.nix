@@ -1,7 +1,7 @@
 {
   disko.devices.disk.vdb = {
     type = "disk";
-    device = "/dev/disk/by-id/nvme-HFM001TD3JX013N_CY0CN03761CC1CJ1H";
+    device = "/dev/disk/by-uuid/2e533752-4e64-4054-98d4-0a837ec000f3";
     content = {
       type = "gpt";
       partitions = {
