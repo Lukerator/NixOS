@@ -27,11 +27,7 @@
         ''
           function()
             require("fzf-lua").files {
-              winopts = {
-                preview = {
-                  hidden = "nohidden",
-                },
-              },
+              cmd = "fd --exclude '.*' --type f .",
               prompt = "Search Files (No Hidden)"
             }
           end
