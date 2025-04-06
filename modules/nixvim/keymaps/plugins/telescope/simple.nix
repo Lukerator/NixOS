@@ -29,11 +29,11 @@
     }
     {
       mode = "n";
-      key = "<leader>ss";
+      key = "<leader>sb";
       action = ":Telescope builtin<CR>";
       options = {
         silent = true;
-        desc = "[S]earch [S]elect Telescope";
+        desc = "[S]earch [B]uiltins";
       };
     }
     {

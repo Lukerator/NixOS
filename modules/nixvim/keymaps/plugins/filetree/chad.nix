@@ -1,10 +1,10 @@
 {
   programs.nixvim.keymaps = [
     {
-      key = "<leader>chad";
       mode = "n";
-      action = ":CHADopen<CR>";
+      key = "<leader>chad";
       options.silent = true;
+      action = ":CHADopen<CR>";
     }
   ];
 }
