@@ -11,6 +11,11 @@
         ''
           function()
             require('fzf-lua').files {
+              winopts = {
+                preview = {
+                  hidden = "nohidden",
+                },
+              },
               cwd = "/home/luke/.config/nixos/modules/nixvim",
             }
           end
@@ -27,7 +32,6 @@
         ''
           function()
             require("fzf-lua").files {
-              cmd = "fd --exclude '.*' .",
               prompt = "Search Files (No Hidden)"
             }
           end
