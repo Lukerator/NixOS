@@ -7,6 +7,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
       url = "github:notashelf/nvf";
     };
+    disko = {
+      url = "github:nix-community/disko/latest";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     nixvim = {
       inputs.nixpkgs.follows = "nixpkgs";
       url = "github:nix-community/nixvim";
@@ -22,6 +26,7 @@
       nixpkgs,
       nixvim,
       stylix,
+      disko,
       nvf,
       ...
     }@inputs:
@@ -37,22 +42,24 @@
         inherit system;
         specialArgs = { inherit inputs; };
         modules = [
-          ./system
-          ./stylix
+          ./modules/system
+          ./modules/stylix
+          ./modules/disko
+          disko.nixosModules.disko
           stylix.nixosModules.stylix
-          ./stylix/system-targets.nix
+          ./modules/stylix/system-targets.nix
         ];
       };
       homeConfigurations.luke = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
         extraSpecialArgs = { inherit inputs; };
         modules = [
-          ./home
-          # ./kickstart.nvf
-          ./stylix
-          # ./.old/nixvimold
-          ./nixvim
-          ./stylix/home-targets.nix
+          ./modules/home
+          # ./modules/kickstart.nvf
+          ./modules/stylix
+          # ./modules/.old/nixvimold
+          ./modules/nixvim
+          ./modules/stylix/home-targets.nix
           stylix.homeManagerModules.stylix
           nixvim.homeManagerModules.nixvim
         ];
