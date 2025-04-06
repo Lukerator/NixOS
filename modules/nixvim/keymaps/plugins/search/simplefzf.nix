@@ -20,11 +20,11 @@
     }
     {
       mode = "n";
-      key = "<leader>sa";
+      key = "<leader>sf";
       action = ":FzfLua files<CR>";
       options = {
         silent = true;
-        desc = "[S]earch [F]iles (including hidden)";
+        desc = "[S]earch [F]iles";
       };
     }
     {
