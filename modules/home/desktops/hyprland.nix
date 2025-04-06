@@ -19,6 +19,7 @@
       gestures.workspace_swipe = true;
       monitor = [
         "eDP-1, prefered, auto, 1"
+        "HDMI-A-1, prefered, auto, 1"
       ];
       misc = {
         force_default_wallpaper = 1;
