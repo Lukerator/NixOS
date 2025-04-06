@@ -4,7 +4,7 @@
       mode = "n";
       key = "<leader>uu";
       action = ":UndotreeToggle<CR>";
-      opts = {
+      options = {
         silent = true;
         desc = "Toggle undotree";
       };
