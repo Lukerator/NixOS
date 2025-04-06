@@ -21,18 +21,19 @@
       key = "<leader>sf";
       options = {
         silent = true;
-        desc = "[S]earch [F]iles";
+        desc = "[S]earch [F]iles (Show Hidden)";
       };
       action.__raw = # lua
         ''
           function()
-            require("fzf-lua").files {
-              cmd = "fd --exclude '.*' --type f .",
-              prompt = "Search Files (No Hidden)"
+            require('fzf-lua').files {
+              cmd = "fd --type f .",
+              prompt = "Search Files (Hidden Files)"
             }
           end
         '';
     }
+
     {
       mode = "n";
       key = "<leader>s/";
@@ -67,5 +68,28 @@
           end
         '';
     }
+    {
+      mode = "i";
+      key = "<C-d>";
+      options = {
+        silent = true;
+        desc = "Dictionary completion using fzf";
+      };
+      action.__raw = # lua
+        ''
+          function()
+            local dict_file = "/path/to/your/dictionary.txt"
+            local selected_word = require('fzf-lua').fzf({
+              prompt = "Select a word",
+              cmd = "cat " .. dict_file,
+              fzf_opts = {"--preview", "echo {}"}
+            })
+            if selected_word then
+              vim.api.nvim_put({ selected_word }, "c", true, true)
+            end
+          end
+        '';
+    }
+
   ];
 }
