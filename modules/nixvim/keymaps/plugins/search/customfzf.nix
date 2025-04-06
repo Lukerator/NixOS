@@ -18,6 +18,23 @@
     }
     {
       mode = "n";
+      key = "<leader>sf";
+      options = {
+        silent = true;
+        desc = "[S]earch [F]iles (No Hidden)";
+      };
+      action.__raw = # lua
+        ''
+          function()
+            require("fzf-lua").files {
+              cmd = "fd --exclude '.*' .",
+              prompt = "Search Files (No Hidden)"
+            }
+          end
+        '';
+    }
+    {
+      mode = "n";
       key = "<leader>s/";
       options = {
         silent = true;

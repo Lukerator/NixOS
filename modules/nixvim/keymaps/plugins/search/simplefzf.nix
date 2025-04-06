@@ -20,7 +20,7 @@
     }
     {
       mode = "n";
-      key = "<leader>sf";
+      key = "<leader>sa";
       action = ":FzfLua files<CR>";
       options = {
         silent = true;
