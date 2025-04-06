@@ -46,7 +46,7 @@
         modules = [
           ./modules/system
           ./modules/stylix
-          ./modules/disko
+          # ./modules/disko
           # disko.nixosModules.disko
           stylix.nixosModules.stylix
           ./modules/stylix/system-targets.nix
