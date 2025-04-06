@@ -27,7 +27,7 @@
         ''
           function()
             require('fzf-lua').files {
-              cmd = "fd --type f .",
+              cmd = "fd",
               prompt = "Search Files (Hidden Files)"
             }
           end
