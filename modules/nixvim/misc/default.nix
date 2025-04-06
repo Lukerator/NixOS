@@ -1,6 +1,5 @@
 {
   imports = [
-    ./codeium.nix
     ./deprecated.nix
     ./enable.nix
     ./globals.nix
