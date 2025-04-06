@@ -7,10 +7,12 @@
       inputs.nixpkgs.follows = "nixpkgs";
       url = "github:notashelf/nvf";
     };
-    disko = {
-      url = "github:nix-community/disko/latest";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    /*
+      disko = {
+        url = "github:nix-community/disko/latest";
+        inputs.nixpkgs.follows = "nixpkgs";
+      };
+    */
     nixvim = {
       inputs.nixpkgs.follows = "nixpkgs";
       url = "github:nix-community/nixvim";
@@ -26,7 +28,7 @@
       nixpkgs,
       nixvim,
       stylix,
-      disko,
+      # disko,
       nvf,
       ...
     }@inputs:
@@ -45,7 +47,7 @@
           ./modules/system
           ./modules/stylix
           ./modules/disko
-          disko.nixosModules.disko
+          # disko.nixosModules.disko
           stylix.nixosModules.stylix
           ./modules/stylix/system-targets.nix
         ];
