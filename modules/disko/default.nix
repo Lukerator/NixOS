@@ -1,7 +1,7 @@
 {
   disko.devices.disk.vdb = {
     type = "disk";
-    # device = "/dev/disk/by-uuid/2e533752-4e64-4054-98d4-0a837ec000f3";
+    device = "/dev/disk/by-uuid/2e533752-4e64-4054-98d4-0a837ec000f3";
     content = {
       type = "gpt";
       partitions = {
