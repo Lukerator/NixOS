@@ -3,10 +3,10 @@
     stylix.url = "github:danth/stylix";
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     awesome-neovim-plugins.url = "github:m15a/flake-awesome-neovim-plugins";
-    nvf = {
-      inputs.nixpkgs.follows = "nixpkgs";
-      url = "github:notashelf/nvf";
-    };
+    # nvf = {
+    #   url = "github:notashelf/nvf";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    # };
     nixvim = {
       inputs.nixpkgs.follows = "nixpkgs";
       url = "github:nix-community/nixvim";
@@ -18,11 +18,11 @@
   };
   outputs =
     {
-      home-manager,
-      nixpkgs,
+      # nvf,
       nixvim,
       stylix,
-      nvf,
+      nixpkgs,
+      home-manager,
       ...
     }@inputs:
     let
@@ -37,8 +37,8 @@
         inherit system;
         specialArgs = { inherit inputs; };
         modules = [
-          ./modules/system
           ./modules/stylix
+          ./modules/system
           stylix.nixosModules.stylix
           ./modules/stylix/system-targets.nix
         ];
@@ -48,13 +48,13 @@
         extraSpecialArgs = { inherit inputs; };
         modules = [
           ./modules/home
-          # ./modules/kickstart.nvf
-          ./modules/stylix
-          # ./modules/.old/nixvimold
           ./modules/nixvim
-          ./modules/stylix/home-targets.nix
-          stylix.homeManagerModules.stylix
+          ./modules/stylix
+          # ./modules/kickstart.nvf
+          # ./modules/.old/nixvimold
           nixvim.homeManagerModules.nixvim
+          stylix.homeManagerModules.stylix
+          ./modules/stylix/home-targets.nix
         ];
       };
     };
