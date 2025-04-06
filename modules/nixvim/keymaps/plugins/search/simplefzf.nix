@@ -24,7 +24,7 @@
       action = ":FzfLua files<CR>";
       options = {
         silent = true;
-        desc = "[S]earch [F]iles";
+        desc = "[S]earch [F]iles (including hidden)";
       };
     }
     {

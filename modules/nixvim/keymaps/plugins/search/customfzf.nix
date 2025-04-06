@@ -21,7 +21,7 @@
       key = "<leader>sf";
       options = {
         silent = true;
-        desc = "[S]earch [F]iles (No Hidden)";
+        desc = "[S]earch [F]iles";
       };
       action.__raw = # lua
         ''
