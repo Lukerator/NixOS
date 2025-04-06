@@ -7,6 +7,6 @@
     ./format
     ./leetcode
     ./saving
-    ./telescope
+    ./search
   ];
 }
