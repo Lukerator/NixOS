@@ -11,7 +11,7 @@
         ''
           function()
             require('fzf-lua').files {
-              cwd = vim.fn.stdpath("config")
+              cwd = "/home/luke/.config/nixos/modules/nixvim",
             }
           end
         '';
