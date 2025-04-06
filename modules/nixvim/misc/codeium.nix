@@ -6,7 +6,7 @@
       callback.__raw = # lua
         ''
           function()
-            vim.fn["CodeiumComplete"]()
+            vim.fn["codeium#Complete"]()
           end
         '';
     }
