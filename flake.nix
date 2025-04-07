@@ -60,18 +60,6 @@
 
       mainNvim = makeNixvim { module = import ./modules/nixvim; };
 
-      testNvim = makeNixvim { module = import ./modules/nixvim/test.nix; };
-
-      lvim = pkgs.symlinkJoin {
-        name = "lvim";
-        paths = [ testNvim ];
-        buildInputs = [ pkgs.makeWrapper ];
-        postBuild = ''
-          rm -f $out/bin/nvim
-          ln -s $out/bin/nvim $out/bin/lvim
-        '';
-      };
-
       pkgs = import nixpkgs {
 
         inherit system;
@@ -123,7 +111,6 @@
           {
             home.packages = [
               mainNvim
-              lvim
             ];
           }
 
