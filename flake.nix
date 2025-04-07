@@ -57,7 +57,12 @@
           ./modules/stylix
           nixvim.homeManagerModules.nixvim
           stylix.homeManagerModules.stylix
-          { home.packages = [ myNeovim ]; }
+          (
+            { pkgs, ... }:
+            {
+              home.packages = [ myNeovim ];
+            }
+          )
           ./modules/stylix/home-targets.nix
         ];
       };
