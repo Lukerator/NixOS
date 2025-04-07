@@ -58,10 +58,18 @@
 
       makeNixvim = nixvim.legacyPackages.${system}.makeNixvim;
 
-      mainNvim = makeNixvim {
+      mainNvim = makeNixvim { config = import ./modules/nixvim; };
 
-        config = import ./modules/nixvim/test.nix;
+      testNvim = makeNixvim { config = import ./modules/nixvim/test.nix; };
 
+      lvim = pkgs.symlinkJoin {
+        name = "lvim";
+        paths = [ testNvim ];
+        buildInputs = [ pkgs.makeWrapper ];
+        postBuild = ''
+          rm -f $out/bin/nvim
+          ln -s $out/bin/nvim $out/bin/lvim
+        '';
       };
 
       pkgs = import nixpkgs {
@@ -112,7 +120,12 @@
 
           ./modules/stylix/home-targets.nix
 
-          { home.packages = [ mainNvim ]; }
+          {
+            home.packages = [
+              mainNvim
+              lvim
+            ];
+          }
 
         ];
 
