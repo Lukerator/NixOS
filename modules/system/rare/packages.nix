@@ -11,6 +11,7 @@
     ghc
     home-manager
     lf
+    lldb
     lsd
     lua
     lutris
