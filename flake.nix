@@ -32,13 +32,14 @@
         inherit system;
         overlays = [ inputs.awesome-neovim-plugins.overlays.default ];
       };
-      myNeovim =
+      myNixVim =
         (makeNixvim {
           inherit pkgs;
           config = import ./modules/newnixvim;
         }).neovim;
     in
     {
+      packages.${system}.default = myNixVim.neovim;
       nixosConfigurations.Luke-PC = nixpkgs.lib.nixosSystem {
         inherit system;
         specialArgs = { inherit inputs; };
@@ -60,7 +61,7 @@
           (
             { pkgs, ... }:
             {
-              home.packages = [ myNeovim ];
+              home.packages = [ myNixVim ];
             }
           )
           ./modules/stylix/home-targets.nix
