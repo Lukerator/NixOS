@@ -1,6 +1,6 @@
 {
-  
-plugins.dashboard = {
+
+  plugins.dashboard = {
     enable = true;
     settings = {
       theme = "hyper";
@@ -23,7 +23,7 @@ plugins.dashboard = {
             desc = "Files";
             group = "Label";
             icon_hl = "@variable";
-            action.__raw = "function(path) vim.cmd('Telescope find_files') end";
+            action.__raw = "function(path) require('fzf-lua').files() end";
           }
         ];
       };
