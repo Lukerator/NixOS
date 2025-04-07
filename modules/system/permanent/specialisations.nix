@@ -1,5 +1,13 @@
 { lib, ... }:
 {
-  specialisation.gaming.configuration.hardware.nvidia.prime.reverseSync.enable = lib.mkForce true;
-  specialisation.battery-saving.configuration.hardware.bluetooth.powerOnBoot = lib.mkForce false;
+  specialisation.gaming.configuration.hardware = {
+    bluetooth.powerOnBoot = lib.mkForce true;
+    nvidia.prime = {
+      reverseSync.enable = lib.mkForce true;
+      offload = {
+        enable = lib.mkForce false;
+        enableOffloadCmd = lib.mkForce false;
+      };
+    };
+  };
 }
