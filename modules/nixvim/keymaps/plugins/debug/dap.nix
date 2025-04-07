@@ -37,7 +37,7 @@
           vim.fn.system(compile_command)
           local compile_result = vim.fn.system("echo $?")
           if compile_result ~= "0\n" then
-              print("Compilation failed!")
+            print("Compilation failed!")
             return
           end
           local dap = require("dap")
@@ -45,13 +45,13 @@
           local dapui = require("dapui")
           dapui.toggle()
           dap.run({
-              type = "codelldb",
+            type = "lldb",
             request = "launch",
             name = "Launch C++",
             program = path,
             cwd = vim.fn.getcwd(),
-          stopOnEntry = false,
-          args = {},
+            stopOnEntry = false,
+            args = {},
         })
         end
       '';
