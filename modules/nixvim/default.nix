@@ -1,7 +1,1 @@
-{
-  imports = [
-    ./keymaps
-    ./misc
-    ./plugins
-  ];
-}
+{ inputs, ... }: let

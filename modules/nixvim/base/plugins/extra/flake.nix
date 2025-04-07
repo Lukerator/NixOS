@@ -3,8 +3,7 @@
   programs.nixvim = {
     extraPlugins = with pkgs.awesomeNeovimPlugins; [
     ];
-    extraConfigLua = # lua
-      "
+    extraConfigLua = "
       ";
   };
 }

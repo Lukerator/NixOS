@@ -27,10 +27,16 @@
     }@inputs:
     let
       system = "x86_64-linux";
+      makeNixvim = nixvim.legacyPackages.${system}.makeNixvim;
       pkgs = import nixpkgs {
         inherit system;
         overlays = [ inputs.awesome-neovim-plugins.overlays.default ];
       };
+      myNeovim =
+        (makeNixvim {
+          inherit pkgs;
+          module = import ./modules/newnixvim;
+        }).neovim;
     in
     {
       nixosConfigurations.Luke-PC = nixpkgs.lib.nixosSystem {
@@ -48,13 +54,13 @@
         extraSpecialArgs = { inherit inputs; };
         modules = [
           ./modules/home
-          ./modules/nixvim
           ./modules/stylix
           # ./modules/kickstart.nvf
           # ./modules/.old/nixvimold
           nixvim.homeManagerModules.nixvim
           stylix.homeManagerModules.stylix
           ./modules/stylix/home-targets.nix
+          { home.packages = [ myNeovim ]; }
         ];
       };
     };
