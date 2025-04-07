@@ -6,7 +6,7 @@
       action.__raw = ''
         function()
           vim.fn.system("g++ " .. vim.fn.expand("%") .. " -o " .. vim.fn.expand("%:r"))
-          require("dap-ui").toggle()
+          require("dapui").toggle()
           require("dap").run({
             type = "lldb",
             name = "Debug",
