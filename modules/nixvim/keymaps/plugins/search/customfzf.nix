@@ -5,7 +5,23 @@
       key = "<leader>sn";
       options = {
         silent = true;
-        desc = "[S]earch [N]eovim Files";
+        desc = "[S]earch [N]ixOS Files";
+      };
+      action.__raw = # lua
+        ''
+          function()
+            require('fzf-lua').files {
+              cwd = "/home/luke/.config/nixos",
+            }
+          end
+        '';
+    }
+    {
+      mode = "n";
+      key = "<leader>sc";
+      options = {
+        silent = true;
+        desc = "[S]earch NeoVim [C]onfig Files";
       };
       action.__raw = # lua
         ''
