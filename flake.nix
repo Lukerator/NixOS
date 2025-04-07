@@ -35,7 +35,7 @@
       myNeovim =
         (makeNixvim {
           inherit pkgs;
-          modules = import ./modules/newnixvim;
+          config = import ./modules/newnixvim;
         }).neovim;
     in
     {
