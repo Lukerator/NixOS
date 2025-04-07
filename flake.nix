@@ -55,12 +55,10 @@
         modules = [
           ./modules/home
           ./modules/stylix
-          # ./modules/kickstart.nvf
-          # ./modules/.old/nixvimold
           nixvim.homeManagerModules.nixvim
           stylix.homeManagerModules.stylix
-          ./modules/stylix/home-targets.nix
           { home.packages = [ myNeovim ]; }
+          ./modules/stylix/home-targets.nix
         ];
       };
     };
