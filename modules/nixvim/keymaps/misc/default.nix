@@ -1,6 +1,6 @@
 {
   imports = [
-    ./errors.nix
+    ./actions.nix
     ./highlight.nix
     ./movement.nix
     ./multicursors.nix

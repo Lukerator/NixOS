@@ -2,6 +2,7 @@
   imports = [
     ./bar
     ./completion
+    ./debug
     ./extra
     ./filetree
     ./format
