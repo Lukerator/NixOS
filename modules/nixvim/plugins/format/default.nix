@@ -1,7 +1,6 @@
 { pkgs, ... }:
 {
   
-= {
     extraPackages = with pkgs; [
       black
       stylua
@@ -31,6 +30,5 @@
           nix = [ "nixfmt-rfc-style" ];
         };
       };
-    };
   };
 }
