@@ -55,41 +55,5 @@
         end
       '';
     }
-    {
-      mode = "n";
-      key = "<leader>ta";
-      options = {
-        silent = true;
-        desc = "[T]oggle [A]ll breakpoints";
-      };
-      action.__raw = ''
-        function()
-          local current_buf = vim.api.nvim_get_current_buf()
-          local total_lines = vim.api.nvim_buf_line_count(current_buf)
-          for line_num = 0, total_lines - 1 do
-            require('dap').toggle_breakpoint(line_num)
-          end
-        end
-      '';
-    }
-    {
-      mode = "v";
-      key = "<leader>ta";
-      options = {
-        silent = true;
-        desc = "[T]oggle [A]ll breakpoints";
-      };
-      action.__raw = ''
-        function()
-          local start_line, end_line = vim.fn.line("v"), vim.fn.line(".")
-          if start_line > end_line then
-            start_line, end_line = end_line, start_line
-          end
-          for line_num = start_line - 1, end_line - 1 do
-            require('dap').toggle_breakpoint(line_num)
-          end
-        end
-      '';
-    }
   ];
 }
