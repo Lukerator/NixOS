@@ -56,11 +56,11 @@
 
       system = "x86_64-linux";
 
-      makeNixvim = nixvim.legacyPackages.${system}.makeNixvim;
+      makeNixvim = nixvim.legacyPackages.${system}.makeNixvimWithModule;
 
-      mainNvim = makeNixvim { config = import ./modules/nixvim; };
+      mainNvim = makeNixvim { module = import ./modules/nixvim; };
 
-      testNvim = makeNixvim { config = import ./modules/nixvim/test.nix; };
+      testNvim = makeNixvim { module = import ./modules/nixvim/test.nix; };
 
       lvim = pkgs.symlinkJoin {
         name = "lvim";
