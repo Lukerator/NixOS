@@ -30,9 +30,33 @@
     {
       mode = "n";
       key = "<leader>dc";
-      action = "<cmd>lua require'dap'.continue()<cr>";
+      action.__raw = ''
+        function()
+          local filename = vim.fn.expand("%:t:r")
+          local compile_command = "g++ " .. vim.fn.expand("%") .. " -o " .. vim.fn.getcwd() .. "/" .. filename
+          vim.fn.system(compile_command)
+          local compile_result = vim.fn.system("echo $?")
+          if compile_result ~= "0\n" then
+              print("Compilation failed!")
+            return
+          end
+          local dap = require("dap")
+          local path = vim.fn.getcwd() .. "/" .. filename
+          local dapui = require("dapui")
+          dapui.toggle()
+          dap.run({
+              type = "codelldb",
+            request = "launch",
+            name = "Launch C++",
+            program = path,
+            cwd = vim.fn.getcwd(),
+          stopOnEntry = false,
+          args = {},
+        })
+        end
+      '';
       options = {
-        desc = "DAP Continue";
+        desc = "DAP Launch (auto compile and toggle dapui)";
         silent = true;
       };
     }

@@ -9,12 +9,9 @@
       settings = {
         completion.ghost_text.enabled = true;
         snippets = {
-          active.__raw = # lua
-            "function(filter) return vim.snippet.active(filter) end";
-          expand.__raw = # lua
-            "function(snippet) vim.snippet.expand(snippet) end";
-          jump.__raw = # lua
-            "function(direction) vim.snippet.jump(direction) end";
+          active.__raw = "function(filter) return vim.snippet.active(filter) end";
+          expand.__raw = "function(snippet) vim.snippet.expand(snippet) end";
+          jump.__raw = "function(direction) vim.snippet.jump(direction) end";
         };
         sources = {
           providers = {

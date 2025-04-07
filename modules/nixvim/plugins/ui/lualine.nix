@@ -32,12 +32,11 @@
         lualine_x = [ ];
         lualine_y = [
           {
-            __raw = # lua
-              ''
-                function()
-                  return tostring(vim.fn.wordcount().words)
-                end
-              '';
+            __raw = ''
+              function()
+                return tostring(vim.fn.wordcount().words)
+              end
+            '';
           }
         ];
         lualine_z = [ "location" ];
