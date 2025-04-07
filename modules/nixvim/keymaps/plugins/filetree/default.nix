@@ -6,7 +6,7 @@
     {
       mode = "n";
       key = "<leader>n";
-      action = ":Oil<CR>";
+      action = ":Oil --float<CR>";
       options = {
         silent = true;
         desc = "Open Oil";
