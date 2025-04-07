@@ -34,7 +34,6 @@
       };
       myNixVim =
         (makeNixvim {
-          inherit pkgs;
           config = import ./modules/newnixvim;
         }).neovim;
     in
