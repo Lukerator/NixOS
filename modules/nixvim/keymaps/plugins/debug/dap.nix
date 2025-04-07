@@ -3,7 +3,7 @@
     {
       mode = "n";
       key = "<leader>dc";
-      opts = {
+      options = {
         silent = true;
         desc = "[D]ebug [C]ontinue";
       };
@@ -23,7 +23,7 @@
       mode = "n";
       key = "<leader>dsi";
       action = ":DapStepInto<CR>";
-      opts = {
+      options = {
         silent = true;
         desc = "[D]ebug [S]tep [i]nto";
       };
@@ -32,7 +32,7 @@
       mode = "n";
       key = "<leader>dso";
       action = ":DapStepOver<CR>";
-      opts = {
+      options = {
         silent = true;
         desc = "[D]ebug [S]tep [o]ver";
       };
@@ -41,7 +41,7 @@
       mode = "n";
       key = "<leader>dsO";
       action = ":DapStepOut<CR>";
-      opts = {
+      options = {
         silent = true;
         desc = "[D]ebug [S]tep [O]ut";
       };
@@ -50,7 +50,7 @@
       mode = "n";
       key = "<leader>db";
       action = ":DapToggleBreakpoint<CR>";
-      opts = {
+      options = {
         silent = true;
         desc = "[D]ebug Toggle [B]reakpoint";
       };
