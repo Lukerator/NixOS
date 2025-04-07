@@ -108,10 +108,6 @@
 
           ./modules/stylix
 
-          ./modules/nixvim
-
-          nixvim.homeManagerModules.nixvim
-
           stylix.homeManagerModules.stylix
 
           ./modules/stylix/home-targets.nix
