@@ -3,6 +3,10 @@
     {
       mode = "n";
       key = "<leader>dc";
+      opts = {
+        silent = true;
+        desc = "[D]ebug [C]ontinue";
+      };
       action.__raw = ''
         function()
           require("dapui").toggle()
@@ -14,6 +18,42 @@
           })
         end
       '';
+    }
+    {
+      mode = "n";
+      key = "<leader>dsi";
+      action = ":DapStepInto<CR>";
+      opts = {
+        silent = true;
+        desc = "[D]ebug [S]tep [i]nto";
+      };
+    }
+    {
+      mode = "n";
+      key = "<leader>dso";
+      action = ":DapStepOver<CR>";
+      opts = {
+        silent = true;
+        desc = "[D]ebug [S]tep [o]ver";
+      };
+    }
+    {
+      mode = "n";
+      key = "<leader>dsO";
+      action = ":DapStepOut<CR>";
+      opts = {
+        silent = true;
+        desc = "[D]ebug [S]tep [O]ut";
+      };
+    }
+    {
+      mode = "n";
+      key = "<leader>db";
+      action = ":DapToggleBreakpoint<CR>";
+      opts = {
+        silent = true;
+        desc = "[D]ebug Toggle [B]reakpoint";
+      };
     }
   ];
 }
