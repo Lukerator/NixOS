@@ -1,3 +1,6 @@
 {
-  programs.nixvim.plugins.trouble.enable = true;
+  imports = [
+    ./dap.nix
+    ./trouble.nix
+  ];
 }

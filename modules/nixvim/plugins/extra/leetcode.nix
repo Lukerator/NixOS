@@ -3,6 +3,6 @@
     "require('leetcode').setup({
       lang = 'cpp',
       image_support = false,
-      picker = { provider = 'telescope' },
+      picker = { provider = 'fzf-lua' },
     })";
 }
