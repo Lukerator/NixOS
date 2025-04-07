@@ -6,7 +6,7 @@
       skip_confirm_for_simple_edits = true;
       float = {
         max_width = 100;
-        max_height = 50;
+        max_height = 30;
       };
     };
   };
