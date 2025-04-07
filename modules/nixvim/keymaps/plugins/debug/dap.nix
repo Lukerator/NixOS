@@ -1,21 +1,25 @@
 {
   programs.nixvim.keymaps = [
-    # {
-    #   mode = "n";
-    #   key = "<leader>dc";
-    #   action.__raw = ''
-    #     function()
-    #       vim.fn.system("g++ " .. vim.fn.expand("%") .. " -o " .. vim.fn.expand("%:r"))
-    #       require("dap").run({
-    #         type = "lldb",
-    #         request = "launch",
-    #         program = vim.fn.expand("%:r")
-    #       })
-    #       require("dap-ui").toggle()
-    #       vim.fn.system("rm " .. vim.fn.expand("%:r"))
-    #     end
-    #   '';
-    # }
+    {
+      mode = "n";
+      key = "<leader>dc";
+      options = {
+        desc = "DAP Continue";
+        silent = true;
+      };
+      action.__raw = ''
+        function()
+          vim.fn.system("g++ " .. vim.fn.expand("%") .. " -o " .. vim.fn.expand("%:r"))
+          require("dap").run({
+            type = "lldb",
+            request = "launch",
+            program = vim.fn.expand("%:r")
+          })
+          require("dap-ui").toggle()
+          vim.fn.system("rm " .. vim.fn.expand("%:r"))
+        end
+      '';
+    }
     {
       mode = "n";
       key = "<leader>db";
