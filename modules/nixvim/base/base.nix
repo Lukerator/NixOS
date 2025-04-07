@@ -1,7 +1,0 @@
-{
-  imports = [
-    ./keymaps
-    ./misc
-    ./plugins
-  ];
-}
