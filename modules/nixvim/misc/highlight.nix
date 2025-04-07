@@ -1,6 +1,4 @@
 {
-  
-= {
     autoGroups = {
       highlight-yank = {
         clear = true;
@@ -18,5 +16,4 @@
         '';
       }
     ];
-  };
 }
