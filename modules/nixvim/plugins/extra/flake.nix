@@ -1,10 +1,7 @@
 { pkgs, ... }:
 {
-  
-= {
-    extraPlugins = with pkgs.awesomeNeovimPlugins; [
-    ];
-    extraConfigLua = "
+  extraPlugins = with pkgs.awesomeNeovimPlugins; [
+  ];
+  extraConfigLua = "
       ";
-  };
 }

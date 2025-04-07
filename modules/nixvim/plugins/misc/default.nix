@@ -1,6 +1,5 @@
 {
-  
-plugins = {
+  plugins = {
     mini.enable = true;
     noice.enable = true;
     notify.enable = true;

@@ -1,6 +1,5 @@
 {
-  
-plugins.auto-save = {
+  plugins.auto-save = {
     enable = true;
     settings = {
       trigger_events = {
@@ -18,7 +17,6 @@ plugins.auto-save = {
         function(buf)
         local fn = vim.fn
           local utils = require("auto-save.utils.data")
-
         if utils.not_in(fn.getbufvar(buf, "&filetype"), {'oil'}) then
               return true
           end

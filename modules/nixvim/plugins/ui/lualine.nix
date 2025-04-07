@@ -1,6 +1,5 @@
 {
-  
-plugins.lualine = {
+  plugins.lualine = {
     enable = true;
     settings = {
       options = {

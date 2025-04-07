@@ -1,6 +1,5 @@
 {
-  
-plugins.dashboard.settings.config.header = [
+  plugins.dashboard.settings.config.header = [
     ""
     ""
     "███╗   ██╗███████╗ ██████╗ ██╗   ██╗██╗███╗   ███╗"

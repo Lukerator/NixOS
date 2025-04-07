@@ -1,6 +1,5 @@
 {
-  
-keymaps = [
+  keymaps = [
     {
       key = "<Esc>";
       mode = "n";

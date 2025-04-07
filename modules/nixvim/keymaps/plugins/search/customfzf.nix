@@ -1,6 +1,5 @@
 {
-  
-keymaps = [
+  keymaps = [
     {
       mode = "n";
       key = "<leader>sn";

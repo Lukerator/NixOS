@@ -1,6 +1,5 @@
 {
-  
-plugins = {
+  plugins = {
     dropbar.enable = true;
     luasnip.enable = true;
     floaterm.enable = true;

@@ -1,5 +1,4 @@
 {
-
   keymaps = [
     {
       mode = "n";

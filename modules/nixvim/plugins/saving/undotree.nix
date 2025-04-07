@@ -1,6 +1,5 @@
 {
-  
-plugins.undotree = {
+  plugins.undotree = {
     enable = true;
     settings = {
       CursorLine = true;

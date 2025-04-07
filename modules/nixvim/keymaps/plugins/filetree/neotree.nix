@@ -3,10 +3,10 @@
     {
       mode = "n";
       key = "<leader>n";
-      action = ":Oil<CR>";
+      action = ":Neotree float toggle reveal %:p:h<CR>";
       options = {
         silent = true;
-        desc = "Open Oil";
+        desc = "Open NeoTree";
       };
     }
   ];

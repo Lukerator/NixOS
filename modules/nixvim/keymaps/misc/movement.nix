@@ -1,6 +1,5 @@
 {
-  
-keymaps = [
+  keymaps = [
     {
       key = "<up>";
       action = "gk";

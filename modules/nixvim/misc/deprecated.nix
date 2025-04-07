@@ -1,4 +1,3 @@
 {
-  
-extraConfigLua = "vim.deprecate = function() end";
+  extraConfigLua = "vim.deprecate = function() end";
 }

@@ -1,6 +1,5 @@
 {
-  
-plugins.blink-cmp.settings.keymap = {
+  plugins.blink-cmp.settings.keymap = {
     preset = "none";
     "<Tab>" = [
       "snippet_forward"

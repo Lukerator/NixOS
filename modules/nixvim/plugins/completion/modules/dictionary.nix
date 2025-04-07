@@ -1,6 +1,5 @@
 {
-  
-plugins.blink-cmp-dictionary = {
+  plugins.blink-cmp-dictionary = {
     enable = true;
     autoLoad = true;
   };

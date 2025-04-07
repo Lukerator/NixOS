@@ -1,6 +1,5 @@
 {
-  
-plugins.cmp.settings.mapping = {
+  plugins.cmp.settings.mapping = {
     "<CR>".__raw = ''
       cmp.mapping(function(fallback)
       local luasnip = require("luasnip")
