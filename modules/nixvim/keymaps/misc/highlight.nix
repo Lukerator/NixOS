@@ -1,5 +1,6 @@
 {
-  programs.nixvim.keymaps = [
+  
+keymaps = [
     {
       key = "<Esc>";
       mode = "n";

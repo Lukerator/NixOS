@@ -1,5 +1,6 @@
 {
-  programs.nixvim = {
+  
+= {
     autoGroups = {
       highlight-yank = {
         clear = true;

@@ -1,5 +1,6 @@
 {
-  programs.nixvim.plugins.cmp = {
+  
+plugins.cmp = {
     enable = true;
     settings = {
       completion = {

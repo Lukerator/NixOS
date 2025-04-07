@@ -1,5 +1,6 @@
 {
-  programs.nixvim.keymaps = [
+  
+keymaps = [
     {
       key = "<C-0>";
       mode = "n";

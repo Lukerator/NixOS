@@ -1,5 +1,6 @@
 {
-  programs.nixvim.plugins.dashboard = {
+  
+plugins.dashboard = {
     enable = true;
     settings = {
       theme = "hyper";

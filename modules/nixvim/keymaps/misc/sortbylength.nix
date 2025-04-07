@@ -1,5 +1,6 @@
 {
-  programs.nixvim.keymaps = [
+  
+keymaps = [
     {
       mode = "v";
       key = "<leader>ss";

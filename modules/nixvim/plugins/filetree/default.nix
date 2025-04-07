@@ -1,5 +1,6 @@
 {
-  programs.nixvim.plugins.neo-tree = {
+  
+plugins.neo-tree = {
     enable = true;
     popupBorderStyle = "rounded";
     filesystem.hijackNetrwBehavior = "open_current";

@@ -1,5 +1,6 @@
 {
-  programs.nixvim.colorschemes.catppuccin = {
+  
+colorschemes.catppuccin = {
     enable = true;
     settings.flavour = "macchiato";
   };

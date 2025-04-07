@@ -1,6 +1,7 @@
 { pkgs, ... }:
 {
-  programs.nixvim = {
+  
+= {
     extraPackages = with pkgs; [
       black
       stylua

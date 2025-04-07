@@ -1,5 +1,6 @@
 {
-  programs.nixvim.plugins.lsp = {
+  
+plugins.lsp = {
     enable = true;
     servers = {
       html.enable = true;

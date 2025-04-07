@@ -1,5 +1,6 @@
 {
-  programs.nixvim.plugins.barbar.keymaps = {
+  
+plugins.barbar.keymaps = {
     next.key = "<Tab>";
     close.key = "<leader>x";
     previous.key = "<S-Tab>";

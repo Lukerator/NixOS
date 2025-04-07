@@ -1,5 +1,6 @@
 {
-  programs.nixvim.plugins.chadtree = {
+  
+plugins.chadtree = {
     enable = true;
     view.windowOptions.__raw = ''
       {

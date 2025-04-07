@@ -1,5 +1,6 @@
 {
-  programs.nixvim.plugins.auto-save = {
+  
+plugins.auto-save = {
     enable = true;
     settings = {
       trigger_events = {

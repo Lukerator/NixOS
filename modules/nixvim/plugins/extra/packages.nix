@@ -1,6 +1,7 @@
 { pkgs, ... }:
 {
-  programs.nixvim.extraPlugins = with pkgs.vimPlugins; [
+  
+extraPlugins = with pkgs.vimPlugins; [
     leetcode-nvim
     nvim-ufo
     nvzone-typr

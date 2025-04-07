@@ -1,5 +1,6 @@
 {
-  programs.nixvim.keymaps = [
+  
+keymaps = [
     {
       key = "<up>";
       action = "gk";

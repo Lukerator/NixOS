@@ -1,5 +1,6 @@
 {
-  programs.nixvim.plugins.barbar = {
+  
+plugins.barbar = {
     enable = true;
     settings.no_name_title = "New File";
     keymaps = {
