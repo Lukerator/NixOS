@@ -52,7 +52,8 @@
             cwd = vim.fn.getcwd(),
             stopOnEntry = false,
             args = {},
-        })
+          })
+          vim.cmd("autocmd VimLeavePre * lua os.remove('" .. executable_path .. "')")
         end
       '';
       options = {
