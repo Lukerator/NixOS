@@ -63,26 +63,33 @@
         };
       }
     */
+    /*
+      {
+        mode = "n";
+        key = "<leader>dc";
+        action.__raw = ''
+          function()
+              local filename = vim.fn.expand("%:t:r")
+              local executable_path = vim.fn.getcwd() .. "/" .. filename
+              local compile_command = "g++ " .. vim.fn.expand("%") .. " -o " .. executable_path
+              vim.fn.system(compile_command)
+              local compile_result = vim.fn.system("echo $?")
+              if compile_result ~= "0\n" then
+                  print("Compilation failed!")
+                return
+              end
+              vim.fn.system(executable_path)
+              vim.fn.system("rm " .. executable_path)
+              local dapui = require("dapui")
+              dapui.toggle()
+            end
+        '';
+      }
+    */
     {
       mode = "n";
       key = "<leader>dc";
-      action.__raw = ''
-        function()
-            local filename = vim.fn.expand("%:t:r")
-            local executable_path = vim.fn.getcwd() .. "/" .. filename
-            local compile_command = "g++ " .. vim.fn.expand("%") .. " -o " .. executable_path
-            vim.fn.system(compile_command)
-            local compile_result = vim.fn.system("echo $?")
-            if compile_result ~= "0\n" then
-                print("Compilation failed!")
-              return
-            end
-            vim.fn.system(executable_path)
-            vim.fn.system("rm " .. executable_path)
-            local dapui = require("dapui")
-            dapui.toggle()
-          end
-      '';
+      action.__raw = ''function() print(vim.fn.expand("%:t:r")) end'';
     }
     {
       mode = "n";
