@@ -67,7 +67,7 @@
           local current_buf = vim.api.nvim_get_current_buf()
           local total_lines = vim.api.nvim_buf_line_count(current_buf)
           for line_num = 0, total_lines - 1 do
-            require('dap').toggle_breakpoint({ line = line_num })
+            require('dap').toggle_breakpoint(line_num)
           end
         end
       '';
@@ -86,7 +86,7 @@
             start_line, end_line = end_line, start_line
           end
           for line_num = start_line - 1, end_line - 1 do
-            require('dap').toggle_breakpoint({ line = line_num })
+            require('dap').toggle_breakpoint(line_num)
           end
         end
       '';
