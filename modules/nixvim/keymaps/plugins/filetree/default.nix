@@ -1,4 +1,7 @@
 {
+  plugins.oil.settings.keymaps = {
+    "<BS>" = "actions.parent";
+  };
   keymaps = [
     {
       mode = "n";
