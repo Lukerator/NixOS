@@ -27,39 +27,62 @@
         silent = true;
       };
     }
+    /*
+      {
+        mode = "n";
+        key = "<leader>dc";
+        action.__raw = ''
+          function()
+            local filename = vim.fn.expand("%:t:r")
+            local compile_command = "g++ " .. vim.fn.expand("%") .. " -o " .. vim.fn.getcwd() .. "/" .. filename
+            vim.fn.system(compile_command)
+            local compile_result = vim.fn.system("echo $?")
+            if compile_result ~= "0\n" then
+              print("Compilation failed!")
+              return
+            end
+            local dap = require("dap")
+            local path = vim.fn.getcwd() .. "/" .. filename
+            local dapui = require("dapui")
+            dapui.toggle()
+            dap.run({
+              type = "lldb",
+              request = "launch",
+              name = "Launch C++",
+              program = path,
+              cwd = vim.fn.getcwd(),
+              stopOnEntry = false,
+              args = {},
+            })
+            vim.cmd("autocmd VimLeavePre * lua os.remove('" .. executable_path .. "')")
+          end
+        '';
+        options = {
+          desc = "DAP Launch (auto compile and toggle dapui)";
+          silent = true;
+        };
+      }
+    */
     {
       mode = "n";
       key = "<leader>dc";
       action.__raw = ''
         function()
-          local filename = vim.fn.expand("%:t:r")
-          local compile_command = "g++ " .. vim.fn.expand("%") .. " -o " .. vim.fn.getcwd() .. "/" .. filename
-          vim.fn.system(compile_command)
-          local compile_result = vim.fn.system("echo $?")
-          if compile_result ~= "0\n" then
-            print("Compilation failed!")
-            return
+            local filename = vim.fn.expand("%:t:r")
+            local executable_path = vim.fn.getcwd() .. "/" .. filename
+            local compile_command = "g++ " .. vim.fn.expand("%") .. " -o " .. executable_path
+            vim.fn.system(compile_command)
+            local compile_result = vim.fn.system("echo $?")
+            if compile_result ~= "0\n" then
+                print("Compilation failed!")
+              return
+            end
+            vim.fn.system(executable_path)
+            vim.fn.system("rm " .. executable_path)
+            local dapui = require("dapui")
+            dapui.toggle()
           end
-          local dap = require("dap")
-          local path = vim.fn.getcwd() .. "/" .. filename
-          local dapui = require("dapui")
-          dapui.toggle()
-          dap.run({
-            type = "lldb",
-            request = "launch",
-            name = "Launch C++",
-            program = path,
-            cwd = vim.fn.getcwd(),
-            stopOnEntry = false,
-            args = {},
-          })
-          vim.cmd("autocmd VimLeavePre * lua os.remove('" .. executable_path .. "')")
-        end
       '';
-      options = {
-        desc = "DAP Launch (auto compile and toggle dapui)";
-        silent = true;
-      };
     }
     {
       mode = "n";
