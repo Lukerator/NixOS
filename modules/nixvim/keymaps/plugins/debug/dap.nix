@@ -39,21 +39,16 @@
     {
       mode = "n";
       key = "<leader>du";
-      action.__raw = "function() require('dapui').toggle() end";
+      action.__raw = "function() require('dapui').toggle() require('dap').stop() end";
       options = {
         silent = true;
-        desc = "[D]ebug Toggle [U]I";
+        desc = "[D]ebug Stop R[u]nning";
       };
     }
     {
       mode = "n";
       key = "<leader>dt";
-      action.__raw = "
-        function()
-          require('dapui').close()
-          require('dap').stop()
-        end
-      ";
+      action = ":DapTerminate<CR>";
       options = {
         silent = true;
         desc = "[D]ebug [T]erminate";
