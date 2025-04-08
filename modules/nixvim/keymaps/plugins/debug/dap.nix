@@ -39,7 +39,7 @@
     {
       mode = "n";
       key = "<leader>du";
-      action.__raw = "function() require('dapui').close() require('dap').stop() end";
+      action.__raw = "function() require('dapui').close() require('dap').close() end";
       options = {
         silent = true;
         desc = "[D]ebug Stop R[u]nning";
