@@ -3,19 +3,22 @@
     enable = true;
     settings.exclude = {
       buftypes = [
-        "dashboard"
-        "terminal"
+        "nofile"
+        "prompt"
         "floaterm"
+        "quickfix"
+        "terminal"
+        "dashboard"
       ];
       filetypes = [
         ""
-        "checkhealth"
         "help"
-        "lspinfo"
+        "yaml"
         "packer"
+        "lspinfo"
+        "checkhealth"
         "TelescopePrompt"
         "TelescopeResults"
-        "yaml"
       ];
     };
   };
