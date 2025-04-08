@@ -11,7 +11,7 @@
         mode = "dock";
         exclusive = true;
         passtrough = false;
-        height = 20;
+        height = 18;
         modules-left = [
           "hyprland/workspaces"
         ];
