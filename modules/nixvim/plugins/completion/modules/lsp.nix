@@ -2,7 +2,6 @@
   plugins.lsp = {
     enable = true;
     servers = {
-      hls.enable = true;
       html.enable = true;
       nixd.enable = true;
       clangd.enable = true;
@@ -10,6 +9,10 @@
       pyright.enable = true;
       tinymist.enable = true;
       marksman.enable = true;
+      hls = {
+        enable = true;
+        installGhc = false;
+      };
     };
   };
 }
