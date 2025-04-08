@@ -38,6 +38,24 @@
     }
     {
       mode = "n";
+      key = "<leader>du";
+      action.__raw = "function() require('dapui').toggle() end";
+      options = {
+        silent = true;
+        desc = "[D]ebug Toggle [U]I";
+      };
+    }
+    {
+      mode = "n";
+      key = "<leader>dt";
+      action = ":DapTerminate<CR>";
+      options = {
+        silent = true;
+        desc = "[D]ebug [T]erminate";
+      };
+    }
+    {
+      mode = "n";
       key = "<leader>dc";
       options = {
         silent = true;
