@@ -3,7 +3,7 @@
     ./applications.nix
     ./firefox.nix
     ./home.nix
-    ./waybar.ni
+    ./waybar.nix
     ./zathura.nix
     ./zsh.nix
   ];
