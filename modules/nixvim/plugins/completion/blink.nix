@@ -2,7 +2,7 @@
   plugins.blink-cmp = {
     enable = true;
     settings.completion = {
-      menu.border = "round";
+      menu.border = "rounded";
     };
   };
 }
