@@ -10,6 +10,7 @@
     gh
     ghc
     home-manager
+    killall
     lf
     lldb
     lsd

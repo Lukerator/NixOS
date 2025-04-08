@@ -33,17 +33,17 @@
         "suppressevent maximize, class:.*"
         "nofocus,class:^$,title:^$,xwayland:1,floating:1,fullscreen:0,pinned:0"
       ];
+      exec-once = [
+        "swayosd-server"
+        "killall -q waybar;sleep 1 && waybar"
+        "exec ${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1"
+      ];
       general = {
         gaps_in = 6;
         gaps_out = 12;
         border_size = 2;
         layout = "dwindle";
       };
-      exec-once = [
-        "swayosd-server"
-        "killall -q waybar;sleep 1 && waybar"
-        "exec ${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1"
-      ];
       bindel = [
         ",XF86MonBrightnessUp, exec, swayosd-client --brightness raise"
         ",XF86MonBrightnessDown, exec, swayosd-client --brightness lower"

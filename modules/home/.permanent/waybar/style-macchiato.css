@@ -31,162 +31,163 @@
 @define-color crust #181926;
 
 window#waybar {
-	background-color: @base;
-	font-family: "Cantarell", "Font Awesome 5 Pro";
 	font-size: 9pt;
-	font-weight: bold;
 	margin-top: 8px;
 	min-height: 0px;
 	margin-left: 0px;
+	font-weight: bold;
 	margin-right: 0px;
-	margin-bottom: 0px;
 	border-radius: 0px;
+	margin-bottom: 0px;
 	box-shadow: 0 0 0 0px;
+	background-color: @base;
+	font-family: "Cantarell", "Font Awesome 5 Pro";
 }
 
 #window {
 	color: @text;
-	background-color: @base;
 	min-height: 0px;
-	margin-top: 10px;
 	margin-left: 2px;
+	margin-top: 10px;
 	margin-right: 2px;
-	margin-bottom: 0px;
 	border-radius: 0px;
+	margin-bottom: 0px;
 	box-shadow: 0 0 0 0px;
+	background-color: @base;
 }
 
 #workspaces button.active {
 	color: @text;
-	background-color: @base;
 	min-height: 0px;
 	margin-top: -2px;
+	font-weight: bold;
 	margin-left: -5px;
+	border-radius: 0px;
 	margin-right: -5px;
 	margin-bottom: -13px;
-	border-radius: 0px;
 	box-shadow: 0 0 0 0px;
+	background-color: @base;
 }
 
 #workspaces button {
 	color: @blue;
-	background-color: @base;
 	min-height: 0px;
 	margin-top: -2px;
 	margin-left: -5px;
+	border-radius: 0px;
 	margin-right: -5px;
 	margin-bottom: -13px;
-	border-radius: 0px;
 	box-shadow: 0 0 0 0px;
+	background-color: @base;
 }
 
 #workspaces button.focused {
 	color: @base;
-	background-color: @base;
-	background: @focused;
 	min-height: 0px;
 	margin-top: -2px;
 	margin-left: -5px;
-	margin-right: -5px;
-	margin-bottom: -13px;
 	border-radius: 0px;
+	margin-right: -5px;
+	background: @focused;
+	margin-bottom: -13px;
 	box-shadow: 0 0 0 0px;
+	background-color: @base;
 }
 
 #workspaces {
-	background-color: @base;
 	color: @text;
-	min-height: 0px;
 	margin-top: 2px;
+	min-height: 0px;
 	margin-left: 10px;
 	margin-right: 0px;
-	margin-bottom: 0px;
-	border-radius: 0px;
 	padding-left: 8px;
+	border-radius: 0px;
+	margin-bottom: 0px;
 	padding-right: 8px;
 	box-shadow: 0 0 0 0px;
+	background-color: @base;
 }
 
 #clock {
 	color: @text;
-	background-color: @base;
-	min-height: 0px;
 	margin-top: 8px;
+	min-height: 0px;
 	margin-left: 2px;
-	margin-right: 13px;
-	margin-bottom: 0px;
-	border-radius: 0px;
 	padding-left: 8px;
+	border-radius: 0px;
+	margin-bottom: 0px;
+	margin-right: 13px;
 	padding-right: 8px;
 	box-shadow: 0 0 0 0px;
+	background-color: @base;
 }
 
 #network {
-	background-color: @base;
 	color: @text;
 	min-height: 0px;
-	margin-top: 10px;
 	margin-left: 2px;
+	margin-top: 10px;
 	margin-right: 2px;
-	margin-bottom: 0px;
-	border-radius: 0px;
 	padding-left: 8px;
+	border-radius: 0px;
+	margin-bottom: 0px;
 	padding-right: 8px;
 	box-shadow: 0 0 0 0px;
+	background-color: @base;
 }
 
 #pulseaudio {
-	background-color: @base;
 	color: @text;
 	min-height: 0px;
-	margin-top: 10px;
 	margin-left: 2px;
+	margin-top: 10px;
 	margin-right: 2px;
-	margin-bottom: 0px;
-	border-radius: 0px;
 	padding-left: 8px;
+	border-radius: 0px;
+	margin-bottom: 0px;
 	padding-right: 8px;
 	box-shadow: 0 0 0 0px;
+	background-color: @base;
 }
 
 #pulseaudio.muted {
-	background-color: @base;
 	color: @text;
 	min-height: 0px;
-	margin-top: 10px;
 	margin-left: 2px;
+	margin-top: 10px;
 	margin-right: 2px;
-	margin-bottom: 0px;
-	border-radius: 0px;
 	padding-left: 8px;
+	border-radius: 0px;
+	margin-bottom: 0px;
 	padding-right: 8px;
 	box-shadow: 0 0 0 0px;
+	background-color: @base;
 }
 
 #backlight {
-	background-color: @base;
 	color: @text;
 	min-height: 0px;
-	margin-top: 10px;
 	margin-left: 2px;
+	margin-top: 10px;
 	margin-right: 2px;
-	margin-bottom: 0px;
-	border-radius: 0px;
 	padding-left: 8px;
+	border-radius: 0px;
+	margin-bottom: 0px;
 	padding-right: 8px;
 	box-shadow: 0 0 0 0px;
+	background-color: @base;
 }
 
 #battery {
-	background-color: @base;
 	color: @text;
 	min-height: 0px;
-	margin-top: 10px;
 	margin-left: 2px;
+	margin-top: 10px;
 	margin-right: 2px;
-	margin-bottom: 0px;
-	border-radius: 0px;
 	padding-left: 8px;
+	border-radius: 0px;
+	margin-bottom: 0px;
 	padding-right: 8px;
 	box-shadow: 0 0 0 0px;
+	background-color: @base;
 }
