@@ -11,5 +11,6 @@
     multicursors.enable = true;
     cmp-nvim-lsp.enable = true;
     nvim-autopairs.enable = true;
+    indent-blankline.enable = true;
   };
 }
