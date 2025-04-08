@@ -66,7 +66,7 @@ window#waybar {
 	margin-left: -5px;
 	border-radius: 0px;
 	margin-right: -5px;
-	margin-bottom: -13px;
+	margin-bottom: -15px;
 	box-shadow: 0 0 0 0px;
 	background-color: @base;
 	font-family: "Cantarell", "Font Awesome 5 Pro";
@@ -81,7 +81,7 @@ window#waybar {
 	margin-left: -5px;
 	border-radius: 0px;
 	margin-right: -5px;
-	margin-bottom: -13px;
+	margin-bottom: -15px;
 	box-shadow: 0 0 0 0px;
 	background-color: @base;
 	font-family: "Cantarell", "Font Awesome 5 Pro";
@@ -97,7 +97,7 @@ window#waybar {
 	border-radius: 0px;
 	margin-right: -5px;
 	background: @focused;
-	margin-bottom: -13px;
+	margin-bottom: -15px;
 	box-shadow: 0 0 0 0px;
 	background-color: @base;
 	font-family: "Cantarell", "Font Awesome 5 Pro";
