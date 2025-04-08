@@ -48,7 +48,12 @@
     {
       mode = "n";
       key = "<leader>dt";
-      action = ":DapTerminate<CR>";
+      action.__raw = "
+        function()
+          require('dapui').close()
+          require('dap').stop()
+        end
+      ";
       options = {
         silent = true;
         desc = "[D]ebug [T]erminate";
