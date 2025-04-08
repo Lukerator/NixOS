@@ -41,6 +41,7 @@
       };
       exec-once = [
         "swayosd-server"
+        "killall -q waybar;sleep 1 && waybar"
         "exec ${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1"
       ];
       bindel = [
