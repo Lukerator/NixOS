@@ -2,6 +2,7 @@
   plugins.lsp = {
     enable = true;
     servers = {
+      hls.enable = true;
       html.enable = true;
       nixd.enable = true;
       clangd.enable = true;

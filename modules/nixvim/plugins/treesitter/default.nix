@@ -14,6 +14,7 @@
         "html"
         "typst"
         "python"
+        "haskell"
         "markdown"
       ];
     };
