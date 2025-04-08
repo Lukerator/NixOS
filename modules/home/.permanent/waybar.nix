@@ -48,7 +48,6 @@
         network = {
           format = "󰖩  {essid}";
           format-disconnected = "󰖪  disconnected";
-          on-click = "kitty nmtui";
         };
         clock = {
           format = "  {:%H:%M  %d/%m} ";
