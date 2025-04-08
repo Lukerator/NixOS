@@ -16,6 +16,7 @@
         "yaml"
         "packer"
         "lspinfo"
+        "dashboard"
         "checkhealth"
         "TelescopePrompt"
         "TelescopeResults"
