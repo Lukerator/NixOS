@@ -140,6 +140,7 @@
         "$mod SHIFT, q, exec, hyprctl kill"
         "$mod SHIFT, x, exec, shutdown -h now"
         "$mod CTRL, x, exec, hyprctl dispatch exit"
+        "$mod, s, exec, hyprshot -o ~/Pictures -m region"
 
         "$mod, 1, workspace, 1"
         "$mod, 2, workspace, 2"
