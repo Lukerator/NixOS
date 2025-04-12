@@ -9,9 +9,9 @@
     git
     gh
     ghc
+    ghostty
     home-manager
     killall
-    kitty
     lf
     lldb
     lsd

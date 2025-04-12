@@ -136,7 +136,7 @@
         "$mod, l, exec, lutris"
         "$mod, w, exec, firefox"
         "$mod, c, exec, neovide"
-        "$mod, return, exec, foot"
+        "$mod, return, exec, ghostty"
         "$mod SHIFT, q, exec, hyprctl kill"
         "$mod SHIFT, x, exec, shutdown -h now"
         "$mod CTRL, x, exec, hyprctl dispatch exit"
