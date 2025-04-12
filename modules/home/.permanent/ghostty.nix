@@ -1,10 +1,10 @@
 {
   programs.ghostty = {
     enable = true;
-    theme = "tokyonight";
     settings = {
-      font-family = "JetBrainsMonoNL Nerd Font Mono";
       font-size = 12;
+      theme = "tokyonight";
+      font-family = "JetBrainsMonoNL Nerd Font Mono";
     };
   };
 }
