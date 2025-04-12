@@ -1,5 +1,5 @@
 {
-  programs.ghostty.theme = {
+  programs.ghostty.themes = {
     catppuccin-macchiato = {
       background = "24273a";
       foreground = "cad3f5";
