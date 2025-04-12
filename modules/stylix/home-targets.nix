@@ -10,7 +10,7 @@
     targets = {
       qt.enable = true;
       gtk.enable = false;
-      foot.enable = true;
+      kitty.enable = true;
       zathura.enable = true;
       hyprland = {
         enable = true;

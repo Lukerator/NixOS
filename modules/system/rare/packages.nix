@@ -11,6 +11,7 @@
     ghc
     home-manager
     killall
+    kitty
     lf
     lldb
     lsd
