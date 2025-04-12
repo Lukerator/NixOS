@@ -11,6 +11,7 @@
     ghc
     ghostty
     home-manager
+    hyprshot
     killall
     lf
     lldb

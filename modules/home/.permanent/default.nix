@@ -2,7 +2,8 @@
   imports = [
     ./applications.nix
     ./firefox.nix
-    ./ghostty
+    ./ghostthemes.nix
+    ./ghostty.nix
     ./home.nix
     ./waybar.nix
     ./zathura.nix
