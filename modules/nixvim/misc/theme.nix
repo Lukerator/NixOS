@@ -1,8 +1,6 @@
 {
-  colorschemes = {
-    catppuccin = {
-      enable = false;
-      settings.flavour = "macchiato";
-    };
+  colorschemes.catppuccin = {
+    enable = false;
+    settings.flavour = "macchiato";
   };
 }
