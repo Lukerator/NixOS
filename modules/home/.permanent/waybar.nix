@@ -1,9 +1,10 @@
 {
   programs.waybar = {
     enable = true;
-    #style = builtins.readFile ./waybar/style-mocha.css;
-    style = builtins.readFile ./waybar/style-macchiato.css;
     #style = builtins.readFile ./waybar/style-gruv.css;
+    #style = builtins.readFile ./waybar/style-mocha.css;
+    # style = builtins.readFile ./waybar/style-macchiato.css;
+    style = builtins.readFile ./waybar/style-tokyonight.css;
     settings = [
       {
         layer = "top";
