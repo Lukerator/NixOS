@@ -15,24 +15,24 @@
           ""
           "Make cool shit"
         ];
-        shortcut = [
-          {
-            key = "f";
-            icon = " ";
-            desc = "Files";
-            group = "Label";
-            icon_hl = "@variable";
-            action.__raw = "function(path) require('fzf-lua').files() end";
-          }
-          {
-            key = "n";
-            icon = " ";
-            desc = "New File";
-            group = "Label";
-            icon_hl = "@variable";
-            action.__raw = "function(path) require('nui.input').open({position = '50%', relative = 'editor'}) end";
-          }
-        ];
+        # shortcut = [
+        #   {
+        #     key = "f";
+        #     icon = " ";
+        #     desc = "Files";
+        #     group = "Label";
+        #     icon_hl = "@variable";
+        #     action.__raw = "function(path) require('fzf-lua').files() end";
+        #   }
+        #   {
+        #     key = "n";
+        #     icon = " ";
+        #     desc = "New File";
+        #     group = "Label";
+        #     icon_hl = "@variable";
+        #     action.__raw = "function(path) require('nui.input').open({position = '50%', relative = 'editor'}) end";
+        #   }
+        # ];
       };
     };
   };
