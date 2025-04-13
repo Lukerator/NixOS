@@ -10,6 +10,7 @@
     targets = {
       qt.enable = true;
       gtk.enable = false;
+      nixvim.enable = true;
       ghostty.enable = true;
       zathura.enable = true;
       hyprland = {
