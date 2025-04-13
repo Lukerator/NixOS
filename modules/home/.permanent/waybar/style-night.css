@@ -1,0 +1,195 @@
+@define-color transparent rgba(0, 0, 0, 0);
+@define-color red #f7768e;
+@define-color green #9ece6a;
+@define-color yellow #e0af68;
+@define-color blue #7aa2f7;
+@define-color magenta #bb9af7;
+@define-color cyan #7dcfff;
+@define-color orange #ff9e64;
+@define-color text #c0caf5;
+@define-color base #1a1b26;
+@define-color surface0 #15161e;
+@define-color surface1 #414868;
+@define-color surface2 #565f89;
+@define-color overlay0 #737aa2;
+@define-color overlay1 #9aa5ce;
+@define-color overlay2 #a9b1d6;
+@define-color subtext0 #c0caf5;
+@define-color subtext1 #d5d6db;
+@define-color mantle #1a1b26;
+@define-color crust #1a1b26;
+@define-color focused #7aa2f7;
+
+window#waybar {
+	font-size: 9pt;
+	margin-top: 8px;
+	min-height: 0px;
+	margin-left: 0px;
+	font-weight: bold;
+	margin-right: 0px;
+	border-radius: 0px;
+	margin-bottom: 0px;
+	box-shadow: 0 0 0 0px;
+	background-color: @base;
+	font-family: "Cantarell", "Font Awesome 5 Pro";
+}
+
+#window {
+	color: @text;
+	font-size: 9pt;
+	min-height: 0px;
+	margin-left: 2px;
+	margin-top: 10px;
+	margin-right: 2px;
+	border-radius: 0px;
+	margin-bottom: 0px;
+	box-shadow: 0 0 0 0px;
+	background-color: @base;
+}
+
+#workspaces button.active {
+	color: @text;
+	font-size: 9pt;
+	min-height: 0px;
+	margin-top: -4px;
+	font-weight: bold;
+	margin-left: -5px;
+	border-radius: 0px;
+	margin-right: -5px;
+	margin-bottom: -15px;
+	box-shadow: 0 0 0 0px;
+	background-color: @base;
+	font-family: "Cantarell", "Font Awesome 5 Pro";
+}
+
+#workspaces button {
+	color: @blue;
+	font-size: 9pt;
+	min-height: 0px;
+	margin-top: -4px;
+	font-weight: bold;
+	margin-left: -5px;
+	border-radius: 0px;
+	margin-right: -5px;
+	margin-bottom: -15px;
+	box-shadow: 0 0 0 0px;
+	background-color: @base;
+	font-family: "Cantarell", "Font Awesome 5 Pro";
+}
+
+#workspaces button.focused {
+	color: @base;
+	font-size: 9pt;
+	min-height: 0px;
+	margin-top: -4px;
+	font-weight: bold;
+	margin-left: -5px;
+	border-radius: 0px;
+	margin-right: -5px;
+	background: @focused;
+	margin-bottom: -15px;
+	box-shadow: 0 0 0 0px;
+	background-color: @base;
+	font-family: "Cantarell", "Font Awesome 5 Pro";
+}
+
+#workspaces {
+	color: @text;
+	font-size: 9pt;
+	margin-top: 0px;
+	min-height: 0px;
+	font-weight: bold;
+	margin-left: 10px;
+	margin-right: 0px;
+	padding-left: 8px;
+	border-radius: 0px;
+	margin-bottom: 0px;
+	padding-right: 8px;
+	box-shadow: 0 0 0 0px;
+	background-color: @base;
+	font-family: "Cantarell", "Font Awesome 5 Pro";
+}
+
+#clock {
+	color: @text;
+	margin-top: 8px;
+	min-height: 0px;
+	margin-left: 2px;
+	padding-left: 8px;
+	border-radius: 0px;
+	margin-bottom: 0px;
+	margin-right: 13px;
+	padding-right: 8px;
+	box-shadow: 0 0 0 0px;
+	background-color: @base;
+}
+
+#network {
+	color: @text;
+	min-height: 0px;
+	margin-left: 2px;
+	margin-top: 10px;
+	margin-right: 2px;
+	padding-left: 8px;
+	border-radius: 0px;
+	margin-bottom: 0px;
+	padding-right: 8px;
+	box-shadow: 0 0 0 0px;
+	background-color: @base;
+}
+
+#pulseaudio {
+	color: @text;
+	min-height: 0px;
+	margin-left: 2px;
+	margin-top: 10px;
+	margin-right: 2px;
+	padding-left: 8px;
+	border-radius: 0px;
+	margin-bottom: 0px;
+	padding-right: 8px;
+	box-shadow: 0 0 0 0px;
+	background-color: @base;
+}
+
+#pulseaudio.muted {
+	color: @text;
+	min-height: 0px;
+	margin-left: 2px;
+	margin-top: 10px;
+	margin-right: 2px;
+	padding-left: 8px;
+	border-radius: 0px;
+	margin-bottom: 0px;
+	padding-right: 8px;
+	box-shadow: 0 0 0 0px;
+	background-color: @base;
+}
+
+#backlight {
+	color: @text;
+	min-height: 0px;
+	margin-left: 2px;
+	margin-top: 10px;
+	margin-right: 2px;
+	padding-left: 8px;
+	border-radius: 0px;
+	margin-bottom: 0px;
+	padding-right: 8px;
+	box-shadow: 0 0 0 0px;
+	background-color: @base;
+}
+
+#battery {
+	color: @text;
+	min-height: 0px;
+	margin-left: 2px;
+	margin-top: 10px;
+	margin-right: 2px;
+	padding-left: 8px;
+	border-radius: 0px;
+	margin-bottom: 0px;
+	padding-right: 8px;
+	box-shadow: 0 0 0 0px;
+	background-color: @base;
+}

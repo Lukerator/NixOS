@@ -6,7 +6,6 @@
 @define-color magenta #bb9af7;
 @define-color cyan #7dcfff;
 @define-color orange #ff9e64;
-
 @define-color text #c0caf5;
 @define-color base #1a1b26;
 @define-color surface0 #15161e;
@@ -22,14 +21,14 @@
 @define-color focused #7aa2f7;
 
 window#waybar {
-    font-size: 9pt;
-      font-family: "MonaspiceNe NF";
-      font-weight: bold;
-      margin: 8px 0 0 0;
-      min-height: 0px;
-      border-radius: 0px;
-      box-shadow: none;
-      background-color: @base;
+  font-size: 9pt;
+  font-family: "MonaspiceNe NF";
+  font-weight: bold;
+  margin: 8px 0 0 0;
+  min-height: 0px;
+  border-radius: 0px;
+  box-shadow: none;
+  background-color: @base;
 }
 
 #window,
@@ -43,31 +42,31 @@ window#waybar {
 #pulseaudio.muted,
 #backlight,
 #battery {
-    color: @text;
-    font-size: 9pt;
-      font-family: "MonaspiceNe NF";
-      font-weight: bold;
-      min-height: 0px;
-      border-radius: 0px;
-      box-shadow: none;
-      background-color: @base;
+  color: @text;
+  font-size: 9pt;
+  font-family: "MonaspiceNe NF";
+  font-weight: bold;
+  min-height: 0px;
+  border-radius: 0px;
+  box-shadow: none;
+  background-color: @base;
 }
 
 #window {
-    margin: 10px 2px 0 2px;
+  margin: 10px 2px 0 2px;
 }
 
 #workspaces {
-    margin: 0 0 0 10px;
-      padding: 0 8px;
+  margin: 0 0 0 10px;
+  padding: 0 8px;
 }
 
 #workspaces button {
-    margin: -4px -5px -15px -5px;
+  margin: -4px -5px -15px -5px;
 }
 
 #workspaces button.focused {
-    background-color: @focused;
+  background-color: @focused;
   color: @base;
 }
 
@@ -77,12 +76,12 @@ window#waybar {
 #pulseaudio.muted,
 #backlight,
 #battery {
-    margin: 10px 2px 0 2px;
-      padding: 0 8px;
+  margin: 10px 2px 0 2px;
+  padding: 0 8px;
 }
 
 #clock {
-    margin-top: 8px;
-      margin-right: 13px;
+  margin-top: 8px;
+  margin-right: 13px;
 }
 
