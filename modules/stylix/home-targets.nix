@@ -1,7 +1,7 @@
 { pkgs, ... }:
 {
   config.stylix = {
-    image = ./wallpapers/catppuccin-macchiato.png;
+    image = ./wallpapers/tokyo-night.png;
     cursor = {
       size = 26;
       name = "Catppuccin Macchiato Light";
@@ -10,7 +10,7 @@
     targets = {
       qt.enable = true;
       gtk.enable = false;
-      kitty.enable = true;
+      ghostty.enable = true;
       zathura.enable = true;
       hyprland = {
         enable = true;
