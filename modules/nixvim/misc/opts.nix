@@ -26,7 +26,7 @@
     cursorcolumn = false;
     inccommand = "split";
     relativenumber = true;
-    guifont = "JetBrainsMono NF:h14";
+    guifont = "Monaspace NF:h14";
     clipboard = {
       register = "unnamedplus";
       providers.wl-copy.enable = true;

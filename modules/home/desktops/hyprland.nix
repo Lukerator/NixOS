@@ -2,13 +2,15 @@
 {
   services = {
     swaync.enable = true;
-    hyprpaper = {
-      enable = true;
-      settings = {
-        preload = [ "../../stylix/gruvbox-dark.png" ];
-        wallpaper = [ "../../stylix/gruvbox-dark.png" ];
+    /*
+      hyprpaper = {
+        enable = true;
+        settings = {
+          preload = [ "../../stylix/gruvbox-dark.png" ];
+          wallpaper = [ "../../stylix/gruvbox-dark.png" ];
+        };
       };
-    };
+    */
   };
   wayland.windowManager.hyprland = {
     enable = true;
@@ -36,7 +38,7 @@
       exec-once = [
         "swayosd-server"
         "killall -q waybar;sleep 1 && waybar"
-        "exec ${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1"
+        "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1"
       ];
       general = {
         gaps_in = 6;

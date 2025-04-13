@@ -2,8 +2,9 @@
 {
   fonts = {
     fontDir.enable = true;
-    packages = with pkgs; [
-      nerd-fonts.jetbrains-mono
+    packages = with pkgs.nerd-fonts; [
+      monaspace
+      # jetbrains-mono
     ];
   };
 }
