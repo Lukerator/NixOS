@@ -10,7 +10,6 @@
     targets = {
       qt.enable = true;
       gtk.enable = false;
-      nixvim.enable = true;
       ghostty.enable = true;
       zathura.enable = true;
       hyprland = {
@@ -18,7 +17,7 @@
         hyprpaper.enable = true;
       };
       firefox = {
-        enable = true;
+        enable = false;
         colorTheme.enable = true;
         profileNames = [ "Luke" ];
       };
