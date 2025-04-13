@@ -8,7 +8,7 @@ in
   programs.firefox = {
     enable = true;
     profiles."Luke".extensions = {
-      settings.force = true;
+      force = true;
       packages = with nurpkgs.repos.rycee.firefox-addons; [
         darkreader
         ublock-origin
