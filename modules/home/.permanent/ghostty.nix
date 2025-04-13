@@ -3,10 +3,10 @@
     enable = true;
     settings = {
       font-size = 12;
-      theme = "tokyonight";
+      theme = "catppuccin-macchiato";
       window-padding-x = 10;
       window-padding-y = 5;
-      font-family = "JetBrainsMonoNL Nerd Font Mono";
+      font-family = "MonaspiceNe NF";
     };
   };
 }
