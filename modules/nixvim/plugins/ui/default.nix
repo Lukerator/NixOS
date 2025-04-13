@@ -2,7 +2,7 @@
   imports = [
     ./barbar.nix
     ./basic.nix
-    ./dashboard.nix
+    ./dashboarddoom.nix
     ./indent.nix
     ./headers
     ./lualine.nix
