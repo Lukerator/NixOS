@@ -7,9 +7,12 @@ in
 {
   programs.firefox = {
     enable = true;
-    profiles."Luke".extensions.packages = with nurpkgs.repos.rycee.firefox-addons; [
-      darkreader
-      ublock-origin
-    ];
+    profiles."Luke".extensions = {
+      settings.force = true;
+      packages = with nurpkgs.repos.rycee.firefox-addons; [
+        darkreader
+        ublock-origin
+      ];
+    };
   };
 }
