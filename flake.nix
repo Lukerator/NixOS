@@ -2,7 +2,7 @@
   inputs = {
     stylix.url = "github:danth/stylix";
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-    awesome-neovim-plugins.url = "github:m15a/flake-awesome-neovim-plugins";
+    # awesome-neovim-plugins.url = "github:m15a/flake-awesome-neovim-plugins";
     # nvf = {
     #   url = "github:notashelf/nvf";
     #   inputs.nixpkgs.follows = "nixpkgs";
@@ -23,7 +23,7 @@
       stylix,
       nixpkgs,
       home-manager,
-      awesome-neovim-plugins,
+      # awesome-neovim-plugins,
       ...
     }@inputs:
     let
@@ -32,7 +32,7 @@
       mainNvim = makeNixvim { module = import ./modules/nixvim; };
       pkgs = import nixpkgs {
         inherit system;
-        overlays = [ awesome-neovim-plugins.overlays.default ];
+        # overlays = [ awesome-neovim-plugins.overlays.default ];
       };
     in
     {
