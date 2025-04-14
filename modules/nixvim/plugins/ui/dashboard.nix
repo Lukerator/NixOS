@@ -10,7 +10,7 @@
       };
       config = {
         mru.limit = 5;
-        project.enable = false;
+        project.enable = true;
         footer = [
           ""
           "Make cool shit"
