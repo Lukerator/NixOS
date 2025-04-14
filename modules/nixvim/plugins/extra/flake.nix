@@ -1,6 +1,5 @@
-{ pkgs, input, ... }:
+{ pkgs, ... }:
 {
-  overlays = [ input.awesome-neovim-plugins.overlays.default ];
   extraPlugins = with pkgs.awesomeNeovimPlugins; [
     exercism-nvim
   ];
