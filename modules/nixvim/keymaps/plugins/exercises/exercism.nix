@@ -1,5 +1,5 @@
 {
-  keybinds = [
+  keymaps = [
     {
       mode = "n";
       key = "<leader>ea";
