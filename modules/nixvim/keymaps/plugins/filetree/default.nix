@@ -1,6 +1,6 @@
 {
   plugins.oil.settings.keymaps = {
-    "<CR>" = "actions.cwd";
+    "<S-CR>" = "actions.cd";
     "<BS>" = "actions.parent";
   };
   keymaps = [
