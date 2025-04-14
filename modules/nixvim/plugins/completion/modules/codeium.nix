@@ -1,6 +1,5 @@
 { lib, pkgs, ... }:
 {
-  nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [ "codeium" ];
   plugins.codeium-nvim = {
     enable = true;
     package = pkgs.vimPlugins.windsurf-nvim;
