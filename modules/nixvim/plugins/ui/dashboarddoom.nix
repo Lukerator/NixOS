@@ -13,13 +13,14 @@
         mru.limit = 5;
         project.enable = true;
         footer = [
+          ""
           "\"Talk is cheap. Show me the code.\" – Linus Torvalds"
         ];
         shortcut = [
           {
             key = "r";
             icon = " ";
-            desc = "Recent Files";
+            desc = "Recents";
             group = "Label";
             icon_hl = "@variable";
             action.__raw = "function() require('fzf-lua').oldfiles() end";
@@ -27,7 +28,7 @@
           {
             key = "f";
             icon = " ";
-            desc = "Find File (cwd)";
+            desc = "Files";
             group = "Label";
             icon_hl = "@variable";
             action.__raw = "function() require('fzf-lua').files() end";
@@ -35,26 +36,10 @@
           {
             key = "n";
             icon = " ";
-            desc = "New File";
+            desc = "New";
             group = "Label";
             icon_hl = "@variable";
             action = ":enew";
-          }
-          {
-            key = "w";
-            icon = " ";
-            desc = "Find Word";
-            group = "Label";
-            icon_hl = "@variable";
-            action.__raw = "function() require('fzf-lua').live_grep() end";
-          }
-          {
-            key = "p";
-            icon = "";
-            desc = "Recent Projects";
-            group = "Label";
-            icon_hl = "@variable";
-            action.__raw = "function() require('fzf-lua').projects() end";
           }
         ];
       };
