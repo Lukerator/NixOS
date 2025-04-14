@@ -2,29 +2,29 @@
   keymaps = [
     {
       mode = "n";
-      key = "<leader>et";
+      key = "<leader>dt";
       action = ":Trouble<CR>";
       options = {
         silent = true;
-        desc = "Toggle trouble";
+        desc = "[D]ebug [T]rouble";
       };
     }
     {
       mode = "n";
-      key = "<leader>eq";
+      key = "<leader>dq";
       action = ":Trouble quickfix toggle<CR>";
       options = {
         silent = true;
-        desc = "Quickfix list";
+        desc = "[D]ebug [Q]uickfix";
       };
     }
     {
       mode = "n";
-      key = "<leader>ed";
+      key = "<leader>de";
       action = ":Trouble diagnostics toggle<CR>";
       options = {
         silent = true;
-        desc = "Diagnostics list";
+        desc = "[D]ebug [E]rrors";
       };
     }
   ];

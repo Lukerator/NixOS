@@ -3,10 +3,10 @@
     ./bar
     ./completion
     ./debug
+    ./exercises
     ./extra
     ./filetree
     ./format
-    ./leetcode
     ./saving
     ./search
   ];
