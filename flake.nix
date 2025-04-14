@@ -31,7 +31,7 @@
       mainNvim = makeNixvim { module = import ./modules/nixvim; };
       pkgs = import nixpkgs {
         inherit system;
-        # overlays = [ inputs.awesome-neovim-plugins.overlays.default ];
+        overlays = [ inputs.awesome-neovim-plugins.overlays.default ];
       };
     in
     {
