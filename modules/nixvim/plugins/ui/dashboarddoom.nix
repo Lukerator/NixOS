@@ -7,6 +7,7 @@
       hide = {
         winbar = true;
         tabline = true;
+        shortcut = true;
         statusline = true;
       };
       config = {
