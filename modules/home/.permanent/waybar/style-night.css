@@ -25,13 +25,11 @@ window#waybar {
 	margin-top: 8px;
 	min-height: 0px;
 	margin-left: 0px;
-	font-weight: bold;
 	margin-right: 0px;
 	border-radius: 0px;
 	margin-bottom: 0px;
 	box-shadow: 0 0 0 0px;
-	background-color: @base;
-	font-family: "Cantarell", "Font Awesome 5 Pro";
+	background-color: @transparent;
 }
 
 #window {
@@ -59,7 +57,7 @@ window#waybar {
 	margin-bottom: -15px;
 	box-shadow: 0 0 0 0px;
 	background-color: @base;
-	font-family: "Cantarell", "Font Awesome 5 Pro";
+	font-family: "MonaspiceNe NF";
 }
 
 #workspaces button {
@@ -74,7 +72,7 @@ window#waybar {
 	margin-bottom: -15px;
 	box-shadow: 0 0 0 0px;
 	background-color: @base;
-	font-family: "Cantarell", "Font Awesome 5 Pro";
+	font-family: "MonaspiceNe NF";
 }
 
 #workspaces button.focused {
@@ -90,7 +88,7 @@ window#waybar {
 	margin-bottom: -15px;
 	box-shadow: 0 0 0 0px;
 	background-color: @base;
-	font-family: "Cantarell", "Font Awesome 5 Pro";
+	font-family: "MonaspiceNe NF";
 }
 
 #workspaces {
@@ -107,7 +105,7 @@ window#waybar {
 	padding-right: 8px;
 	box-shadow: 0 0 0 0px;
 	background-color: @base;
-	font-family: "Cantarell", "Font Awesome 5 Pro";
+	font-family: "MonaspiceNe NF";
 }
 
 #clock {
