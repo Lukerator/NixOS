@@ -9,7 +9,7 @@
     };
     targets = {
       qt.enable = true;
-      gtk.enable = false;
+      gtk.enable = true;
       ghostty.enable = true;
       zathura.enable = true;
       hyprland = {
