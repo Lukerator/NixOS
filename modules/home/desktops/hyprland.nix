@@ -2,15 +2,6 @@
 {
   services = {
     swaync.enable = true;
-    /*
-      hyprpaper = {
-        enable = true;
-        settings = {
-          preload = [ "../../stylix/gruvbox-dark.png" ];
-          wallpaper = [ "../../stylix/gruvbox-dark.png" ];
-        };
-      };
-    */
   };
   wayland.windowManager.hyprland = {
     enable = true;
@@ -136,13 +127,14 @@
         "$mod, q, killactive"
         "$mod, e, exec, thunar"
         "$mod, l, exec, lutris"
-        "$mod, w, exec, firefox"
         "$mod, c, exec, neovide"
+        "$mod, s, exec, spotify"
+        "$mod, w, exec, firefox"
         "$mod, return, exec, ghostty"
         "$mod SHIFT, q, exec, hyprctl kill"
         "$mod SHIFT, x, exec, shutdown -h now"
         "$mod CTRL, x, exec, hyprctl dispatch exit"
-        "$mod, s, exec, hyprshot -o ~/Pictures -m region"
+        "$mod SHIFT, s, exec, hyprshot -o ~/Pictures -m region"
 
         "$mod, 1, workspace, 1"
         "$mod, 2, workspace, 2"
