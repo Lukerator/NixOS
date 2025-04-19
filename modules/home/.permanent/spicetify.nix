@@ -21,7 +21,6 @@
         seekSong
         showQueueDuration
         shuffle
-        spicetify-genres
         volumePercentage
         wikify
       ];
