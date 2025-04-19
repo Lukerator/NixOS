@@ -12,6 +12,7 @@
       gtk.enable = true;
       ghostty.enable = true;
       zathura.enable = true;
+      spicetify.enable = true;
       hyprland = {
         enable = true;
         hyprpaper.enable = true;
