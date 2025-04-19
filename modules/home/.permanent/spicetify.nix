@@ -11,7 +11,6 @@
         copyToClipboard
         fullAppDisplayMod
         fullScreen
-        genre
         hidePodcasts
         history
         phraseToPlaylist
