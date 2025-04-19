@@ -9,7 +9,7 @@
       enabledExtensions = with spices.extensions; [
         adblock
         adblockify
-        autoSkipVideos
+        autoSkip
         copyToClipboard
         fullAppDisplayMod
         fullScreen
