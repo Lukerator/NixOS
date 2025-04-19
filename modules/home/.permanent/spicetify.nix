@@ -8,6 +8,7 @@
       enable = true;
       enabledExtensions = with spices.extensions; [
         adblock
+        adblockify
         copyToClipboard
         fullAppDisplayMod
         fullScreen
@@ -21,6 +22,7 @@
         showQueueDuration
         shuffle
         volumePercentage
+        whatsThatGenre
         wikify
       ];
     };
