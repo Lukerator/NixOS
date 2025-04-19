@@ -26,7 +26,7 @@
         wikify
       ];
       enabledCustomApps = with spices.apps; [
-        lyricsplus
+        lyrics-plus
       ];
     };
 }
