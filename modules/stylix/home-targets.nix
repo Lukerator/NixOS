@@ -18,8 +18,7 @@
         hyprpaper.enable = true;
       };
       firefox = {
-        enable = false;
-        colorTheme.enable = true;
+        enable = true;
         profileNames = [ "Luke" ];
       };
     };
