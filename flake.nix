@@ -1,12 +1,8 @@
 {
   inputs = {
     stylix.url = "github:danth/stylix";
+    spicetify.url = "github:Gerg-L/spicetify-nix";
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-    # awesome-neovim-plugins.url = "github:m15a/flake-awesome-neovim-plugins";
-    # nvf = {
-    #   url = "github:notashelf/nvf";
-    #   inputs.nixpkgs.follows = "nixpkgs";
-    # };
     nixvim = {
       inputs.nixpkgs.follows = "nixpkgs";
       url = "github:nix-community/nixvim";
@@ -22,6 +18,7 @@
       nixvim,
       stylix,
       nixpkgs,
+      spicetify,
       home-manager,
       # awesome-neovim-plugins,
       ...
@@ -52,6 +49,7 @@
         modules = [
           ./modules/home
           ./modules/stylix
+          spicetify.homeManagerModules.default
           stylix.homeManagerModules.stylix
           ./modules/stylix/home-targets.nix
           { home.packages = [ mainNvim ]; }
