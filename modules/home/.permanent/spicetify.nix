@@ -10,6 +10,8 @@
         adblock
         adblockify
         autoSkip
+        beautifulLyrics
+        betterGenres
         copyToClipboard
         fullAppDisplay
         fullScreen
@@ -22,11 +24,17 @@
         seekSong
         showQueueDuration
         shuffle
+        simpleBeautifulLyrics
         volumePercentage
         wikify
+        writeify
       ];
       enabledCustomApps = with spices.apps; [
-        lyrics-plus
+        betterLibrary
+        historyInSidebar
+        lyricsPlus
+        marketplace
+        nameThatTune
       ];
     };
 }
