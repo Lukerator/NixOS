@@ -11,7 +11,7 @@
         adblockify
         autoSkip
         copyToClipboard
-        fullAppDisplayMod
+        fullAppDisplay
         fullScreen
         hidePodcasts
         history
@@ -24,6 +24,9 @@
         shuffle
         volumePercentage
         wikify
+      ];
+      enabledCustomApps = with spices.apps; [
+        lyricsplus
       ];
     };
 }
