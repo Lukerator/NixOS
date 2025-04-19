@@ -7,7 +7,7 @@
     {
       enable = true;
       enabledExtensions = with spices.extensions; [
-        charliesAdblock
+        adblock
         copyToClipboard
         fullAppDisplayMod
         fullScreen
