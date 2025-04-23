@@ -3,12 +3,14 @@
   environment.systemPackages = with pkgs; [
     acpi
     brightnessctl
-    catppuccin-gtk
     gcc
     git
     gh
     ghc
     ghostty
+    gtk2
+    gtk3
+    gtk4
     home-manager
     hyprshot
     killall
