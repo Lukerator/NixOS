@@ -3,7 +3,7 @@
     "lsp"
     "path"
     "buffer"
-    "codeium"
+    "windsurf"
     "ripgrep"
     "snippets"
     "dictionary"

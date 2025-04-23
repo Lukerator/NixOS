@@ -1,7 +1,7 @@
 {
   programs.zsh = {
     enable = true;
-    initExtra = "clear";
+    initContent = "clear";
     dotDir = ".config/zsh";
     enableCompletion = true;
     autosuggestion.enable = false;

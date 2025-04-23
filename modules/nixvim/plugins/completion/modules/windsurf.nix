@@ -1,6 +1,6 @@
 { lib, pkgs, ... }:
 {
-  plugins.codeium-nvim = {
+  plugins.windsurf-nvim = {
     enable = true;
     package = pkgs.vimPlugins.windsurf-nvim;
     settings.tools = {
