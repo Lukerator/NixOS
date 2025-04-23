@@ -1,6 +1,6 @@
 {
   imports = [
-    ./codeium.nix
+    ./windsurf.nix
     ./dictionary.nix
     ./ripgrep.nix
   ];
