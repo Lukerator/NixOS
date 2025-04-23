@@ -1,6 +1,6 @@
 {
   imports = [
-    ./codeium.nix
+    ./windsurf.nix
     ./compat.nix
     ./dictionary.nix
     ./ghost.nix
