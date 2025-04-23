@@ -4,6 +4,10 @@
     enable = true;
     polarity = "dark";
     autoEnable = false;
+    fonts.sansSerif = {
+      name = "MonaspiceNe NF";
+      package = pkgs.monaspace;
+    };
     # base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-macchiato.yaml";
     # base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-material-dark-medium.yaml";
     base16Scheme = {
