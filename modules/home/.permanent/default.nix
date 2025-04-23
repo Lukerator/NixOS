@@ -5,6 +5,7 @@
     ./ghostthemes.nix
     ./ghostty.nix
     ./home.nix
+    ./minecraft.nix
     ./spicetify.nix
     ./waybar.nix
     ./zathura.nix
