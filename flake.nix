@@ -2,7 +2,7 @@
   inputs = {
     stylix.url = "github:danth/stylix";
     spicetify.url = "github:Gerg-L/spicetify-nix";
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    nixpkgs.url = "git+https://github.com/NixOS/nixpkgs?shallow=1&ref=nixos-unstable";
     nixvim = {
       inputs.nixpkgs.follows = "nixpkgs";
       url = "github:nix-community/nixvim";
