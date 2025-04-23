@@ -125,6 +125,7 @@
         "$mod CTRL, right, resizeactive, 20 0"
 
         "$mod, q, killactive"
+        "$mod, d, exec, fuzzel"
         "$mod, e, exec, thunar"
         "$mod, l, exec, lutris"
         "$mod, c, exec, neovide"
