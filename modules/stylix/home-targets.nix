@@ -10,6 +10,7 @@
     targets = {
       qt.enable = true;
       gtk.enable = true;
+      fuzzel.enable = true;
       ghostty.enable = true;
       zathura.enable = true;
       spicetify.enable = true;
