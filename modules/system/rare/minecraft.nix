@@ -8,6 +8,7 @@
       # Change Java runtimes available to Prism Launcher
       jdks = [
         zulu
+        zulu17
       ];
     })
   ];
