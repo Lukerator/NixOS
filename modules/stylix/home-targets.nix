@@ -1,7 +1,7 @@
 { pkgs, ... }:
 {
   config.stylix = {
-    image = ./wallpapers/tokyo-nico.png;
+    image = ./wallpapers/tokyo-night.png;
     cursor = {
       size = 26;
       name = "Catppuccin Macchiato Light";
