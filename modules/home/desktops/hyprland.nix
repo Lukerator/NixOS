@@ -131,6 +131,7 @@
         "$mod, c, exec, neovide"
         "$mod, s, exec, spotify"
         "$mod, w, exec, firefox"
+        "$mod, m, exec, prismlauncher"
         "$mod, return, exec, ghostty"
         "$mod SHIFT, q, exec, hyprctl kill"
         "$mod SHIFT, x, exec, shutdown -h now"
