@@ -11,7 +11,7 @@
       dwindle.preserve_split = true;
       gestures.workspace_swipe = true;
       monitor = [
-        "eDP-1, prefered, auto, 0.75"
+        "eDP-1, prefered, auto, 0.85"
         "HDMI-A-2, highres@highrr, auto, 1, mirror, eDP-1"
       ];
       misc = {
