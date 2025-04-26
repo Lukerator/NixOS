@@ -35,5 +35,8 @@
     xfce.thunar-archive-plugin
     xfce.thunar-volman
     zathura
+    heimdall
+    heimdall-gui
+    android-tools
   ];
 }
