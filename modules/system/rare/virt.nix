@@ -1,10 +1,12 @@
 { pkgs, ... }:
 {
   boot.kernelModules = [ "kvm-intel" ];
-  virtualisation.libvirtd.enable = true;
-  users.users.luke.extraGroups = [ "libvirtd" ];
+  users.users.luke.extraGroups = [ "vboxusers" ];
+  virtualisation.virtualbox.host = {
+    enable = true;
+    enableKvm = true;
+  };
   environment = {
-    systemPackages = [ pkgs.vagrant ];
-    sessionVariables.VAGRANT_DEFAULT_PROVIDER = "libvirt";
+    systemPackages = [ pkgs.virtualboxKvm ];
   };
 }
