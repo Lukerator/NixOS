@@ -4,7 +4,7 @@
   users.users.luke.extraGroups = [ "vboxusers" ];
   environment.systemPackages = [
     pkgs.gnome-boxes
-    pkgs.kvmtool
+    pkgs.qemu_kvm
   ];
   virtualisation.virtualbox.host = {
     enable = true;
