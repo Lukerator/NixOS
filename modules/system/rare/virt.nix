@@ -5,6 +5,7 @@
   environment.systemPackages = [
     pkgs.gnome-boxes
     pkgs.qemu_kvm
+    pkgs.virtualboxExtpack
   ];
   virtualisation.virtualbox.host = {
     enable = true;
