@@ -1,15 +1,8 @@
-{ pkgs, ... }:
 {
-  boot.kernelModules = [ "kvm-intel" ];
-  users.users.luke.extraGroups = [ "vboxusers" ];
-  environment.systemPackages = [
-    pkgs.gnome-boxes
-    pkgs.qemu_kvm
-    pkgs.virtualboxExtpack
-  ];
-  virtualisation.virtualbox.host = {
-    enable = true;
-    enableKvm = true;
-    addNetworkInterface = false;
+  users.users.luke.extraGroups = [ "libvirtd" ];
+  programs.virt-manager.enable = true;
+  virtualisation = {
+    libvirtd.enable = true;
+    spiceUSBRedirection.enable = true;
   };
 }

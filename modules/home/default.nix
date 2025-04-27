@@ -1,7 +1,8 @@
 {
   imports = [
+    ./dconf.nix
     ./desktops
-    ./.permanent
+    ./permanent
     ./packages.nix
   ];
 }
