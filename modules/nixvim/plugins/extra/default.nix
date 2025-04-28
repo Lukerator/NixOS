@@ -1,6 +1,6 @@
 {
   imports = [
-    # ./flake.nix
+    ./exercism.nix
     ./leetcode.nix
     ./packages.nix
     ./ufo.nix

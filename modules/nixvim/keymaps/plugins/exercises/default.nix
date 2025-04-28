@@ -1,6 +1,6 @@
 {
   imports = [
-    # ./exercism.nix
+    ./exercism.nix
     ./leetcode.nix
   ];
 }
