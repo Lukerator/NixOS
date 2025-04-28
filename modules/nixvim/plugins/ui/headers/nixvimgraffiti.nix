@@ -1,5 +1,5 @@
 {
-  plugins.dashboard.settings.config.header = [
+  programs.nixvim.plugins.dashboard.settings.config.header = [
     "  _______  .__       ____   ____.__          "
     "  \      \ |__|__  __\   \ /   /|__| _____   "
     "  /   |   \|  \  \/  /\   Y   / |  |/     \  "

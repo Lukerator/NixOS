@@ -1,3 +1,3 @@
 {
-  plugins.blink-ripgrep.enable = true;
+  programs.nixvim.plugins.blink-ripgrep.enable = true;
 }

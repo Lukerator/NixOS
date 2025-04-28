@@ -1,3 +1,3 @@
 {
-  extraConfigLua = "vim.deprecate = function() end";
+  programs.nixvim.extraConfigLua = "vim.deprecate = function() end";
 }

@@ -1,3 +1,3 @@
 {
-  plugins.blink-cmp-dictionary.enable = true;
+  programs.nixvim.plugins.blink-cmp-dictionary.enable = true;
 }

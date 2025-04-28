@@ -1,5 +1,5 @@
 {
-  plugins.blink-cmp.settings.sources.providers.ripgrep = {
+  programs.nixvim.plugins.blink-cmp.settings.sources.providers.ripgrep = {
     async = true;
     module = "blink-ripgrep";
     name = "Ripgrep";

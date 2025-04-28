@@ -2,6 +2,7 @@
   inputs = {
     stylix.url = "github:danth/stylix";
     spicetify.url = "github:Gerg-L/spicetify-nix";
+    vimextraplugins.url = "github:m15a/nixpkgs-vim-extra-plugins";
     nixpkgs.url = "git+https://github.com/NixOS/nixpkgs?shallow=1&ref=nixos-unstable";
     nixvim = {
       inputs.nixpkgs.follows = "nixpkgs";
@@ -48,11 +49,12 @@
         extraSpecialArgs = { inherit inputs; };
         modules = [
           ./modules/home
+          ./modules/nixvim
           ./modules/stylix
-          spicetify.homeManagerModules.default
+          nixvim.homeManagerModules.nixvim
           stylix.homeManagerModules.stylix
           ./modules/stylix/home-targets.nix
-          { home.packages = [ mainNvim ]; }
+          spicetify.homeManagerModules.default
         ];
       };
     };

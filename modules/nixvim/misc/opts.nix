@@ -1,5 +1,5 @@
 {
-  opts = {
+  programs.nixvim.opts = {
     mouse = "a";
     tabstop = 2;
     paste = false;

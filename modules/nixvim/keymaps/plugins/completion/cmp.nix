@@ -1,5 +1,5 @@
 {
-  plugins.cmp.settings.mapping = {
+  programs.nixvim.plugins.cmp.settings.mapping = {
     "<CR>".__raw = ''
       cmp.mapping(function(fallback)
       local luasnip = require("luasnip")

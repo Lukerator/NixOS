@@ -1,6 +1,6 @@
 { lib, pkgs, ... }:
 {
-  plugins.windsurf-nvim = {
+  programs.nixvim.plugins.windsurf-nvim = {
     enable = true;
     package = pkgs.vimPlugins.windsurf-nvim;
     settings.tools = {

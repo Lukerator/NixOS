@@ -1,3 +1,3 @@
 {
-  plugins.blink-cmp.settings.completion.ghost_text.enabled = true;
+  programs.nixvim.plugins.blink-cmp.settings.completion.ghost_text.enabled = true;
 }

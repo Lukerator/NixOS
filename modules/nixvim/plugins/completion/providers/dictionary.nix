@@ -1,5 +1,5 @@
 {
-  plugins.blink-cmp.settings.sources.providers.dictionary = {
+  programs.nixvim.plugins.blink-cmp.settings.sources.providers.dictionary = {
     name = "Dict";
     enabled = true;
     min_keyword_length = 3;

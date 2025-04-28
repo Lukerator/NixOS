@@ -1,5 +1,5 @@
 {
-  plugins.blink-cmp.settings.sources.default = [
+  programs.nixvim.plugins.blink-cmp.settings.sources.default = [
     "lsp"
     "path"
     "buffer"

@@ -1,5 +1,5 @@
 {
-  plugins.dashboard.settings.config.header = [
+  programs.nixvim.plugins.dashboard.settings.config.header = [
     " ███╗   ██╗██╗██╗  ██╗██╗   ██╗██╗███╗   ███╗"
     " ████╗  ██║██║╚██╗██╔╝██║   ██║██║████╗ ████║"
     " ██╔██╗ ██║██║ ╚███╔╝ ██║   ██║██║██╔████╔██║"

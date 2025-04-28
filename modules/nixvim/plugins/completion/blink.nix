@@ -1,5 +1,5 @@
 {
-  plugins.blink-cmp = {
+  programs.nixvim.plugins.blink-cmp = {
     enable = true;
     settings.completion = {
       menu.border = "rounded";

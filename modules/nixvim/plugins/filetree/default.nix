@@ -1,5 +1,5 @@
 {
-  plugins.oil = {
+  programs.nixvim.plugins.oil = {
     enable = true;
     settings = {
       use_default_keymaps = false;
