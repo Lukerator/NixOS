@@ -1,5 +1,5 @@
 {
-  programs.nixvim.imports = [
+  imports = [
     ./copypaste.nix
     ./zoom.nix
   ];
