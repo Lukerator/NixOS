@@ -3,6 +3,7 @@
   environment.systemPackages = with pkgs; [
     acpi
     brightnessctl
+    exercism
     fuzzel
     gcc
     git
