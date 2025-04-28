@@ -1,5 +1,5 @@
 {
-  programs.nixvim.imports = [
+  imports = [
     ./windsurf.nix
     ./dictionary.nix
     ./ripgrep.nix
