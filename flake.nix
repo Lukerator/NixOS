@@ -21,16 +21,14 @@
       nixpkgs,
       spicetify,
       home-manager,
-      # awesome-neovim-plugins,
+      awesome-neovim-plugins,
       ...
     }@inputs:
     let
       system = "x86_64-linux";
-      makeNixvim = nixvim.legacyPackages.${system}.makeNixvimWithModule;
-      mainNvim = makeNixvim { module = import ./modules/nixvim; };
       pkgs = import nixpkgs {
         inherit system;
-        # overlays = [ awesome-neovim-plugins.overlays.default ];
+        overlays = [ awesome-neovim-plugins.overlays.default ];
       };
     in
     {
