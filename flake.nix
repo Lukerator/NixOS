@@ -21,14 +21,14 @@
       nixpkgs,
       spicetify,
       home-manager,
-      awesome-neovim-plugins,
+      vimextraplugins,
       ...
     }@inputs:
     let
       system = "x86_64-linux";
       pkgs = import nixpkgs {
         inherit system;
-        overlays = [ awesome-neovim-plugins.overlays.default ];
+        overlays = [ vimextraplugins.overlays.default ];
       };
     in
     {
