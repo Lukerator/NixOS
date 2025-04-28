@@ -43,6 +43,7 @@
         ];
       };
       homeConfigurations.luke = home-manager.lib.homeManagerConfiguration {
+        inherit pkgs;
         extraSpecialArgs = { inherit inputs pkgs; };
         modules = [
           ./modules/home
