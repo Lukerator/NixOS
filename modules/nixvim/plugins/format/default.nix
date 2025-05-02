@@ -6,7 +6,7 @@
       stylua
       typstfmt
       clang-tools
-      nixfmt-rfc-stylprograms.nixvim.e
+      nixfmt-rfc-style
     ];
     plugins.conform-nvim = {
       enable = true;
