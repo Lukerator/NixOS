@@ -4,12 +4,17 @@
     enable = true;
     polarity = "dark";
     autoEnable = false;
-    fonts.sansSerif = {
+    # base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-macchiato.yaml";
+    # base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-material-dark-medium.yaml";
+    fonts.monospace = {
       name = "MonaspiceNe NF";
       package = pkgs.monaspace;
     };
-    # base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-macchiato.yaml";
-    # base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-material-dark-medium.yaml";
+    cursor = {
+      size = 26;
+      name = "Catppuccin Macchiato Light";
+      package = "${pkgs.catppuccin-cursors.macchiatoLight}";
+    };
     base16Scheme = {
       base00 = "1a1b26";
       base01 = "15161e";
