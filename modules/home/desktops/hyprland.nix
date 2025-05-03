@@ -128,6 +128,7 @@
         "$mod, d, exec, fuzzel"
         "$mod, e, exec, thunar"
         "$mod, l, exec, lutris"
+        "$mod, b, exec, calibre"
         "$mod, c, exec, neovide"
         "$mod, s, exec, spotify"
         "$mod, w, exec, firefox"
