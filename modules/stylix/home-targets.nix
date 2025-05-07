@@ -2,6 +2,11 @@
 {
   config.stylix = {
     image = ./wallpapers/tokyo-night.png;
+    cursor = {
+      size = 26;
+      name = "Catppuccin Macchiato Light";
+      package = "${pkgs.catppuccin-cursors.macchiatoLight}";
+    };
     targets = {
       qt.enable = true;
       gtk.enable = true;

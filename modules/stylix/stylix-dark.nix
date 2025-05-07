@@ -10,11 +10,6 @@
       name = "MonaspiceNe NF";
       package = pkgs.monaspace;
     };
-    cursor = {
-      size = 26;
-      name = "Catppuccin Macchiato Light";
-      package = "${pkgs.catppuccin-cursors.macchiatoLight}";
-    };
     base16Scheme = {
       base00 = "1a1b26";
       base01 = "15161e";
